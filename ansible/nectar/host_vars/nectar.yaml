@@ -1,0 +1,62 @@
+# This file sets the common variables.
+
+# Availability zone.
+availability_zone: melbourne-qh2-uom
+
+# Volumes.
+volumes:
+  - vol_name: comp90024_vol1
+    vol_size: 60
+  - vol_name: comp90024_vol2
+    vol_size: 60
+  - vol_name: comp90024_vol3
+    vol_size: 60
+  - vol_name: comp90024_vol4
+    vol_size: 60
+
+# Security groups.
+security_groups:
+  - name: automated_ssh
+    description: "Automated security group for SSH access."
+    protocol: tcp
+    port_range_min: 22
+    port_range_max: 22
+    #remote_ip_prefix: 128.250.0.0/16 # Allows access from unimelb only.
+    remote_ip_prefix: 0.0.0.0/0 # Allows access from everywhere.
+
+  - name: automated_http
+    description: "Automated security group for HTTP access."
+    protocol: tcp 
+    port_range_min: 80
+    port_range_max: 80
+    remote_ip_prefix: 0.0.0.0/0
+
+  - name: automated_CouchDB
+    description: "Automated security group for CouchDB access."
+    protocol: tcp 
+    port_range_min: 5984
+    port_range_max: 5984
+    remote_ip_prefix: 0.0.0.0/0
+
+  - name: automated_WebServer
+    description: "Automated security group for Web Server access."
+    protocol: tcp 
+    port_range_min: 5555
+    port_range_max: 5555
+    remote_ip_prefix: 0.0.0.0/0
+
+# Instances.
+instances:
+  - name: comp90024-1
+    volumes: ['comp90024_vol1']
+  - name: comp90024-2
+    volumes: ['comp90024_vol2']
+  - name: comp90024-3
+    volumes: ['comp90024_vol3']
+  - name: comp90024-4
+    volumes: ['comp90024_vol4']
+
+instance_image: 215f9775-483c-4e0a-b703-d21a5c966f2e
+instance_key_name: comp90024-67
+instance_flavor: uom.mse.2c9g
+
