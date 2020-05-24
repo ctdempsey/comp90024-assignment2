@@ -1,0 +1,106 @@
+# Setup a CouchDB cluster.
+
+# Upload Docker Compose file to the cloud.
+- name: Upload Docker Compose file
+  become: yes
+  template:
+    src: docker-compose.yaml.j2
+    dest: './docker-compose.yaml'
+    mode: 0744
+    owner: '{{ ansible_user }}'
+    group: '{{ ansible_user }}'
+
+
+# Upload CouchDB cluster script to the cloud.
+- name: Upload CouchDB cluster script
+  become: yes
+  template:
+    src: couchdb-cluster.sh.j2
+    dest: '{{ couchdb_dir }}/couchdb-cluster.sh'
+    mode: 0744
+    owner: '{{ ansible_user }}'
+    group: '{{ ansible_user }}'
+
+# Upload CouchDB configurations to the cloud.
+- name: Upload CouchDB configs
+  become: yes
+  template:
+    src: couchdb.ini.j2
+    dest: '{{ couchdb_config_dir }}/couchdb.ini'
+    mode: 0744
+    owner: '{{ ansible_user }}'
+    group: '{{ ansible_user }}'
+
+# Stop and remove any running Docker containers.
+- name: Stop and remove running Docker containers
+  become: yes
+  command: 'docker-compose down'
+
+# Create `etc/systemd/system/docker.service.d` directory to store daemon proxy setting file.
+- name: Create `/etc/systemd/system/docker.service.d/`
+  become: yes
+  file: 
+    path: /etc/systemd/system/docker.service.d/
+    state: directory
+
+# Upload `http-proxy.conf` to the cloud.
+- name: Upload `http-proxy.conf`
+  become: yes
+  copy:
+    src: ./http-proxy.conf
+    dest: /etc/systemd/system/docker.service.d/http-proxy.conf
+    force: yes
+    mode: 0555
+    owner: '{{ ansible_user }}'
+    group: '{{ ansible_user }}'
+
+# Create `~/.docker/config.json` directory to store Docker client config file.
+- name: Create `~/.docker`
+  become: yes
+  file: 
+    path: ~/.docker
+    state: directory
+
+# Upload Docker client config file.
+- name: Upload Docker client config
+  become: yes
+  copy:
+    src: ./config.json
+    dest: ~/.docker/config.json
+    force: yes
+    mode: 0555
+    owner: '{{ ansible_user }}'
+    group: '{{ ansible_user }}'
+
+   
+# Flush changes.
+- name: Flush changes
+  become: yes
+  shell: systemctl daemon-reload
+
+# Restart Docker.
+- name: Restart Docker
+  become: yes
+  shell: systemctl restart docker
+
+# Build new Docker containers for CouchDB services.
+- name: Build Docker containers
+  become: yes
+  command: 'docker-compose up -d'
+
+# Wait for the newly created Docker containers to start working.
+- name: Wait for Docker containers
+  pause:
+    seconds: 20
+
+# Run CouchDB cluster setup script.
+- name: Run CouchDB cluster script
+  when: ansible_hostname != 'comp90024-1'
+  become: yes
+  shell: sh couchdb-cluster.sh
+  args:
+    chdir: '{{ couchdb_dir }}'
+  register: output
+
+- debug: var=output.sdout
+  when: ansible_hostname != 'comp90024-1'

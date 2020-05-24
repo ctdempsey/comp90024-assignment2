@@ -1,0 +1,110 @@
+---
+# Configure created instances on the cloud.
+
+# Add proxy so that the instance can access the internet.
+- name: Add proxy in /etc/environment
+  become: yes
+  blockinfile: 
+    path: /etc/environment
+    block: |
+      HTTP_PROXY=http://wwwproxy.unimelb.edu.au:8000/
+      HTTPS_PROXY=http://wwwproxy.unimelb.edu.au:8000/
+      http_proxy=http://wwwproxy.unimelb.edu.au:8000/
+      https_proxy=http://wwwproxy.unimelb.edu.au:8000/
+      no_proxy=localhost, 127.0.0.1, localaddress, 172.16.0.0/12, .melbourne.rc.nectar.org.au, .storage.unimelb.edu.au, .cloud.unimelb.edu.au
+
+# Reboot the instance.
+- name: Reboot instance
+  become: yes
+  reboot:
+    reboot_timeout: 3000
+
+# Update apt package.
+- name: Update apt
+  become: yes
+  apt:
+    name: ['apt']
+    state: latest
+    install_recommends: no
+    update_cache: yes
+
+# Instant dependencies on the instance.
+- name: Install dependencies
+  become: yes
+  apt:
+    name: ['python3-setuptools', 
+           'python3-pip', 
+           'curl',
+           'vim', 
+           'apt-transport-https', 
+           'ca-certificates', 
+           'gnupg-agent', 
+           'git',
+           'unzip',
+           'software-properties-common']
+    state: latest
+    install_recommends: no
+    update_cache: yes
+
+# Remove pre-existing Docker installation(s).
+- name: Uninstall existing old version(s) of docker
+  tags: 'docker'
+  become: yes
+  apt:
+    name: "{{ item }}"
+    state: absent
+  with_items:
+    - docker
+    - docker-engine
+    - docker.io
+
+# Add Docker's official GPG key.
+- name: Add Docker’s GPG key
+  become: yes
+  apt_key:
+    url: https://download.docker.com/linux/ubuntu/gpg
+    state: present
+
+# Configure Docker apt repository.
+- name: Docker apt
+  become: yes
+  apt_repository:
+    repo: "deb [arch=amd64] https://download.docker.com/linux/{{ ansible_distribution | lower }} {{ ansible_distribution_release }} edge"
+    mode: '644'
+    update_cache: yes
+    state: present
+
+# Install the latest version of Docker.
+- name: Install Docker
+  become: yes
+  apt:
+    name: "{{ item }}"
+    update_cache: yes
+    state: latest
+  with_items:
+    - docker-ce
+    - docker-ce-cli
+    - containerd.io
+
+# Install the latest version of Docker Compose.
+- name: Install Docker Compose
+  become: yes
+  pip:
+    name: ['docker-compose']
+    executable: pip3
+    state: latest
+
+# Configure the structure (creating directories) of the instance(s).
+- name: Create directories
+  become: yes
+  file:
+    path: "{{ item }}"
+    state: directory
+    mode: 0755
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+  with_items:
+    - "{{home_dir}}"
+    - "{{couchdb_dir}}"
+    - "{{couchdb_data_dir}}"
+    - "{{couchdb_config_dir}}"

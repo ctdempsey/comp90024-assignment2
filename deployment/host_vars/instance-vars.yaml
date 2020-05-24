@@ -1,0 +1,14 @@
+# Sets the common variables for NeCTAR instance configurations.
+
+# Directories.
+home_dir: /home/{{ ansible_user }}
+couchdb_dir: /home/{{ ansible_user }}/couchdb
+couchdb_data_dir: /home/{{ ansible_user }}/couchdb/data
+couchdb_config_dir: /home/{{ ansible_user }}/couchdb/couchdb_configs
+
+# CouchDB incredentials.
+couchdb_user: admin
+couchdb_password: admin
+couchdb_cookie: mycookie
+couchdb_secret: mysecret
+

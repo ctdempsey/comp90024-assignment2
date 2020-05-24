@@ -1,0 +1,10 @@
+- hosts: COMP90024
+  vars_files:
+    - host_vars/instance-vars.yaml
+  gather_facts: true
+  become: yes
+
+  roles:
+    - role: instance-common
+    - role: instance-docker-swarm
+    - role: instance-couchdb-cluster
