@@ -1,17 +1,15 @@
-import csv
-import json
-import re
-import tweepy
+import sys
 
 import pandas as pd
+import tweepy
 
 
 # Request tokens and keys for authentication
-def get_authentication():
-    api_key = input('Enter API Key: ')
-    api_secret_key = input('Enter API Secret Key: ')
-    access_token = input('Enter Access Token: ')
-    access_token_secret = input('Enter Access Token Secret: ')
+def get_authentication(sys_args):
+    api_key = sys_args[0]
+    api_secret_key = sys_args[1]
+    access_token = sys_args[2]
+    access_token_secret = sys_args[3]
     return api_key, api_secret_key, access_token, access_token_secret
 
 
@@ -43,12 +41,11 @@ def search_tags(api_key, api_secret_key, access_token, access_token_secret, hash
     f.close()
 
 
-def get_hashtag():
-    hashtag = input('Enter Hashtag(s): ')
-    return hashtag
+def main():
+    hashtag = sys.argv[1]
+    api_key, api_secret_key, access_token, access_token_secret = get_authentication(sys.argv[2:])
+    search_tags(api_key, api_secret_key, access_token, access_token_secret, hashtag)
 
 
 if __name__ == '__main__':
-    api_key, api_secret_key, access_token, access_token_secret = get_authentication()
-    hashtag = get_hashtag()
-    search_tags(api_key, api_secret_key, access_token, access_token_secret, hashtag)
+    main()
