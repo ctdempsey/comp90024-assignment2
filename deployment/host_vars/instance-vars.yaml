@@ -6,9 +6,19 @@ couchdb_dir: /home/{{ ansible_user }}/couchdb
 couchdb_data_dir: /home/{{ ansible_user }}/couchdb/data
 couchdb_config_dir: /home/{{ ansible_user }}/couchdb/couchdb_configs
 
-# CouchDB incredentials.
+# CouchDB credentials.
 couchdb_user: admin
 couchdb_password: admin
 couchdb_cookie: mycookie
 couchdb_secret: mysecret
 
+# CouchDB Databases
+couchdb_databases:
+ - tweets
+
+# Twitter API credentials.
+twitter_hashtag: covid19
+twitter_api_key:
+twitter_api_secret_key:
+twitter_access_token:
+twitter_access_token_secret:

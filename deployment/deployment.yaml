@@ -8,3 +8,4 @@
     - role: instance-common
     - role: instance-docker-swarm
     - role: instance-couchdb-cluster
+    - role: instance-twitter-harvester

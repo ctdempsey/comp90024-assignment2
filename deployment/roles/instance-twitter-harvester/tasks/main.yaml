@@ -1,0 +1,30 @@
+---
+# Setup twitter harvesters.
+
+# Install required 3rd party Python libraries
+- name: Install tweepy
+  become: yes
+  pip:
+    name: ['tweepy']
+    state: latest
+
+- name: Install couchdb python
+  become: yes
+  pip:
+    name: ['couchdb']
+    state: latest
+
+# Upload twitter_harvester.py to instance
+- name: Upload twitter_harvester.py
+  copy:
+    src: ../../../../tweet_harvester/tweet_harvester.py
+    dest: /opt/tweet_harvester.py
+    mode: 0744
+    owner: '{{ ansible_user }}'
+    group: '{{ ansible_user }}'
+
+# Start twitter_harvester.py on instance
+- name: Start twitter_harvester.py
+  script: '/opt/twitter_harvester.py {{ twitter_hashtag }} {{ twitter_api_key }} {{ twitter_api_secret_key }} {{ twitter_access_token }} {{ twitter_access_token_secret }}'
+  args:
+    executable: python3

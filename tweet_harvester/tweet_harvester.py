@@ -1,9 +1,10 @@
 import sys
 
-import pandas as pd
+# import pandas as pd
 import tweepy
 import couchdb
 
+# TODO: Handle couchdb.http.Unauthorized exception
 couch = couchdb.Server()
 tweetdb = couch['tweets']
 
