@@ -2,10 +2,10 @@
 # Setup a Docker Swarm.
 
 # Setup the master node of the swarm.
-#- name: Setup master node
-  #when: ansible_hostname == 'comp90024-1'
-  #become: yes
-  #shell: docker swarm init
+- name: Setup master node
+  when: ansible_hostname == 'comp90024-1'
+  become: yes
+  shell: docker swarm init
 
 # Get the join token of the manager.
 - name: Get join token
