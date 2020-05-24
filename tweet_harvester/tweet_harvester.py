@@ -1,4 +1,8 @@
-import json, csv, tweepy, re
+import csv
+import json
+import re
+import tweepy
+
 import pandas as pd
 
 
@@ -19,10 +23,8 @@ def search_tags(api_key, api_secret_key, access_token, access_token_secret, hash
     # start api with tweepy
     api = tweepy.API(access, wait_on_rate_limit=True)
 
-
     # create df to write to
     df = pd.DataFrame(columns=['timestamp', 'location', 'tweet_text', 'username', 'all_hashtags', 'followers_count'])
-
 
     # extract tweets with the relevant tag, write to the file
     for tweet in tweepy.Cursor(api.search, q=hashtag + ' -filter:retweets',
@@ -35,11 +37,11 @@ def search_tags(api_key, api_secret_key, access_token, access_token_secret, hash
                                [e['text'] for e in tweet._json['entities']['hashtags']],
                                tweet.user.followers_count]
 
-
     # open the spreadsheet we will write to
     f = open(hashtag + ".json", 'w')
-    df.to_json(f, orient='records') #lines=True)
+    df.to_json(f, orient='records')  # lines=True)
     f.close()
+
 
 def get_hashtag():
     hashtag = input('Enter Hashtag(s): ')
