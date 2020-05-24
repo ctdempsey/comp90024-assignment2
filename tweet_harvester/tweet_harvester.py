@@ -54,6 +54,7 @@ def search_tags(api_key, api_secret_key, access_token, access_token_secret, hash
 
 
 def main():
+    sys.stderr = open('tweet_harvester.err', 'a')
     hashtag = sys.argv[1]
     api_key, api_secret_key, access_token, access_token_secret = get_authentication(sys.argv[2:])
     search_tags(api_key, api_secret_key, access_token, access_token_secret, hashtag)
