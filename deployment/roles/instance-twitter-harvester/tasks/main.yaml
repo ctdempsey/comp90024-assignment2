@@ -6,25 +6,26 @@
   become: yes
   pip:
     name: ['tweepy']
+    executable: pip3
     state: latest
 
 - name: Install couchdb python
   become: yes
   pip:
     name: ['couchdb']
+    executable: pip3
     state: latest
 
 # Upload twitter_harvester.py to instance
 - name: Upload twitter_harvester.py
+  become: yes
   copy:
-    src: ../../../../tweet_harvester/tweet_harvester.py
+    src: ../tweet_harvester/tweet_harvester.py
     dest: /opt/tweet_harvester.py
-    mode: 0744
     owner: '{{ ansible_user }}'
     group: '{{ ansible_user }}'
 
+# TODO: make asynchronous
 # Start twitter_harvester.py on instance
 - name: Start twitter_harvester.py
-  script: '/opt/twitter_harvester.py {{ twitter_hashtag }} {{ twitter_api_key }} {{ twitter_api_secret_key }} {{ twitter_access_token }} {{ twitter_access_token_secret }}'
-  args:
-    executable: python3
+  command: 'python3 /opt/tweet_harvester.py {{ twitter_hashtag }} {{ twitter_api_key }} {{ twitter_api_secret_key }} {{ twitter_access_token }} {{ twitter_access_token_secret }}'
