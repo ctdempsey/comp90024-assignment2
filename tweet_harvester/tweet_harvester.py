@@ -2,6 +2,10 @@ import sys
 
 import pandas as pd
 import tweepy
+import couchdb
+
+couch = couchdb.Server()
+tweetdb = couch['tweets']
 
 
 # Request tokens and keys for authentication
@@ -22,24 +26,31 @@ def search_tags(api_key, api_secret_key, access_token, access_token_secret, hash
     api = tweepy.API(access, wait_on_rate_limit=True)
 
     # create df to write to
-    df = pd.DataFrame(columns=['id', 'timestamp', 'location', 'tweet_text', 'username', 'all_hashtags', 'followers_count'])
+    # df = pd.DataFrame(columns=['id', 'timestamp', 'location', 'tweet_text', 'username', 'all_hashtags', 'followers_count'])
 
     # extract tweets with the relevant tag, write to the file
     for tweet in tweepy.Cursor(api.search, q=hashtag + ' -filter:retweets',
                                lang="en", tweet_mode='extended').items(100):
         if tweet.coordinates:
-            df.loc[len(df)] = [tweet.id,
-                               tweet.created_at,
-                               tweet.coordinates,
-                               tweet.full_text.replace('\n', ' ').encode('utf-8'),
-                               tweet.user.screen_name.encode('utf-8'),
-                               [e['text'] for e in tweet._json['entities']['hashtags']],
-                               tweet.user.followers_count]
+            tweetdb[tweet.id] = {'created_at': tweet.created_at,
+                                 'coordinates': tweet.coordinates,
+                                 'full_text': tweet.full_text.replace('\n', ' ').encode('utf-8'),
+                                 'user': tweet.user.screen_name.encode('utf-8'),
+                                 'hashtags': [e['text'] for e in tweet._json['entities']['hashtags']],
+                                 'user_followers': tweet.user.followers_count}
+        # if tweet.coordinates:
+        #     df.loc[len(df)] = [tweet.id,
+        #                        tweet.created_at,
+        #                        tweet.coordinates,
+        #                        tweet.full_text.replace('\n', ' ').encode('utf-8'),
+        #                        tweet.user.screen_name.encode('utf-8'),
+        #                        [e['text'] for e in tweet._json['entities']['hashtags']],
+        #                        tweet.user.followers_count]
 
     # open the spreadsheet we will write to
-    f = open(hashtag + ".json", 'w')
-    df.to_json(f, orient='records')  # lines=True)
-    f.close()
+    # f = open(hashtag + ".json", 'w')
+    # df.to_json(f, orient='records')  # lines=True)
+    # f.close()
 
 
 def main():
