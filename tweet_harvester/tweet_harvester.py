@@ -22,13 +22,14 @@ def search_tags(api_key, api_secret_key, access_token, access_token_secret, hash
     api = tweepy.API(access, wait_on_rate_limit=True)
 
     # create df to write to
-    df = pd.DataFrame(columns=['timestamp', 'location', 'tweet_text', 'username', 'all_hashtags', 'followers_count'])
+    df = pd.DataFrame(columns=['id', 'timestamp', 'location', 'tweet_text', 'username', 'all_hashtags', 'followers_count'])
 
     # extract tweets with the relevant tag, write to the file
     for tweet in tweepy.Cursor(api.search, q=hashtag + ' -filter:retweets',
                                lang="en", tweet_mode='extended').items(100):
         if tweet.coordinates:
-            df.loc[len(df)] = [tweet.created_at,
+            df.loc[len(df)] = [tweet.id,
+                               tweet.created_at,
                                tweet.coordinates,
                                tweet.full_text.replace('\n', ' ').encode('utf-8'),
                                tweet.user.screen_name.encode('utf-8'),
