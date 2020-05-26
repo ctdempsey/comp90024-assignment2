@@ -30,20 +30,19 @@ def search_tags(api_key, api_secret_key, access_token, access_token_secret, hash
     # start api with tweepy
     api = tweepy.API(access, wait_on_rate_limit=True)
 
-
     # extract tweets with the relevant tag, write to database
-    for tweet in tweepy.Cursor(api.search, q=hashtag + ' -filter:retweets -has:geo', lang="en", tweet_mode='extended',
+    for tweet in tweepy.Cursor(api.search, q=hashtag + ' -filter:retweets', lang="en", tweet_mode='extended',
                                geocode='-28.04234848,133.49058772,2100km').items(1000):
         try:
             tweet_data = {'_id': tweet.id_str,
-                        'created_at': tweet.created_at.isoformat(),
-                        'coordinates': tweet.coordinates,
-                        'place': tweet.place,
-                        'full_text': tweet.full_text,
-                        'user_id': tweet.user.id_str,
-                        'user_screen_name': tweet.user.screen_name,
-                        'hashtags': [e['text'] for e in tweet._json['entities']['hashtags']],
-                        'user_followers': tweet.user.followers_count}
+                          'created_at': tweet.created_at.isoformat(),
+                          'coordinates': tweet.coordinates,
+                          'place': tweet.place,
+                          'full_text': tweet.full_text,
+                          'user_id': tweet.user.id_str,
+                          'user_screen_name': tweet.user.screen_name,
+                          'hashtags': [e['text'] for e in tweet._json['entities']['hashtags']],
+                          'user_followers': tweet.user.followers_count}
             if tweet.place:
                 place_data = {'id': tweet.place.id,
                               'place_type': tweet.place.place_type,
@@ -52,17 +51,20 @@ def search_tags(api_key, api_secret_key, access_token, access_token_secret, hash
                               'country_code': tweet.place.country_code,
                               'country': tweet.place.country,
                               'contained_within': tweet.place.contained_within,
-                              'bounding_box': {'type':
-
-                              }}
+                              'bounding_box': {'type': tweet.place.bounding_box.type,
+                                               'coordinates': tweet.place.bounding_box.coordinates
+                                               }
+                              }
                 tweet_data['place'] = place_data
-            tweetdb.save(tweet_data)
+            if tweet.coordinates or tweet.place:
+                tweetdb.save(tweet_data)
         except TypeError:
             print(tweet.place)
         except couchdb.http.ResourceConflict:
             pass
 
     tweetdb.commit()
+
 
 def main():
     # sys.stderr = open(os.path.expanduser('~/tweet_harvester.err'), 'a')
