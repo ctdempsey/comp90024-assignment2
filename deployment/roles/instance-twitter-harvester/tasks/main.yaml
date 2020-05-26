@@ -16,16 +16,30 @@
     executable: pip3
     state: latest
 
+# Install geo apt packages
+- name: Install geo packages
+  become: yes
+  apt:
+    name: '{{ item }}'
+    state: present
+    update_cache: yes
+    cache_valid_time: 604800
+  loop:
+    - gdal-bin
+    - python3-gdal
+
 # Upload twitter_harvester.py to instance
 - name: Upload twitter_harvester.py
   become: yes
   copy:
-    src: ../tweet_harvester/tweet_harvester.py
-    dest: /opt/tweet_harvester.py
+    src: ../tweet_harvester
+    dest: /opt/
     owner: '{{ ansible_user }}'
     group: '{{ ansible_user }}'
 
 # TODO: make asynchronous
 # Start twitter_harvester.py on instance
 - name: Start twitter_harvester.py
-  command: 'python3 /opt/tweet_harvester.py {{ twitter_hashtag }} {{ twitter_api_key }} {{ twitter_api_secret_key }} {{ twitter_access_token }} {{ twitter_access_token_secret }} {{ couchdb_user }} {{ couchdb_password }} 5984'
+  command: 'python3 tweet_harvester.py {{ twitter_hashtag }} {{ twitter_api_key }} {{ twitter_api_secret_key }} {{ twitter_access_token }} {{ twitter_access_token_secret }} {{ couchdb_user }} {{ couchdb_password }} 5984'
+  args:
+    chdir: '/opt/tweet_harvester'

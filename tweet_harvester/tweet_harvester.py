@@ -94,7 +94,7 @@ def main():
 
     # setup for coord_to_LGA (coordinate to LGA transformation)
     drv = ogr.GetDriverByName('ESRI Shapefile') # set input type as shapefile
-    ds_in = drv.Open("../data/LGAS_2019.shp") # load shapefile
+    ds_in = drv.Open("./data/LGAS_2019.shp") # load shapefile
     lyr_in = ds_in.GetLayer(0) # get the shapefile's first layer
     idx_reg = lyr_in.GetLayerDefn().GetFieldIndex("LGA_CODE19") # set target attribute
 
