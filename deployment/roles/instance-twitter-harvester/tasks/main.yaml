@@ -28,4 +28,4 @@
 # TODO: make asynchronous
 # Start twitter_harvester.py on instance
 - name: Start twitter_harvester.py
-  command: 'python3 /opt/tweet_harvester.py {{ twitter_hashtag }} {{ twitter_api_key }} {{ twitter_api_secret_key }} {{ twitter_access_token }} {{ twitter_access_token_secret }}'
+  command: 'python3 /opt/tweet_harvester.py {{ twitter_hashtag }} {{ twitter_api_key }} {{ twitter_api_secret_key }} {{ twitter_access_token }} {{ twitter_access_token_secret }} {{ couchdb_user }} {{ couchdb_password }} 5984'
