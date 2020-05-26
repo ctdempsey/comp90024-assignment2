@@ -1,5 +1,6 @@
 import os
 import sys
+import ogr
 
 # import pandas as pd
 import tweepy
@@ -65,6 +66,21 @@ def search_tags(api_key, api_secret_key, access_token, access_token_secret, hash
 
     tweetdb.commit()
 
+def get_LSA(lon, lat, lyr_in, idx_reg, ctran):
+    # transform incoming longitude/latitude to the shapefile's projection
+    [lon,lat,z]=ctran.TransformPoint(lon,lat)
+    # create a point from coordinates
+    pt = ogr.Geometry(ogr.wkbPoint)
+    pt.SetPoint_2D(0, lon, lat)
+    #Set up a spatial filter such that the only features we see when we
+    #loop through "lyr_in" are those which overlap the point defined above
+    lyr_in.SetSpatialFilter(pt)
+    #Loop through the overlapped features and display the field of interest
+    polygon = None
+    for feat_in in lyr_in:
+        polygon = feat_in.GetFieldAsString(idx_reg)
+        # print(lon, lat, feat_in.GetFieldAsString(idx_reg))
+    return (lon, lat, polygon)
 
 def main():
     # sys.stderr = open(os.path.expanduser('~/tweet_harvester.err'), 'a')
@@ -75,6 +91,23 @@ def main():
     couch = couchdb.Server(cdb_url)
     tweetdb = couch['tweets']
     search_tags(api_key, api_secret_key, access_token, access_token_secret, hashtag, tweetdb)
+
+    # setup for coord_to_LGA (coordinate to LGA transformation)
+    drv = ogr.GetDriverByName('ESRI Shapefile') # set input type as shapefile
+    ds_in = drv.Open("../data/LGAS_2019.shp") # load shapefile
+    lyr_in = ds_in.GetLayer(0) # get the shapefile's first layer
+    idx_reg = lyr_in.GetLayerDefn().GetFieldIndex("LGA_CODE19") # set target attribute
+
+    # set our CRS to the standard WGS 84 (EPSG:4326)
+    geo_ref = lyr_in.GetSpatialRef()
+    point_ref=ogr.osr.SpatialReference()
+    point_ref.ImportFromEPSG(4326)
+    ctran=ogr.osr.CoordinateTransformation(point_ref,geo_ref)
+
+    # some dummy locations for testing
+    locations = [(144.97, -37.82), (138.6, -34.93), (151.2, -33.87), (153.02, -27.47), (115.85, -31.95), (147.32, 147.32), (149.13, -35.3), (130.83, -12.45)]
+    for lon, lat in locations:
+        print(get_LSA(lon, lat, lyr_in, idx_reg, ctran))
 
 
 if __name__ == '__main__':
