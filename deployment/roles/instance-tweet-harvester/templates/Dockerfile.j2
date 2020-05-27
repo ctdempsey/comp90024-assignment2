@@ -1,0 +1,26 @@
+# Dockerfile to Containerize the harvester.
+
+# Default version of python3 used in the chosen instance image.
+FROM python:3.6.9
+
+# Working directory of the harvester.
+WORKDIR /tweet_harvester
+
+COPY . /tweet_harvester
+
+# Upgrade pip.
+RUN pip3 install --upgrade pip
+
+# Install tweepy to harvest tweets.
+RUN pip3 install --trusted-host pypi.python.org tweepy
+
+# Install couchdb to store harvested tweets.
+RUN pip3 install --trusted-host pypi.python.org couchdb
+
+# Install gdal.
+RUN apt-get update -y
+RUN apt-get install -y gdal-bin
+
+# TODO: Make asynchronous.
+# Farmers rejoice!
+CMD ["python3", "tweet_harvester.py", "{{ twitter_hashtag }}", "{{ twitter_api_key }}","{{ twitter_api_secret_key }}","{{ twitter_access_token }}","{{ twitter_access_token_secret }}","{{ couchdb_user }}", "{{ couchdb_password }}", "{{ ansible_default_ipv4.address }}", "{{ couchdb_port }}"]

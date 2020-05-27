@@ -5,6 +5,7 @@ home_dir: /home/{{ ansible_user }}
 couchdb_dir: /home/{{ ansible_user }}/couchdb
 couchdb_data_dir: /home/{{ ansible_user }}/couchdb/data
 couchdb_config_dir: /home/{{ ansible_user }}/couchdb/couchdb_configs
+harvester_setup_dir: /home/{{ ansible_user }}/harvester_setup
 
 # CouchDB credentials.
 couchdb_user: admin
@@ -12,7 +13,10 @@ couchdb_password: admin
 couchdb_cookie: mycookie
 couchdb_secret: mysecret
 
-# CouchDB Databases
+# CouchDB port.
+couchdb_port: 5984
+
+# CouchDB Databases.
 couchdb_databases:
  - tweets
 
@@ -22,3 +26,7 @@ twitter_api_key: 8ETE5q77ZFdJ1YfKeHzML0tam
 twitter_api_secret_key: hSy3Hehmox6M07lOlhUEursvTX3sYf8LPddFpOVMvr03jeZfVp
 twitter_access_token: 1252231255711608835-6w5avNvaTQfcI2yAt9PUxFnai4Wk9z
 twitter_access_token_secret: h36RKFNb2m3ptrfprreXAJh0r42xfic7bAwA9AMzXJq2J
+
+# Harvester variables.
+harvester_name: '{{ ansible_hostname }}_harvester'
+harvester_database: tweets

@@ -87,12 +87,16 @@
 - name: Build Docker containers
   become: yes
   command: 'docker-compose up -d'
+  args:
+    chdir: "{{ couchdb_dir }}"
 
 # Wait for the newly created Docker containers to start working.
 - name: Wait for Docker containers
   pause:
-    seconds: 20
+    seconds: 15
 
+# TODO: 'Dynamicallize' the snippet: Automatically check if cluster is the master node or not.
+# TODO: Dynamically assign master and worker nodes. Recommended: 1 master + 3 workers.
 # Run CouchDB cluster setup script.
 - name: Run CouchDB cluster script
   when: ansible_hostname != 'comp90024-1'
@@ -102,16 +106,16 @@
     chdir: '{{ couchdb_dir }}'
   register: output
 
-- debug: var=output.sdout
-  when: ansible_hostname != 'comp90024-1'
+#- debug: var=output.sdout
+  #when: ansible_hostname != 'comp90024-1'
 
-# WARNING: Causes error due to "not being a database administrator"
-# Create CouchDB databases
+# Create CouchDB database(s).
 - name: Create CouchDB databases
   uri:
-    url: "http://{{ hostvars[groups['COMP90024'][0]]['ansible_eth0']['ipv4']['address'] }}:5984/{{ item }}"
+    url: "http://{{ ansible_default_ipv4.address }}:5984/{{ item }}"
     method: PUT
-    user: "{{ couchdb_user }}"
-    password: "{{ couchdb_password }}"
+    user: admin
+    password: admin
+    force_basic_auth: yes
     status_code: 201,412
   loop: "{{ couchdb_databases }}"

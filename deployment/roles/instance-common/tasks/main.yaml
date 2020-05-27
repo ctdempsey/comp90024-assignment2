@@ -51,12 +51,10 @@
   tags: 'docker'
   become: yes
   apt:
-    name: "{{ item }}"
+    name: ['docker',
+           'docker-engine',
+           'docker.io']
     state: absent
-  with_items:
-    - docker
-    - docker-engine
-    - docker.io
 
 # Add Docker's official GPG key.
 - name: Add Docker’s GPG key
@@ -78,13 +76,11 @@
 - name: Install Docker
   become: yes
   apt:
-    name: "{{ item }}"
+    name: ['docker-ce',
+           'docker-ce-cli',
+           'containerd.io']
     update_cache: yes
     state: latest
-  with_items:
-    - docker-ce
-    - docker-ce-cli
-    - containerd.io
 
 # Install the latest version of Docker Compose.
 - name: Install Docker Compose
@@ -98,13 +94,14 @@
 - name: Create directories
   become: yes
   file:
-    path: "{{ item }}"
+    path: '{{ item }}'
     state: directory
     mode: 0755
     owner: "{{ ansible_user }}"
     group: "{{ ansible_user }}"
-  with_items:
-    - "{{home_dir}}"
-    - "{{couchdb_dir}}"
-    - "{{couchdb_data_dir}}"
-    - "{{couchdb_config_dir}}"
+  loop:
+    ["{{ home_dir }}",
+    "{{ couchdb_dir }}",
+    "{{ couchdb_data_dir }}",
+    "{{ couchdb_config_dir }}",
+    "{{ harvester_setup_dir }}"]

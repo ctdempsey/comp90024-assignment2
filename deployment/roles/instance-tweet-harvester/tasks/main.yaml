@@ -1,0 +1,37 @@
+---
+# Setup twitter harvesters.
+
+# Upload harvester setup files to instance(s).
+- name: Upload tweet_harvester setup files
+  become: yes
+  copy:
+    src: '{{ item }}'
+    dest: '{{ harvester_setup_dir }}'
+    mode: 700
+    owner: '{{ ansible_user }}'
+    group: '{{ ansible_user }}'
+  with_fileglob:
+    - './roles/instance-tweet-harvester/templates/*'
+
+# Build the harvester from Dockerfile.
+- name: Build harvester
+  become: yes
+  command: 'docker build -f Dockerfile.j2 -t {{ harvester_name }} .'
+  args: 
+    chdir: '{{ harvester_setup_dir }}'
+
+# TODO: run asynchronously 
+# Start up the harvester.
+- name: Start harvester
+  become: yes
+  command: 'docker run -d {{ harvester_name }}'
+  args: '{{ harvester_setup_dir }}'
+
+# Check status of CouchDB cluster.
+- name: Check status of CouchDB cluster
+  become: yes
+  command: "curl http://{{ couchdb_user }}:{{ couchdb_password }}@{{ ansible_default_ipv4.address }}:5984/_membership"
+  register: output
+  ignore_errors: yes
+
+- debug: var=output.stdout

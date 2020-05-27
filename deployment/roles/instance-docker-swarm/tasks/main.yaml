@@ -1,8 +1,10 @@
 ---
 # Setup a Docker Swarm.
 
-# Setup the master node of the swarm.
-- name: Setup master node
+# TODO: Dynamically init/join swarms.
+
+# Initialise a swarm and setup master node.
+- name: Initialise a swarm and setup master node 
   when: ansible_hostname == 'comp90024-1'
   become: yes
   shell: docker swarm init
@@ -30,7 +32,7 @@
   include_vars: ./join_token.yaml
 
 # If node is not a manager, join the swarm.
-- name: Join the swarm
+- name: Join a swarm
   when: ansible_hostname != 'comp90024-1'
   become: yes
   command: "{{ join_token }}"
