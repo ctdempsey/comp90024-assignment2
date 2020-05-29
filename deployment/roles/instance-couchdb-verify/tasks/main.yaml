@@ -1,0 +1,53 @@
+# Master node: wait for cluster(s) to setup properly.
+- name : Wait for CouchDB cluster(s) to setup
+  pause:
+    seconds: 5
+
+# Empty request to prevent error.
+- name: Empty request to prevent error
+  become: yes
+  uri:
+    url: "http://{{couchdb_user}}:{{couchdb_password}}@{{configuration_node}}:{{couchdb_port}}/"
+    method: GET
+    status_code: 200, 411
+    headers:
+      Content-Length: 1
+
+# Master node: finish cluster setup.
+- name: Finish CouchDB cluster setup
+  uri:
+    url: http://{{configuration_node}}:{{couchdb_port}}/_cluster_setup
+    body: 
+      #action: finish_cluster
+    body_format: json
+    method: POST
+    user: '{{ couchdb_user }}'
+    password: '{{ couchdb_password }}'
+    force_basic_auth: yes
+    status_code: 201, 400
+    headers:
+      Content-Type: "application/json"
+
+# Master node:: verify cluster setup status.
+- name: Verify CouchDB cluster setup status
+  uri:
+    url: http://{{configuration_node}}:{{couchdb_port}}/_cluster_setup
+    user: '{{ couchdb_user }}'
+    password: '{{ couchdb_password }}'
+    force_basic_auth: yes
+    headers:
+      Content-Length: 1
+- name: Verify status
+  become: yes
+  shell: curl http://{{couchdb_user}}:{{couchdb_password}}@{{configuration_node}}:{{couchdb_port}}/_cluster_setup
+
+# Master node: create CouchDB database(s).
+- name: Create CouchDB databases
+  uri:
+    url: http://{{configuration_node}}:{{couchdb_port}}/{{item}}
+    method: PUT
+    user: '{{ couchdb_user }}'
+    password: '{{ couchdb_password }}'
+    force_basic_auth: yes
+    status_code: 201,412
+  loop: "{{ couchdb_databases }}"

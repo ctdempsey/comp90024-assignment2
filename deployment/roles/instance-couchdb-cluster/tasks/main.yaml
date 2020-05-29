@@ -26,7 +26,7 @@
   become: yes
   template:
     src: couchdb.ini.j2
-    dest: '{{ couchdb_config_dir }}/couchdb.ini'
+    dest: '{{ couchdb_config_dir }}/local.ini'
     mode: 0744
     owner: '{{ ansible_user }}'
     group: '{{ ansible_user }}'
@@ -72,7 +72,7 @@
     owner: '{{ ansible_user }}'
     group: '{{ ansible_user }}'
 
-   
+
 # Flush changes.
 - name: Flush changes
   become: yes
@@ -82,6 +82,18 @@
 - name: Restart Docker
   become: yes
   shell: systemctl restart docker
+
+# Change docker.sock permissions so we can use docker commands.
+- name: docker.sock permission configs
+  become: yes
+  shell: sudo chmod 666 /var/run/docker.sock
+
+# Pull couchdb3 image.
+- name: Pull couchdb image
+  become: yes
+  shell: docker pull couchdb:3.0.0
+  args:
+    chdir: "{{ couchdb_dir }}"
 
 # Build new Docker containers for CouchDB services.
 - name: Build Docker containers
@@ -93,29 +105,48 @@
 # Wait for the newly created Docker containers to start working.
 - name: Wait for Docker containers
   pause:
-    seconds: 15
+    seconds: 10
 
-# TODO: 'Dynamicallize' the snippet: Automatically check if cluster is the master node or not.
-# TODO: Dynamically assign master and worker nodes. Recommended: 1 master + 3 workers.
-# Run CouchDB cluster setup script.
-- name: Run CouchDB cluster script
-  when: ansible_hostname != 'comp90024-1'
-  become: yes
-  shell: sh couchdb-cluster.sh
-  args:
-    chdir: '{{ couchdb_dir }}'
-  register: output
-
-#- debug: var=output.sdout
-  #when: ansible_hostname != 'comp90024-1'
-
-# Create CouchDB database(s).
-- name: Create CouchDB databases
+# Enable CouchDB cluster mode.
+- name: Enable CouchDB cluster mode
+  when: ansible_default_ipv4.address != configuration_node
   uri:
-    url: "http://{{ ansible_default_ipv4.address }}:5984/{{ item }}"
-    method: PUT
-    user: admin
-    password: admin
+    url: http://{{configuration_node}}:{{couchdb_port}}/_cluster_setup
+    body: 
+      action: enable_cluster
+      bind_address: 0.0.0.0
+      username: "{{couchdb_user}}"
+      password: "{{couchdb_password}}"
+      port: "{{couchdb_port}}"
+      node_count: 4
+      remote_node: "{{ansible_default_ipv4.address}}"
+      remote_current_user: "{{couchdb_user}}"
+      remote_current_password: "{{couchdb_password}}"
+    body_format: json
+    method: POST
+    user: '{{ couchdb_user }}'
+    password: '{{ couchdb_password }}'
     force_basic_auth: yes
-    status_code: 201,412
-  loop: "{{ couchdb_databases }}"
+    status_code: 201, 202, 409
+    headers:
+      Content-Type: "application/json"
+
+# Join CouchDB configuration node to make a cluster.
+- name: Join a CouchDB cluster
+  when: ansible_default_ipv4.address != configuration_node
+  uri:
+    url: http://{{configuration_node}}:{{couchdb_port}}/_cluster_setup
+    body: 
+      action: add_node
+      host: "{{ansible_default_ipv4.address}}" 
+      port: "{{couchdb_port}}"
+      username: "{{couchdb_user}}"
+      password: "{{couchdb_password}}"
+    body_format: json
+    method: POST
+    user: '{{ couchdb_user }}'
+    password: '{{ couchdb_password }}'
+    force_basic_auth: yes
+    status_code: 201, 202, 409
+    headers:
+      Content-Type: "application/json"

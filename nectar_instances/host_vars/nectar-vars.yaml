@@ -31,16 +31,37 @@ security_groups:
     port_range_max: 80
     remote_ip_prefix: 0.0.0.0/0
 
-  - name: CouchDB
+  - name: CouchDB - Standard clustered port for all HTTP API requests
     description: "Security group for CouchDB access."
     protocol: tcp 
     port_range_min: 5984
     port_range_max: 5984
     remote_ip_prefix: 0.0.0.0/0
 
+  - name: CouchDB - Erlang port mapper daemon (epmd)
+    description: "Security group for CouchDB access."
+    protocol: tcp 
+    port_range_min: 4369
+    port_range_max: 4369
+    remote_ip_prefix: 0.0.0.0/0
+  
+  - name: CouchDB cluster communication
+    description: "Security group for CouchDB cluster communication."
+    protocol: tcp
+    port_range_min: 9100
+    port_range_max: 9200
+    remote_ip_prefix: 0.0.0.0/0
+
+  - name: Secure Docker client communication. Required for Docker Machine to work. 
+    description: "Security group for Secure Docker client communication."
+    protocol: tcp
+    port_range_min: 2376
+    port_range_max: 2376
+    remote_ip_prefix: 0.0.0.0/0
+     
   - name: Docker Swarm - cluster management communications
     description: "Security group for Docker Swarm cluster management communications."
-    protocol: tcp 
+    protocol: tcp
     port_range_min: 2377
     port_range_max: 2377
     remote_ip_prefix: 0.0.0.0/0

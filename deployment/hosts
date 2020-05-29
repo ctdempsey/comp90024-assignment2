@@ -5,7 +5,7 @@ ansible_ssh_private_key_file=./comp90024-67.pem
 ansible_ssh_common_args='-o StrictHostKeyChecking=no'
 
 [COMP90024]
-172.26.130.217
-172.26.129.187
-172.26.132.65
-172.26.134.70
+172.26.130.183
+172.26.133.218
+172.26.131.73
+172.26.131.115

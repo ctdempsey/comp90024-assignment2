@@ -1,19 +1,43 @@
-#!/usr/bin/env bash
-echo "Joining a CouchDB Cluster"
+#!/usr/bin/bash
+user={{ couchdb_user }}
+pass={{ couchdb_password }}
+masternode={{ configuration_node }}
+node={{ ansible_default_ipv4.address }}
+cookie={{ couchdb_cookie }}
+version='3.1.0'
 
-user = {{ couchdb_user }}
-password = {{ couchdb_password }}
-master_ip = {{ hostvars[groups['COMP90024'][0]]['ansible_eth0']['ipv4']['address'] }}
-worker_ip = {{ ansible_default_ipv4.address }}
+docker pull couchdb
 
-curl -XPOST "http://${user}:${password}@${master_ip}:5984/_cluster_setup" \
-      --header "Content-Type: application/json"\
-      --data "{\"action\": \"enable_cluster\", \"bind_address\":\"0.0.0.0\",\
-             \"username\": \"${user}\", \"password\":\"${password}\", \"port\": \"5984\",\
-             \"remote_node\": \"${worker_ip}\", \"node_count\": \"4\",\
-             \"remote_current_user\":\"${user}\", \"remote_current_password\":\"${password}\"}"
+docker run\
+      -d\
+      --expose 2376\
+      --expose 2377\
+      --expose 7946\
+      --expose 4789\
+      --expose 5984\
+      --expose 4369\
+      --expose 9100-9200\
+      --name couchdb${node}\
+      --env COUCHDB_USER=${user}\
+      --env COUCHDB_PASSWORD=${pass}\
+      --env COUCHDB_SECRET=${cookie}\
+      --env ERL_FLAGS="-setcookie \"${cookie}\" -name \"couchdb@${node}\""\
+      couchdb:${version}
 
-curl -XPOST "http://${user}:${password}@${master_ip}:5984/_cluster_setup"\
-      --header "Content-Type: application/json"\
-      --data "{\"action\": \"add_node\", \"host\":\"${worker_ip}\",\
-             \"port\": \"5984\", \"username\": \"${user}\", \"password\":\"${password}\"}"
+curl -X POST "http://${user}:${pass}@${masternode}:5984/_cluster_setup" \
+      -H "Content-Type: application/json"\
+      -d "{\"action\": \"enable_cluster\", \"bind_address\":\"0.0.0.0\",\
+             \"username\": \"${user}\", \"password\":\"${pass}\", \"port\": \"5984\",\
+             \"remote_node\": \"${node}\", \"node_count\": \"4\",\
+             \"remote_current_user\":\"${user}\", \"remote_current_password\":\"${pass}\"}"
+
+curl -X POST "http://${user}:${pass}@${masternode}:5984/_cluster_setup"\
+      -H "Content-Type: application/json"\
+      -d "{\"action\": \"add_node\", \"host\":\"${node}\",\
+             \"port\": \"5984\", \"username\": \"${user}\", \"password\":\"${pass}\"}"
+
+curl -X GET "http://${user}:${pass}@${masternode}:5984/"
+
+curl -X POST "http://${user}:${pass}@${masternode}:5984/_cluster_setup" \
+    -H "Content-Type: application/json" -d "{\"action\": \"finish_cluster\"}"
+

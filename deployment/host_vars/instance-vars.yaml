@@ -2,9 +2,9 @@
 
 # Directories.
 home_dir: /home/{{ ansible_user }}
-couchdb_dir: /home/{{ ansible_user }}/couchdb
-couchdb_data_dir: /home/{{ ansible_user }}/couchdb/data
-couchdb_config_dir: /home/{{ ansible_user }}/couchdb/couchdb_configs
+couchdb_dir: /home/{{ ansible_user }}/opt/couchdb
+couchdb_data_dir: /home/{{ ansible_user }}/opt/couchdb/data
+couchdb_config_dir: /home/{{ ansible_user }}/opt/couchdb/etc
 harvester_setup_dir: /home/{{ ansible_user }}/harvester_setup
 
 # CouchDB credentials.
@@ -19,6 +19,7 @@ couchdb_port: 5984
 # CouchDB Databases.
 couchdb_databases:
  - tweets
+ - _users
 
 # Twitter API credentials.
 twitter_hashtag: covid19
@@ -30,3 +31,9 @@ twitter_access_token_secret: h36RKFNb2m3ptrfprreXAJh0r42xfic7bAwA9AMzXJq2J
 # Harvester variables.
 harvester_name: '{{ ansible_hostname }}_harvester'
 harvester_database: tweets
+
+# IP address(es) of CouchDB configuration node(s).
+configuration_node: 172.26.130.183
+
+
+
