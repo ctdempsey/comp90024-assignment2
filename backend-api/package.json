@@ -1,0 +1,24 @@
+{
+  "name": "backend_api",
+  "version": "1.0.0",
+  "description": "COMP90024, Semester 1 2020, Group 67 Assignment 2 Backend API",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ctdempsey/comp90024-assignment2.git"
+  },
+  "author": "Cameron Dempsey, Emily Marshall, Hoang Viet Mai, Jock Harkness, Thomas Minuzzo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ctdempsey/comp90024-assignment2/issues"
+  },
+  "homepage": "https://github.com/ctdempsey/comp90024-assignment2#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "nano": "^8.2.2"
+  }
+}
