@@ -1,0 +1,11 @@
+{
+  "_id": "_design/locmapreduce",
+  "_rev": "8-e2bd5e80b6fa2756647c1c70d3d6df3e",
+  "views": {
+    "CoordinatesPrecedence": {
+      "reduce": "function (keys, values, rereduce) {\n    return sum(values);\n}",
+      "map": "function (doc) {\n    if(doc.rows.length > 0) {\n        for(var idx in doc.rows){\n          if(doc.rows[idx].doc.coordinates!=null){\n              emit(doc.rows[idx].doc.coordinates,1);\n           }\n            else{\n              emit(doc.rows[idx].doc.place,1);\n            }\n        }\n    }\n}"
+    }
+  },
+  "language": "javascript"
+}
