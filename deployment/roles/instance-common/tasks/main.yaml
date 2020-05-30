@@ -104,4 +104,4 @@
     "{{ couchdb_dir }}",
     "{{ couchdb_data_dir }}",
     "{{ couchdb_config_dir }}",
-    "{{ harvester_setup_dir }}"]
+    "{{ harvester_dir }}"]

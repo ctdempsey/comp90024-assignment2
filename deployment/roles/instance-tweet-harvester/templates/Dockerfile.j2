@@ -4,9 +4,7 @@
 FROM python:3.6.9
 
 # Working directory of the harvester.
-WORKDIR /tweet_harvester
-
-COPY . /tweet_harvester
+WORKDIR /
 
 # Upgrade pip.
 RUN pip3 install --upgrade pip

@@ -5,7 +5,7 @@ home_dir: /home/{{ ansible_user }}
 couchdb_dir: /home/{{ ansible_user }}/opt/couchdb
 couchdb_data_dir: /home/{{ ansible_user }}/opt/couchdb/data
 couchdb_config_dir: /home/{{ ansible_user }}/opt/couchdb/etc
-harvester_setup_dir: /home/{{ ansible_user }}/harvester_setup
+harvester_dir: /home/{{ ansible_user }}/tweet_harvester
 
 # CouchDB credentials.
 couchdb_user: admin
