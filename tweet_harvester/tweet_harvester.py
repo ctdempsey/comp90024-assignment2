@@ -3,6 +3,8 @@
 import os
 import sys
 import ogr
+from math import cos, sin, atan2, sqrt
+
 
 # import necessary libs
 import tweepy
@@ -46,6 +48,10 @@ def search_tags(api_key, api_secret_key, access_token, access_token_secret, hash
                           'hashtags': [e['text'] for e in tweet._json['entities']['hashtags']],
                           'user_followers': tweet.user.followers_count}
             if tweet.place:
+                coords = tweet.place.bounding_box.coordinates[0]
+                center_lon = (float(coords[0][0]) + float(coords[2][0]))/2.0
+                centre_lat = (float(coords[0][1]) + float(coords[2][1]))/2.0
+                lga = get_LGA(center_lon, centre_lat, lyr_in, idx_reg, ctran)
                 place_data = {'id': tweet.place.id,
                               'place_type': tweet.place.place_type,
                               'name': tweet.place.name,
@@ -53,6 +59,7 @@ def search_tags(api_key, api_secret_key, access_token, access_token_secret, hash
                               'country_code': tweet.place.country_code,
                               'country': tweet.place.country,
                               'contained_within': tweet.place.contained_within,
+                              'LGA' : lga,
                               'bounding_box': {'type': tweet.place.bounding_box.type,
                                                'coordinates': tweet.place.bounding_box.coordinates
                                                }
@@ -63,7 +70,7 @@ def search_tags(api_key, api_secret_key, access_token, access_token_secret, hash
             if tweet.coordinates or tweet.place:
                 tweetdb.save(tweet_data)
         except TypeError:
-            print(tweet.place)
+            print("ERROR")
         except couchdb.http.ResourceConflict:
             pass
 
