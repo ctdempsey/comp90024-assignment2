@@ -19,9 +19,9 @@ def get_authentication(sys_args):
 def get_couchdb_details(sys_args):
     cdb_user = sys_args[0]
     cdb_password = sys_args[1]
-    cbd_ip = sys_args[2]
+    cdb_ip = sys_args[2]
     cdb_port = sys_args[3]
-    return cdb_user, cdb_password, cdb_port
+    return cdb_user, cdb_password, cdb_ip, cdb_port
 
 
 def search_tags(api_key, api_secret_key, access_token, access_token_secret, hashtag, tweetdb):
@@ -91,11 +91,11 @@ def main():
     api_key, api_secret_key, access_token, access_token_secret = get_authentication(sys.argv[2:6])
 
     # get couchdb details.
-    cdb_user, cdb_password, cbd_ip, cdb_port = get_couchdb_details(sys.argv[6:])
+    cdb_user, cdb_password, cdb_ip, cdb_port = get_couchdb_details(sys.argv[6:])
     #cdb_url = 'http://' + cdb_user + ':' + cdb_password + '@localhost:' + cdb_port + '/'
 
     # connect to couchdb.
-    cbd_url = 'http://' +cdb_user+ ':' +cdb_password+ '@' +cdb_ip+':' +cdb_port/'
+    cdb_url = 'http://' +cdb_user+ ':' +cdb_password+ '@' +cdb_ip+':' +cdb_port + '/'
     couch = couchdb.Server(cdb_url)
 
     tweetdb = couch['tweets']
