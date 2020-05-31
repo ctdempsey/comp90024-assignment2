@@ -104,4 +104,6 @@
     "{{ couchdb_dir }}",
     "{{ couchdb_data_dir }}",
     "{{ couchdb_config_dir }}",
-    "{{ harvester_dir }}"]
+    "{{ harvester_dir }}",
+    "{{ backend_api_dir }}",
+    "{{ backend_nginx_dir }}"]

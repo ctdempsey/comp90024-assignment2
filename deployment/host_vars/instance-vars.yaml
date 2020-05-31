@@ -6,6 +6,8 @@ couchdb_dir: /home/{{ ansible_user }}/opt/couchdb
 couchdb_data_dir: /home/{{ ansible_user }}/opt/couchdb/data
 couchdb_config_dir: /home/{{ ansible_user }}/opt/couchdb/etc
 harvester_dir: /home/{{ ansible_user }}/tweet_harvester
+backend_api_dir: /home/{{ ansible_user }}/backend-api
+backend_nginx_dir: /home/{{ ansible_user }}/backend_nginx
 
 # CouchDB credentials.
 couchdb_user: admin
