@@ -29,7 +29,7 @@
 # Upload backend API Dockerfile to configuration instance(s).
 - name: Upload backend API Dockerfile to configuration instance(s)
   become: yes
-  copy:
+  template:
     src: './roles/instance-backend-api/templates/Dockerfile.j2'
     dest: '{{ backend_api_dir }}/Dockerfile'
     mode: 700

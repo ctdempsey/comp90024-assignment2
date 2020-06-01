@@ -28,14 +28,14 @@
 
 # Upload backend API Nginx setup files to configuration instance(s).
 - name: Upload backend API Nginx Dockerfile
-  copy:
+  template:
     src: './roles/instance-backend-nginx/templates/Dockerfile.j2'
     dest: '{{ backend_nginx_dir }}/Dockerfile'
     mode: 700
     owner: '{{ ansible_user }}'
     group: '{{ ansible_user }}'
 - name: Upload backend API Nginx config file
-  copy:
+  template:
     src: './roles/instance-backend-nginx/templates/default.conf.j2'
     dest: '{{ backend_nginx_dir }}/default.conf'
     mode: 700

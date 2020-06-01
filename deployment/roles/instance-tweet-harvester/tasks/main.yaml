@@ -25,12 +25,12 @@
 # Upload harvester Dockerfile to instance(s).
 - name: Upload tweet_harvester Dockerfile
   become: yes
-  copy:
-    src: './roles/instance-tweet-harvester/templates/Dockerfile.j2'
-    dest: '{{ harvester_dir }}/Dockerfile'
+  template:
+    src: "./roles/instance-tweet-harvester/templates/Dockerfile.j2"
+    dest: "{{ harvester_dir }}/Dockerfile"
     mode: 700
-    owner: '{{ ansible_user }}'
-    group: '{{ ansible_user }}'
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
 
 # Upload local tweet_harvester directory to remote.
 - name: Upload local tweet_harvester directory to remove

@@ -36,7 +36,7 @@ def search_tags(api_key, api_secret_key, access_token, access_token_secret, hash
 
     # extract tweets with the relevant tag, write to database
     for tweet in tweepy.Cursor(api.search, q=hashtag + ' -filter:retweets', lang="en", tweet_mode='extended',
-                               geocode='-28.04234848,133.49058772,2100km').items(1000):
+                               geocode='-28.04234848,133.49058772,2100km').items():
         try:
             tweet_data = {'_id': tweet.id_str,
                           'created_at': tweet.created_at.isoformat(),
@@ -118,8 +118,7 @@ def main():
 
     # connect to couchdb.
     cdb_url = 'http://' + cdb_user + ':' + cdb_password + '@' + cdb_ip +':' + cdb_port + '/'
-    #couch = couchdb.Server(cdb_url)
-    couch = couchdb.Server('http://admin:admin@172.26.130.183:5984')
+    couch = couchdb.Server(cdb_url)
 
     tweetdb = couch['tweets']
 

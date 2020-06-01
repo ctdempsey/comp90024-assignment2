@@ -34,5 +34,5 @@ ENV C_INCLUDE_PATH=/usr/include/gdal
 RUN pip3 install GDAL==2.4.2
 
 # Farmers rejoice!
-#CMD ["python3", "tweet_harvester.py", "{{ twitter_hashtag }}", "{{ twitter_api_key }}","{{ twitter_api_secret_key }}","{{ twitter_access_token }}","{{ twitter_access_token_secret }}","{{ couchdb_user }}", "{{ couchdb_password }}", "{{ ansible_default_ipv4.address }}", "{{ couchdb_port }}"]
-CMD ["python3", "tweet_harvester.py", "covid19", "8ETE5q77ZFdJ1YfKeHzML0tam", "hSy3Hehmox6M07lOlhUEursvTX3sYf8LPddFpOVMvr03jeZfVp", "1252231255711608835-6w5avNvaTQfcI2yAt9PUxFnai4Wk9z", "h36RKFNb2m3ptrfprreXAJh0r42xfic7bAwA9AMzXJq2J", "admin", "admin", "172.26.130.183", "5984"]
+CMD ["python3", "tweet_harvester.py", "{{ twitter_hashtag }}", "{{ twitter_api_key }}","{{ twitter_api_secret_key }}","{{ twitter_access_token }}","{{ twitter_access_token_secret }}","{{ couchdb_user }}", "{{ couchdb_password }}", "{{ ansible_default_ipv4.address }}", "{{ couchdb_port }}"]
+#CMD ["python3", "tweet_harvester.py", "covid19", "8ETE5q77ZFdJ1YfKeHzML0tam", "hSy3Hehmox6M07lOlhUEursvTX3sYf8LPddFpOVMvr03jeZfVp", "1252231255711608835-6w5avNvaTQfcI2yAt9PUxFnai4Wk9z", "h36RKFNb2m3ptrfprreXAJh0r42xfic7bAwA9AMzXJq2J", "admin", "admin", "172.26.130.183", "5984"]

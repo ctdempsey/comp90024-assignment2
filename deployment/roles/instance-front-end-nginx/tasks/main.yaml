@@ -30,7 +30,7 @@
 - name: Upload backend API Nginx Dockerfile
   copy:
     src: './roles/instance-backend-nginx/templates/Dockerfile.j2'
-    dest: '{{ backend_nginx_dir }}/Dockerfile'
+    dest: "{{ backend_nginx_dir }}/Dockerfile"
     mode: 700
     owner: '{{ ansible_user }}'
     group: '{{ ansible_user }}'
