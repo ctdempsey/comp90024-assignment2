@@ -71,9 +71,9 @@ def search_tags(api_key, api_secret_key, access_token, access_token_secret, hash
                 tweetdb.save(tweet_data)
                 #print("LGA:", tweet_data['LGA'])
         except TypeError:
-            print("ERROR")
+            print(tweet.place)
         except couchdb.http.ResourceConflict:
-            print("CouchDB Resource Conflict")
+            #print("CouchDB Resource Conflict")
             pass
 
     tweetdb.commit()
