@@ -58,7 +58,7 @@
 # Start up the API server.
 - name: Start API server
   become: yes
-  command: 'docker run -d -p 0.0.0.0:5555:5555 -t --name backend_api api_image'
+  command: 'docker run -d --restart always -p 0.0.0.0:5555:5555 -t --name backend_api api_image'
   args: 
     chdir: '{{ backend_api_dir }}'
 

@@ -27,6 +27,7 @@ def get_couchdb_details(sys_args):
 
 
 def search_tags(api_key, api_secret_key, access_token, access_token_secret, hashtag, tweetdb, lyr_in, idx_reg, ctran):
+    
     # Handles Twitter authentication
     access = tweepy.OAuthHandler(api_key, api_secret_key)
     access.set_access_token(access_token, access_token_secret)
@@ -34,6 +35,8 @@ def search_tags(api_key, api_secret_key, access_token, access_token_secret, hash
     # start api with tweepy
     api = tweepy.API(access, wait_on_rate_limit=True)
 
+    print('hashtag: ', hashtag)
+    
     # extract tweets with the relevant tag, write to database
     for tweet in tweepy.Cursor(api.search, q=hashtag + ' -filter:retweets', lang="en", tweet_mode='extended',
                                geocode='-28.04234848,133.49058772,2100km').items():

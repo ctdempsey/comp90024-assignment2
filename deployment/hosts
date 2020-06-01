@@ -5,7 +5,8 @@ ansible_ssh_private_key_file=./comp90024-67.pem
 ansible_ssh_common_args='-o StrictHostKeyChecking=no'
 
 [COMP90024]
-172.26.130.183
-172.26.133.218
-172.26.131.73
-172.26.131.115
+172.26.130.183 hashtag=covid19
+172.26.133.218 hashtag=covid-19
+172.26.131.73  hashtag=2019ncov
+172.26.131.115 hashtag=coronavirus
+

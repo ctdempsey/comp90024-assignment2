@@ -60,7 +60,7 @@
 # Start up the harvester.
 - name: Start harvester
   become: yes
-  command: 'docker run -d --name harvester {{ harvester_name }}'
+  command: 'docker run -d --restart always --name harvester {{ harvester_name }}'
   args: 
     chdir: '{{ harvester_dir }}'
 

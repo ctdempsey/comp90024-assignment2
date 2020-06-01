@@ -52,6 +52,6 @@
 # Run Nginx Docker container and link it to backend API Docker container.
 - name: Run and link Nginx container to backend Api container
   become: yes
-  command: 'docker run -d -p 0.0.0.0:8080:5555 --link backend_api:backend_api --name backend_nginx backend_nginx_image'
+  command: 'docker run -d --restart always -p 0.0.0.0:8080:5555 --link backend_api:backend_api --name backend_nginx backend_nginx_image'
   args:
     chdir: '{{ backend_nginx_dir }}'
