@@ -23,8 +23,8 @@ RUN pip3 install --trusted-host pypi.python.org couchdb
 
 # Install Python GDAL dependencies.
 RUN apt-get update -y
-RUN apt-get install gdal-bin
-RUN apt-get install libgdal-dev
+RUN apt-get install -y gdal-bin
+RUN apt-get install -y libgdal-dev
 
 # Update C env vars so compiler can find gdal.
 ENV CPLUS_INCLUDE_PATH=/usr/include/gdal
