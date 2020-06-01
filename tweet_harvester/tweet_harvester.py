@@ -112,11 +112,11 @@ def main():
 
     # get couchdb details.
     cdb_user, cdb_password, cdb_ip, cdb_port = get_couchdb_details(sys.argv[6:])
-    #cdb_url = 'http://' + cdb_user + ':' + cdb_password + '@localhost:' + cdb_port + '/'
 
     # connect to couchdb.
-    cdb_url = 'http://' +cdb_user+ ':' +cdb_password+ '@' +cdb_ip+':' +cdb_port + '/'
-    couch = couchdb.Server(cdb_url)
+    cdb_url = 'http://' + cdb_user + ':' + cdb_password + '@' + cdb_ip +':' + cdb_port + '/'
+    #couch = couchdb.Server(cdb_url)
+    couch = couchdb.Server('http://admin:admin@172.26.130.183:5984')
 
     tweetdb = couch['tweets']
 

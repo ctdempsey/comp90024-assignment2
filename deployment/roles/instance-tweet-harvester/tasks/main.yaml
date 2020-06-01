@@ -1,5 +1,9 @@
 ---
 # Setup twitter harvesters.
+- name : remove dead containers
+  become: yes
+  shell: docker rm -v $(docker ps -aq -f status=exited)
+  ignore_errors: true
 
 # Remove old tweet_harvester directory.
 - name: Remove old harvester directory
@@ -38,6 +42,14 @@
     owner: '{{ ansible_user }}'
     group: '{{ ansible_user }}'
 
+# Stop and remove existing harvester.
+- name: Remove existing harvester
+  become: yes
+  shell: |
+    docker stop harvester
+    docker rm harvester
+  ignore_errors: yes
+
 # Build the harvester from Dockerfile.
 - name: Build harvester
   become: yes
@@ -45,11 +57,10 @@
   args: 
     chdir: '{{ harvester_dir }}'
 
-# TODO: run asynchronously 
 # Start up the harvester.
 - name: Start harvester
   become: yes
-  command: 'docker run -d -it {{ harvester_name }}'
+  command: 'docker run -d --name harvester {{ harvester_name }}'
   args: 
     chdir: '{{ harvester_dir }}'
 

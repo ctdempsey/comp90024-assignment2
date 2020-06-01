@@ -1,10 +1,16 @@
-# Dockerfile to Containerize the harvester.
+# Dockerfile to containerise the harvester.
 
 # Default version of python3 used in the chosen instance image.
 FROM python:3.6.9
 
 # Working directory of the harvester.
 WORKDIR /tweet_harvester
+
+# Required data.
+COPY data /tweet_harvester/data/
+
+# Source code.
+COPY tweet_harvester.py /tweet_harvester
 
 # Upgrade pip.
 RUN pip3 install --upgrade pip
@@ -15,10 +21,18 @@ RUN pip3 install --trusted-host pypi.python.org tweepy
 # Install couchdb to store harvested tweets.
 RUN pip3 install --trusted-host pypi.python.org couchdb
 
-# Install gdal.
+# Install Python GDAL dependencies.
 RUN apt-get update -y
-RUN apt-get install -y gdal-bin
+RUN apt-get install gdal-bin
+RUN apt-get install libgdal-dev
 
-# TODO: Make asynchronous.
+# Update C env vars so compiler can find gdal.
+ENV CPLUS_INCLUDE_PATH=/usr/include/gdal
+ENV C_INCLUDE_PATH=/usr/include/gdal
+
+# gdal
+RUN pip3 install GDAL==2.4.2
+
 # Farmers rejoice!
-CMD ["python3", "tweet_harvester.py", "{{ twitter_hashtag }}", "{{ twitter_api_key }}","{{ twitter_api_secret_key }}","{{ twitter_access_token }}","{{ twitter_access_token_secret }}","{{ couchdb_user }}", "{{ couchdb_password }}", "{{ ansible_default_ipv4.address }}", "{{ couchdb_port }}"]
+#CMD ["python3", "tweet_harvester.py", "{{ twitter_hashtag }}", "{{ twitter_api_key }}","{{ twitter_api_secret_key }}","{{ twitter_access_token }}","{{ twitter_access_token_secret }}","{{ couchdb_user }}", "{{ couchdb_password }}", "{{ ansible_default_ipv4.address }}", "{{ couchdb_port }}"]
+CMD ["python3", "tweet_harvester.py", "covid19", "8ETE5q77ZFdJ1YfKeHzML0tam", "hSy3Hehmox6M07lOlhUEursvTX3sYf8LPddFpOVMvr03jeZfVp", "1252231255711608835-6w5avNvaTQfcI2yAt9PUxFnai4Wk9z", "h36RKFNb2m3ptrfprreXAJh0r42xfic7bAwA9AMzXJq2J", "admin", "admin", "172.26.130.183", "5984"]
