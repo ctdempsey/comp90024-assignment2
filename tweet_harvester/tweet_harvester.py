@@ -47,6 +47,7 @@ def search_tags(api_key, api_secret_key, access_token, access_token_secret, hash
                           'user_screen_name': tweet.user.screen_name,
                           'hashtags': [e['text'] for e in tweet._json['entities']['hashtags']],
                           'user_followers': tweet.user.followers_count}
+            print(tweet_data)
             if tweet.place:
                 place_data = {'id': tweet.place.id,
                               'place_type': tweet.place.place_type,
