@@ -2,37 +2,34 @@
 # Setup twitter harvesters.
 
 # Remove old tweet_harvester directory.
-- name: Remove old harvester
+- name: Remove old harvester directory
   become: yes
   command: rm -r tweet_harvester
   args: 
     chdir: /home/{{ansible_user}}/
 
-- name: Create directories
+# Create tweet_harvester directory.
+- name: Create harvester directory
   become: yes
   file:
-    path: '{{ item }}'
+    path: '{{ harvester_dir }}'
     state: directory
     mode: 0755
     owner: "{{ ansible_user }}"
     group: "{{ ansible_user }}"
-  loop:
-    ["{{ harvester_dir }}"]
 
 # Upload harvester Dockerfile to instance(s).
 - name: Upload tweet_harvester Dockerfile
   become: yes
   copy:
-    src: '{{ item }}'
-    dest: '{{ harvester_dir }}'
+    src: './roles/instance-tweet-harvester/templates/Dockerfile.j2'
+    dest: '{{ harvester_dir }}/Dockerfile'
     mode: 700
     owner: '{{ ansible_user }}'
     group: '{{ ansible_user }}'
-  with_fileglob:
-    - './roles/instance-tweet-harvester/templates/*'
 
-# Upload required data for the harvester.
-- name: Upload tweet_harvester directory
+# Upload local tweet_harvester directory to remote.
+- name: Upload local tweet_harvester directory to remove
   become: yes
   copy:
     src: '../tweet_harvester/'
@@ -44,7 +41,7 @@
 # Build the harvester from Dockerfile.
 - name: Build harvester
   become: yes
-  command: 'docker build -f Dockerfile.j2 -t {{ harvester_name }} .'
+  command: 'docker build -f Dockerfile -t {{ harvester_name }} .'
   args: 
     chdir: '{{ harvester_dir }}'
 
@@ -53,5 +50,6 @@
 - name: Start harvester
   become: yes
   command: 'docker run -d -it {{ harvester_name }}'
-  args: '{{ harvester_dir }}'
+  args: 
+    chdir: '{{ harvester_dir }}'
 

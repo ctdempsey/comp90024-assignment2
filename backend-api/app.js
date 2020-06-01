@@ -14,7 +14,7 @@ const nano = require('nano')(COUCHDB_URL);
 tweets = nano.db.use('tweets');
 
 // TESTING: Get a list of all tweets.
-app.get('/tweets', function(req, res) {
+app.get('/api/tweets', function(req, res) {
     tweets.list(function (err, body) {
       if (err) {
         res.send(err)
@@ -26,14 +26,14 @@ app.get('/tweets', function(req, res) {
 })
 
 // Homepage.
-app.get('/', function(req, res) {
-    res.send('<h1> Hi :D <h1>');
+app.get('/api', function(req, res) {
+    res.send('<h1> Hi from Group 67 :D <h1>');
 })
 
 // Start the app.
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5555;
 const HOST = process.env.HOST || '0.0.0.0';
-app.listen(PORT, HOST, function(req, res) {
+app.listen(PORT, function(req, res) {
     console.log(`API Server running on ${HOST}:${PORT}.`);
     if (COUCHDB_URL) {
         console.log('Database connection established.');

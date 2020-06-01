@@ -1,0 +1,57 @@
+# Setup Nginx as Reverse proxy server for backend API.
+
+# Remove old backend API Nginx directory.
+- name: Remove old backend API Nginx directory
+  become: yes
+  command: rm -r backend_nginx
+  args: 
+    chdir: /home/{{ansible_user}}
+  ignore_errors: yes
+
+# Create backend API Nginx directory.
+- name: Create backend API Nginx directory
+  become: yes
+  file:
+    path: '{{ backend_nginx_dir }}'
+    state: directory
+    mode: 0755
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"    
+
+# Remove old backend API Nginx container.
+- name: Remove old Nginx container
+  become: yes
+  shell: |
+    docker stop backend_nginx
+    docker rm backend_nginx
+  ignore_errors: yes
+
+# Upload backend API Nginx setup files to configuration instance(s).
+- name: Upload backend API Nginx Dockerfile
+  copy:
+    src: './roles/instance-backend-nginx/templates/Dockerfile.j2'
+    dest: '{{ backend_nginx_dir }}/Dockerfile'
+    mode: 700
+    owner: '{{ ansible_user }}'
+    group: '{{ ansible_user }}'
+- name: Upload backend API Nginx config file
+  copy:
+    src: './roles/instance-backend-nginx/templates/default.conf.j2'
+    dest: '{{ backend_nginx_dir }}/default.conf'
+    mode: 700
+    owner: '{{ ansible_user }}'
+    group: '{{ ansible_user }}'
+
+# Build Nginx Docker image.
+- name: Build Nginx Docker image.
+  become: yes
+  command: docker build -t backend_nginx_image .
+  args:
+    chdir: '{{ backend_nginx_dir }}'
+
+# Run Nginx Docker container and link it to backend API Docker container.
+- name: Run and link Nginx container to backend Api container
+  become: yes
+  command: 'docker run -d -p 0.0.0.0:8080:5555 --link backend_api:backend_api --name backend_nginx backend_nginx_image'
+  args:
+    chdir: '{{ backend_nginx_dir }}'

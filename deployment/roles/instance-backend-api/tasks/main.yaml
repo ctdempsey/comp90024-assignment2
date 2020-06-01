@@ -1,0 +1,64 @@
+# Setup backend API server(s).
+
+# Remove old backend API directory.
+- name: Remove old backend API directory
+  become: yes
+  command: rm -r backend-api
+  args: 
+    chdir: /home/{{ansible_user}}/
+  ignore_errors: yes
+
+# Create backend API directory.
+- name: Create backend API directory
+  become: yes
+  file:
+    path: '{{ backend_api_dir }}'
+    state: directory
+    mode: 0755
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"  
+
+# Remove old backend API container.
+- name: Remove old API container
+  become: yes
+  shell: |
+    docker stop backend_api
+    docker rm backend_api
+  ignore_errors: yes
+
+# Upload backend API Dockerfile to configuration instance(s).
+- name: Upload backend API Dockerfile to configuration instance(s)
+  become: yes
+  copy:
+    src: './roles/instance-backend-api/templates/Dockerfile.j2'
+    dest: '{{ backend_api_dir }}/Dockerfile'
+    mode: 700
+    owner: '{{ ansible_user }}'
+    group: '{{ ansible_user }}'
+
+# Upload local backend API directory to remote.
+- name: Upload local backend API directory to remote
+  become: yes
+  synchronize:
+    src: '../backend-api/'
+    dest: '{{ backend_api_dir }}'
+    mode: push
+    owner: False
+    group: False
+    rsync_opts:
+      - "--exclude=node_modules"
+
+# Build backend API from Dockerfile.
+- name: Build backend API
+  become: yes
+  command: 'docker build -f Dockerfile -t api_image .'
+  args: 
+    chdir: '{{ backend_api_dir }}'
+
+# Start up the API server.
+- name: Start API server
+  become: yes
+  command: 'docker run -d -p 0.0.0.0:5555:5555 -t --name backend_api api_image'
+  args: 
+    chdir: '{{ backend_api_dir }}'
+

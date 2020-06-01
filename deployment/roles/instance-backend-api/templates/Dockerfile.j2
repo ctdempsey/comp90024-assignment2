@@ -1,0 +1,27 @@
+FROM node:12.17.0
+
+LABEL version=1.0
+
+# App working directory.
+WORKDIR /backend-api
+
+# Copy package.json and package-lock.json
+COPY package*.json ./
+
+# Install dependencies
+RUN npm install
+
+# App source code.
+COPY app.js ./
+
+# PORT.
+EXPOSE 5555
+EXPOSE 4789
+EXPOSE 5984
+EXPOSE 4369
+EXPOSE 9100-9200:9100-9200
+EXPOSE 3000
+EXPOSE 80
+
+# Start the API server.
+CMD ["npm", "start"]
