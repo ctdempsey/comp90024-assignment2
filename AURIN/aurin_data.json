@@ -1,0 +1,2722 @@
+{
+    "10050": {
+        "population": 26948,
+        "%_of_pop_with_post_school_education": 59.2,
+        "mean_income": 49398
+    },
+    "10130": {
+        "population": 14679,
+        "%_of_pop_with_post_school_education": 60,
+        "mean_income": 44456
+    },
+    "10250": {
+        "population": 22308,
+        "%_of_pop_with_post_school_education": 62.4,
+        "mean_income": 43656
+    },
+    "10300": {
+        "population": 1105,
+        "%_of_pop_with_post_school_education": 44.8,
+        "mean_income": 44514
+    },
+    "10470": {
+        "population": 20398,
+        "%_of_pop_with_post_school_education": 61.5,
+        "mean_income": 51228
+    },
+    "10500": {
+        "population": null,
+        "%_of_pop_with_post_school_education": 60.9,
+        "mean_income": null
+    },
+    "10550": {
+        "population": 17845,
+        "%_of_pop_with_post_school_education": 60.3,
+        "mean_income": 40810
+    },
+    "10600": {
+        "population": 6434,
+        "%_of_pop_with_post_school_education": 62.3,
+        "mean_income": 37728
+    },
+    "10650": {
+        "population": 4535,
+        "%_of_pop_with_post_school_education": 53.5,
+        "mean_income": 39240
+    },
+    "10750": {
+        "population": 153738,
+        "%_of_pop_with_post_school_education": 56.6,
+        "mean_income": 49920
+    },
+    "10800": {
+        "population": 3156,
+        "%_of_pop_with_post_school_education": 52.8,
+        "mean_income": 44693
+    },
+    "10850": {
+        "population": 3698,
+        "%_of_pop_with_post_school_education": 57.8,
+        "mean_income": 50156
+    },
+    "10900": {
+        "population": 42648,
+        "%_of_pop_with_post_school_education": 68.4,
+        "mean_income": 53662
+    },
+    "10950": {
+        "population": 1494,
+        "%_of_pop_with_post_school_education": 49.4,
+        "mean_income": 45555
+    },
+    "11150": {
+        "population": 1372,
+        "%_of_pop_with_post_school_education": 57.3,
+        "mean_income": 47897
+    },
+    "11200": {
+        "population": 613,
+        "%_of_pop_with_post_school_education": 46.7,
+        "mean_income": 46520
+    },
+    "11250": {
+        "population": 8465,
+        "%_of_pop_with_post_school_education": 51.3,
+        "mean_income": 50434
+    },
+    "11300": {
+        "population": 19580,
+        "%_of_pop_with_post_school_education": 61.5,
+        "mean_income": 50181
+    },
+    "11350": {
+        "population": 17880,
+        "%_of_pop_with_post_school_education": 69.5,
+        "mean_income": 40633
+    },
+    "11400": {
+        "population": 6902,
+        "%_of_pop_with_post_school_education": 58,
+        "mean_income": 47309
+    },
+    "11450": {
+        "population": 33322,
+        "%_of_pop_with_post_school_education": 58.9,
+        "mean_income": 56693
+    },
+    "11500": {
+        "population": 74934,
+        "%_of_pop_with_post_school_education": 54,
+        "mean_income": 48624
+    },
+    "11520": {
+        "population": 46463,
+        "%_of_pop_with_post_school_education": 68.5,
+        "mean_income": 71411
+    },
+    "11570": {
+        "population": 153226,
+        "%_of_pop_with_post_school_education": 52.1,
+        "mean_income": 45882
+    },
+    "11600": {
+        "population": 1551,
+        "%_of_pop_with_post_school_education": 50,
+        "mean_income": 44161
+    },
+    "11650": {
+        "population": 164019,
+        "%_of_pop_with_post_school_education": 58.2,
+        "mean_income": 48519
+    },
+    "11700": {
+        "population": 743,
+        "%_of_pop_with_post_school_education": 50.8,
+        "mean_income": 51664
+    },
+    "11720": {
+        "population": 24726,
+        "%_of_pop_with_post_school_education": 54.1,
+        "mean_income": 53746
+    },
+    "11730": {
+        "population": 23530,
+        "%_of_pop_with_post_school_education": 55.5,
+        "mean_income": 37169
+    },
+    "11750": {
+        "population": 2378,
+        "%_of_pop_with_post_school_education": 54.1,
+        "mean_income": 58192
+    },
+    "11800": {
+        "population": 36307,
+        "%_of_pop_with_post_school_education": 59.7,
+        "mean_income": 42583
+    },
+    "12000": {
+        "population": 2246,
+        "%_of_pop_with_post_school_education": 54.9,
+        "mean_income": 44786
+    },
+    "12150": {
+        "population": 1896,
+        "%_of_pop_with_post_school_education": 51.5,
+        "mean_income": 40384
+    },
+    "12160": {
+        "population": null,
+        "%_of_pop_with_post_school_education": 52.1,
+        "mean_income": null
+    },
+    "12350": {
+        "population": 6181,
+        "%_of_pop_with_post_school_education": 51.4,
+        "mean_income": 40027
+    },
+    "12380": {
+        "population": 94522,
+        "%_of_pop_with_post_school_education": 52.5,
+        "mean_income": 44398
+    },
+    "12390": {
+        "population": null,
+        "%_of_pop_with_post_school_education": 58.4,
+        "mean_income": null
+    },
+    "12700": {
+        "population": 4555,
+        "%_of_pop_with_post_school_education": 58.7,
+        "mean_income": 48061
+    },
+    "12730": {
+        "population": 5072,
+        "%_of_pop_with_post_school_education": 54.6,
+        "mean_income": 40245
+    },
+    "12750": {
+        "population": 18443,
+        "%_of_pop_with_post_school_education": 59.9,
+        "mean_income": 38874
+    },
+    "12850": {
+        "population": 82858,
+        "%_of_pop_with_post_school_education": 40.5,
+        "mean_income": 43249
+    },
+    "12870": {
+        "population": 6870,
+        "%_of_pop_with_post_school_education": 53,
+        "mean_income": 42717
+    },
+    "12900": {
+        "population": 4590,
+        "%_of_pop_with_post_school_education": 53.3,
+        "mean_income": 42416
+    },
+    "12930": {
+        "population": 79212,
+        "%_of_pop_with_post_school_education": 60.7,
+        "mean_income": 54517
+    },
+    "12950": {
+        "population": 2127,
+        "%_of_pop_with_post_school_education": 50.2,
+        "mean_income": 36880
+    },
+    "13010": {
+        "population": 4261,
+        "%_of_pop_with_post_school_education": 54.6,
+        "mean_income": 36318
+    },
+    "13310": {
+        "population": 14583,
+        "%_of_pop_with_post_school_education": 58.5,
+        "mean_income": 47482
+    },
+    "13340": {
+        "population": 5584,
+        "%_of_pop_with_post_school_education": 56.9,
+        "mean_income": 43817
+    },
+    "13450": {
+        "population": 13960,
+        "%_of_pop_with_post_school_education": 52.3,
+        "mean_income": 44597
+    },
+    "13550": {
+        "population": 6193,
+        "%_of_pop_with_post_school_education": 53.3,
+        "mean_income": 48046
+    },
+    "13660": {
+        "population": 2444,
+        "%_of_pop_with_post_school_education": 50,
+        "mean_income": 35427
+    },
+    "13800": {
+        "population": 35478,
+        "%_of_pop_with_post_school_education": 58.8,
+        "mean_income": 51674
+    },
+    "13850": {
+        "population": 1674,
+        "%_of_pop_with_post_school_education": 49,
+        "mean_income": 43474
+    },
+    "13910": {
+        "population": 9253,
+        "%_of_pop_with_post_school_education": 52.2,
+        "mean_income": 42324
+    },
+    "14000": {
+        "population": 83168,
+        "%_of_pop_with_post_school_education": 69.6,
+        "mean_income": 63752
+    },
+    "14100": {
+        "population": 7788,
+        "%_of_pop_with_post_school_education": 69.3,
+        "mean_income": 116874
+    },
+    "14170": {
+        "population": 102758,
+        "%_of_pop_with_post_school_education": 71,
+        "mean_income": 69937
+    },
+    "14200": {
+        "population": 7856,
+        "%_of_pop_with_post_school_education": 52.8,
+        "mean_income": 38798
+    },
+    "14300": {
+        "population": 2629,
+        "%_of_pop_with_post_school_education": 62,
+        "mean_income": 47934
+    },
+    "14350": {
+        "population": 12433,
+        "%_of_pop_with_post_school_education": 55.9,
+        "mean_income": 37404
+    },
+    "14400": {
+        "population": 11984,
+        "%_of_pop_with_post_school_education": 68.3,
+        "mean_income": 54413
+    },
+    "14500": {
+        "population": 70303,
+        "%_of_pop_with_post_school_education": 72.1,
+        "mean_income": 95675
+    },
+    "14550": {
+        "population": 4233,
+        "%_of_pop_with_post_school_education": 53.9,
+        "mean_income": 33217
+    },
+    "14600": {
+        "population": 3382,
+        "%_of_pop_with_post_school_education": 48.8,
+        "mean_income": 42902
+    },
+    "14650": {
+        "population": 102871,
+        "%_of_pop_with_post_school_education": 59,
+        "mean_income": 53435
+    },
+    "14700": {
+        "population": 20187,
+        "%_of_pop_with_post_school_education": 75.6,
+        "mean_income": 95621
+    },
+    "14750": {
+        "population": 5814,
+        "%_of_pop_with_post_school_education": 51.4,
+        "mean_income": 41187
+    },
+    "14850": {
+        "population": 22078,
+        "%_of_pop_with_post_school_education": 61,
+        "mean_income": 41521
+    },
+    "14870": {
+        "population": 9523,
+        "%_of_pop_with_post_school_education": 56.7,
+        "mean_income": 54221
+    },
+    "14900": {
+        "population": 86750,
+        "%_of_pop_with_post_school_education": 52.4,
+        "mean_income": 49432
+    },
+    "14920": {
+        "population": 3901,
+        "%_of_pop_with_post_school_education": 50.5,
+        "mean_income": 41306
+    },
+    "14950": {
+        "population": 1699,
+        "%_of_pop_with_post_school_education": 55.3,
+        "mean_income": 45797
+    },
+    "15050": {
+        "population": 37214,
+        "%_of_pop_with_post_school_education": 56.9,
+        "mean_income": 57443
+    },
+    "15240": {
+        "population": 40977,
+        "%_of_pop_with_post_school_education": 55.7,
+        "mean_income": 39398
+    },
+    "15270": {
+        "population": 11686,
+        "%_of_pop_with_post_school_education": 58.2,
+        "mean_income": 50790
+    },
+    "15300": {
+        "population": 6916,
+        "%_of_pop_with_post_school_education": 53.7,
+        "mean_income": 53171
+    },
+    "15350": {
+        "population": 18322,
+        "%_of_pop_with_post_school_education": 75.9,
+        "mean_income": 135798
+    },
+    "15520": {
+        "population": 5679,
+        "%_of_pop_with_post_school_education": 51.9,
+        "mean_income": 40612
+    },
+    "15560": {
+        "population": 2203,
+        "%_of_pop_with_post_school_education": 50.8,
+        "mean_income": 38325
+    },
+    "15650": {
+        "population": 8510,
+        "%_of_pop_with_post_school_education": 53.1,
+        "mean_income": 63293
+    },
+    "15700": {
+        "population": 8205,
+        "%_of_pop_with_post_school_education": 56.5,
+        "mean_income": 36477
+    },
+    "15750": {
+        "population": 7275,
+        "%_of_pop_with_post_school_education": 52.7,
+        "mean_income": 47219
+    },
+    "15800": {
+        "population": 3060,
+        "%_of_pop_with_post_school_education": 52.1,
+        "mean_income": 41746
+    },
+    "15850": {
+        "population": 3353,
+        "%_of_pop_with_post_school_education": 51.9,
+        "mean_income": 43335
+    },
+    "15900": {
+        "population": 82101,
+        "%_of_pop_with_post_school_education": 61.8,
+        "mean_income": 56766
+    },
+    "15950": {
+        "population": 43828,
+        "%_of_pop_with_post_school_education": 81.1,
+        "mean_income": 96339
+    },
+    "15990": {
+        "population": 154633,
+        "%_of_pop_with_post_school_education": 69.5,
+        "mean_income": 72004
+    },
+    "16100": {
+        "population": 2759,
+        "%_of_pop_with_post_school_education": 56.2,
+        "mean_income": 45437
+    },
+    "16150": {
+        "population": 20726,
+        "%_of_pop_with_post_school_education": 59.6,
+        "mean_income": 54396
+    },
+    "16200": {
+        "population": 7496,
+        "%_of_pop_with_post_school_education": 54.2,
+        "mean_income": 45969
+    },
+    "16260": {
+        "population": 111330,
+        "%_of_pop_with_post_school_education": 67.8,
+        "mean_income": 53657
+    },
+    "16350": {
+        "population": 98564,
+        "%_of_pop_with_post_school_education": 54.7,
+        "mean_income": 51780
+    },
+    "16380": {
+        "population": 37882,
+        "%_of_pop_with_post_school_education": 59.4,
+        "mean_income": 42164
+    },
+    "16400": {
+        "population": 34364,
+        "%_of_pop_with_post_school_education": 58.9,
+        "mean_income": 49252
+    },
+    "16490": {
+        "population": 31761,
+        "%_of_pop_with_post_school_education": 63.1,
+        "mean_income": 62376
+    },
+    "16550": {
+        "population": 77004,
+        "%_of_pop_with_post_school_education": 68.7,
+        "mean_income": 69640
+    },
+    "16610": {
+        "population": 9922,
+        "%_of_pop_with_post_school_education": 50.7,
+        "mean_income": 37639
+    },
+    "16700": {
+        "population": 60990,
+        "%_of_pop_with_post_school_education": 68,
+        "mean_income": 59141
+    },
+    "16900": {
+        "population": 32787,
+        "%_of_pop_with_post_school_education": 55.8,
+        "mean_income": 50712
+    },
+    "16950": {
+        "population": 45918,
+        "%_of_pop_with_post_school_education": 59.6,
+        "mean_income": 42483
+    },
+    "17000": {
+        "population": 12940,
+        "%_of_pop_with_post_school_education": 57.3,
+        "mean_income": 68530
+    },
+    "17040": {
+        "population": 10771,
+        "%_of_pop_with_post_school_education": 62.8,
+        "mean_income": 45534
+    },
+    "17080": {
+        "population": 7592,
+        "%_of_pop_with_post_school_education": 54.7,
+        "mean_income": 46410
+    },
+    "17100": {
+        "population": 20586,
+        "%_of_pop_with_post_school_education": 64.6,
+        "mean_income": 57870
+    },
+    "17150": {
+        "population": 131401,
+        "%_of_pop_with_post_school_education": 65.1,
+        "mean_income": 62400
+    },
+    "17200": {
+        "population": 119017,
+        "%_of_pop_with_post_school_education": 74.9,
+        "mean_income": 67978
+    },
+    "17310": {
+        "population": 29892,
+        "%_of_pop_with_post_school_education": 57,
+        "mean_income": 45584
+    },
+    "17350": {
+        "population": 3171,
+        "%_of_pop_with_post_school_education": 49.6,
+        "mean_income": 41318
+    },
+    "17400": {
+        "population": 3085,
+        "%_of_pop_with_post_school_education": 54.4,
+        "mean_income": 33149
+    },
+    "17420": {
+        "population": 87264,
+        "%_of_pop_with_post_school_education": 66.4,
+        "mean_income": 66581
+    },
+    "17550": {
+        "population": 42726,
+        "%_of_pop_with_post_school_education": 58,
+        "mean_income": 42607
+    },
+    "17620": {
+        "population": 7633,
+        "%_of_pop_with_post_school_education": 56.2,
+        "mean_income": 53638
+    },
+    "17640": {
+        "population": 4301,
+        "%_of_pop_with_post_school_education": 58.5,
+        "mean_income": 43692
+    },
+    "17650": {
+        "population": 3269,
+        "%_of_pop_with_post_school_education": 61.1,
+        "mean_income": 39803
+    },
+    "17750": {
+        "population": 32848,
+        "%_of_pop_with_post_school_education": 58.3,
+        "mean_income": 50515
+    },
+    "17850": {
+        "population": 1791,
+        "%_of_pop_with_post_school_education": 56.1,
+        "mean_income": 40363
+    },
+    "17900": {
+        "population": 2752,
+        "%_of_pop_with_post_school_education": 49.1,
+        "mean_income": 41977
+    },
+    "17950": {
+        "population": 1462,
+        "%_of_pop_with_post_school_education": 50.8,
+        "mean_income": 49062
+    },
+    "18020": {
+        "population": 4422,
+        "%_of_pop_with_post_school_education": 52.6,
+        "mean_income": 37121
+    },
+    "18050": {
+        "population": 43058,
+        "%_of_pop_with_post_school_education": 77.3,
+        "mean_income": 82654
+    },
+    "18100": {
+        "population": 1861,
+        "%_of_pop_with_post_school_education": 52.3,
+        "mean_income": 38201
+    },
+    "18200": {
+        "population": 3127,
+        "%_of_pop_with_post_school_education": 54.2,
+        "mean_income": 41367
+    },
+    "18250": {
+        "population": 42534,
+        "%_of_pop_with_post_school_education": 72.3,
+        "mean_income": 87020
+    },
+    "18350": {
+        "population": 25287,
+        "%_of_pop_with_post_school_education": 63.8,
+        "mean_income": 52238
+    },
+    "18400": {
+        "population": 24868,
+        "%_of_pop_with_post_school_education": 59.4,
+        "mean_income": 55031
+    },
+    "18450": {
+        "population": 99528,
+        "%_of_pop_with_post_school_education": 60,
+        "mean_income": 54315
+    },
+    "18500": {
+        "population": 35234,
+        "%_of_pop_with_post_school_education": 76.4,
+        "mean_income": 135361
+    },
+    "18710": {
+        "population": 8993,
+        "%_of_pop_with_post_school_education": 64.1,
+        "mean_income": 59884
+    },
+    "19399": {
+        "population": 437,
+        "%_of_pop_with_post_school_education": 57.4,
+        "mean_income": 44102
+    },
+    "20110": {
+        "population": 6795,
+        "%_of_pop_with_post_school_education": 60.3,
+        "mean_income": 38704
+    },
+    "20260": {
+        "population": 6011,
+        "%_of_pop_with_post_school_education": 56.4,
+        "mean_income": 41287
+    },
+    "20570": {
+        "population": 50277,
+        "%_of_pop_with_post_school_education": 58.2,
+        "mean_income": 48258
+    },
+    "20660": {
+        "population": 68876,
+        "%_of_pop_with_post_school_education": 64.8,
+        "mean_income": 58386
+    },
+    "20740": {
+        "population": 15292,
+        "%_of_pop_with_post_school_education": 58.3,
+        "mean_income": 42322
+    },
+    "20830": {
+        "population": 24163,
+        "%_of_pop_with_post_school_education": 58.3,
+        "mean_income": 46667
+    },
+    "20910": {
+        "population": 57346,
+        "%_of_pop_with_post_school_education": 68.6,
+        "mean_income": 88051
+    },
+    "21010": {
+        "population": 7542,
+        "%_of_pop_with_post_school_education": 56.4,
+        "mean_income": 40802
+    },
+    "21110": {
+        "population": 101723,
+        "%_of_pop_with_post_school_education": 70.6,
+        "mean_income": 86633
+    },
+    "21180": {
+        "population": 91137,
+        "%_of_pop_with_post_school_education": 49,
+        "mean_income": 44590
+    },
+    "21270": {
+        "population": 3638,
+        "%_of_pop_with_post_school_education": 50.8,
+        "mean_income": 40296
+    },
+    "21370": {
+        "population": 20066,
+        "%_of_pop_with_post_school_education": 53.1,
+        "mean_income": 41685
+    },
+    "21450": {
+        "population": 42901,
+        "%_of_pop_with_post_school_education": 58.5,
+        "mean_income": 49242
+    },
+    "21610": {
+        "population": 137366,
+        "%_of_pop_with_post_school_education": 55.8,
+        "mean_income": 48628
+    },
+    "21670": {
+        "population": 5599,
+        "%_of_pop_with_post_school_education": 49.4,
+        "mean_income": 37202
+    },
+    "21750": {
+        "population": 12051,
+        "%_of_pop_with_post_school_education": 54.3,
+        "mean_income": 41464
+    },
+    "21830": {
+        "population": 9245,
+        "%_of_pop_with_post_school_education": 51.2,
+        "mean_income": 41851
+    },
+    "21890": {
+        "population": 72901,
+        "%_of_pop_with_post_school_education": 62.9,
+        "mean_income": 52965
+    },
+    "22110": {
+        "population": 22458,
+        "%_of_pop_with_post_school_education": 57.4,
+        "mean_income": 40366
+    },
+    "22170": {
+        "population": 69959,
+        "%_of_pop_with_post_school_education": 58.8,
+        "mean_income": 47717
+    },
+    "22250": {
+        "population": 5691,
+        "%_of_pop_with_post_school_education": 48.6,
+        "mean_income": 37602
+    },
+    "22310": {
+        "population": 79937,
+        "%_of_pop_with_post_school_education": 68.7,
+        "mean_income": 64171
+    },
+    "22410": {
+        "population": 10726,
+        "%_of_pop_with_post_school_education": 52.5,
+        "mean_income": 47014
+    },
+    "22490": {
+        "population": 10790,
+        "%_of_pop_with_post_school_education": 59.8,
+        "mean_income": 46926
+    },
+    "22620": {
+        "population": 55518,
+        "%_of_pop_with_post_school_education": 58.1,
+        "mean_income": 46194
+    },
+    "22670": {
+        "population": 66075,
+        "%_of_pop_with_post_school_education": 48.6,
+        "mean_income": 40151
+    },
+    "22750": {
+        "population": 117325,
+        "%_of_pop_with_post_school_education": 59.6,
+        "mean_income": 50229
+    },
+    "22830": {
+        "population": 33656,
+        "%_of_pop_with_post_school_education": 52.8,
+        "mean_income": 43235
+    },
+    "22910": {
+        "population": 7633,
+        "%_of_pop_with_post_school_education": 63.6,
+        "mean_income": 42889
+    },
+    "22980": {
+        "population": 3201,
+        "%_of_pop_with_post_school_education": 47.4,
+        "mean_income": 42475
+    },
+    "23110": {
+        "population": 46388,
+        "%_of_pop_with_post_school_education": 59.9,
+        "mean_income": 57082
+    },
+    "23190": {
+        "population": 11386,
+        "%_of_pop_with_post_school_education": 54.5,
+        "mean_income": 44201
+    },
+    "23270": {
+        "population": 83203,
+        "%_of_pop_with_post_school_education": 51,
+        "mean_income": 47058
+    },
+    "23350": {
+        "population": 8913,
+        "%_of_pop_with_post_school_education": 63.2,
+        "mean_income": 45264
+    },
+    "23430": {
+        "population": 83314,
+        "%_of_pop_with_post_school_education": 61.4,
+        "mean_income": 53192
+    },
+    "23670": {
+        "population": 88955,
+        "%_of_pop_with_post_school_education": 59.5,
+        "mean_income": 50399
+    },
+    "23810": {
+        "population": 36943,
+        "%_of_pop_with_post_school_education": 56.2,
+        "mean_income": 52368
+    },
+    "23940": {
+        "population": 3767,
+        "%_of_pop_with_post_school_education": 52.3,
+        "mean_income": 35733
+    },
+    "24130": {
+        "population": 24592,
+        "%_of_pop_with_post_school_education": 64.2,
+        "mean_income": 55310
+    },
+    "24210": {
+        "population": 68380,
+        "%_of_pop_with_post_school_education": 61.9,
+        "mean_income": 59266
+    },
+    "24250": {
+        "population": 4564,
+        "%_of_pop_with_post_school_education": 62,
+        "mean_income": 39279
+    },
+    "24330": {
+        "population": 40047,
+        "%_of_pop_with_post_school_education": 63.9,
+        "mean_income": 52824
+    },
+    "24410": {
+        "population": 60618,
+        "%_of_pop_with_post_school_education": 61.8,
+        "mean_income": 51202
+    },
+    "24600": {
+        "population": 58003,
+        "%_of_pop_with_post_school_education": 71.2,
+        "mean_income": 66592
+    },
+    "24650": {
+        "population": 58544,
+        "%_of_pop_with_post_school_education": 55.8,
+        "mean_income": 49694
+    },
+    "24780": {
+        "population": 27365,
+        "%_of_pop_with_post_school_education": 52,
+        "mean_income": 41939
+    },
+    "24850": {
+        "population": 18627,
+        "%_of_pop_with_post_school_education": 56.6,
+        "mean_income": 48592
+    },
+    "24900": {
+        "population": 14830,
+        "%_of_pop_with_post_school_education": 51.8,
+        "mean_income": 39643
+    },
+    "24970": {
+        "population": 98003,
+        "%_of_pop_with_post_school_education": 62.6,
+        "mean_income": 52011
+    },
+    "25060": {
+        "population": 62659,
+        "%_of_pop_with_post_school_education": 62.8,
+        "mean_income": 61271
+    },
+    "25150": {
+        "population": 15844,
+        "%_of_pop_with_post_school_education": 57,
+        "mean_income": 50233
+    },
+    "25250": {
+        "population": 80683,
+        "%_of_pop_with_post_school_education": 63.1,
+        "mean_income": 51666
+    },
+    "25340": {
+        "population": 81438,
+        "%_of_pop_with_post_school_education": 60.5,
+        "mean_income": 51518
+    },
+    "25430": {
+        "population": 9314,
+        "%_of_pop_with_post_school_education": 66.1,
+        "mean_income": 41765
+    },
+    "25490": {
+        "population": 9477,
+        "%_of_pop_with_post_school_education": 57.7,
+        "mean_income": 43747
+    },
+    "25620": {
+        "population": 7267,
+        "%_of_pop_with_post_school_education": 60.2,
+        "mean_income": 41317
+    },
+    "25710": {
+        "population": 37818,
+        "%_of_pop_with_post_school_education": 65.1,
+        "mean_income": 61607
+    },
+    "25810": {
+        "population": 6382,
+        "%_of_pop_with_post_school_education": 51,
+        "mean_income": 42365
+    },
+    "25900": {
+        "population": 61011,
+        "%_of_pop_with_post_school_education": 76.1,
+        "mean_income": 78625
+    },
+    "25990": {
+        "population": 3374,
+        "%_of_pop_with_post_school_education": 56.3,
+        "mean_income": 35901
+    },
+    "26080": {
+        "population": 1939,
+        "%_of_pop_with_post_school_education": 69.7,
+        "mean_income": 54357
+    },
+    "26170": {
+        "population": 15763,
+        "%_of_pop_with_post_school_education": 56.9,
+        "mean_income": 42437
+    },
+    "26260": {
+        "population": 9613,
+        "%_of_pop_with_post_school_education": 55.3,
+        "mean_income": 44443
+    },
+    "26350": {
+        "population": 63021,
+        "%_of_pop_with_post_school_education": 74.1,
+        "mean_income": 94462
+    },
+    "26430": {
+        "population": 5383,
+        "%_of_pop_with_post_school_education": 56.5,
+        "mean_income": 39320
+    },
+    "26490": {
+        "population": 16383,
+        "%_of_pop_with_post_school_education": 67.7,
+        "mean_income": 52921
+    },
+    "26610": {
+        "population": 11463,
+        "%_of_pop_with_post_school_education": 52.2,
+        "mean_income": 43000
+    },
+    "26670": {
+        "population": 3423,
+        "%_of_pop_with_post_school_education": 58.1,
+        "mean_income": 42774
+    },
+    "26700": {
+        "population": 15672,
+        "%_of_pop_with_post_school_education": 58.1,
+        "mean_income": 42312
+    },
+    "26730": {
+        "population": 18454,
+        "%_of_pop_with_post_school_education": 56.7,
+        "mean_income": 46702
+    },
+    "26810": {
+        "population": 22048,
+        "%_of_pop_with_post_school_education": 57.6,
+        "mean_income": 48786
+    },
+    "26890": {
+        "population": 2406,
+        "%_of_pop_with_post_school_education": 49.3,
+        "mean_income": 40325
+    },
+    "26980": {
+        "population": 87773,
+        "%_of_pop_with_post_school_education": 64.2,
+        "mean_income": 55161
+    },
+    "27070": {
+        "population": 85106,
+        "%_of_pop_with_post_school_education": 54,
+        "mean_income": 47066
+    },
+    "27170": {
+        "population": 20083,
+        "%_of_pop_with_post_school_education": 58.3,
+        "mean_income": 46834
+    },
+    "27260": {
+        "population": 92449,
+        "%_of_pop_with_post_school_education": 60.8,
+        "mean_income": 51210
+    },
+    "27350": {
+        "population": 47913,
+        "%_of_pop_with_post_school_education": 75.1,
+        "mean_income": 70088
+    },
+    "27450": {
+        "population": 84092,
+        "%_of_pop_with_post_school_education": 60.3,
+        "mean_income": 48996
+    },
+    "27630": {
+        "population": 3835,
+        "%_of_pop_with_post_school_education": 50.8,
+        "mean_income": 46159
+    },
+    "29399": {
+        "population": 300,
+        "%_of_pop_with_post_school_education": 73.1,
+        "mean_income": 29137
+    },
+    "30250": {
+        "population": 281,
+        "%_of_pop_with_post_school_education": 28.3,
+        "mean_income": 27895
+    },
+    "30300": {
+        "population": 2706,
+        "%_of_pop_with_post_school_education": 49.4,
+        "mean_income": 47969
+    },
+    "30370": {
+        "population": 8597,
+        "%_of_pop_with_post_school_education": 49.3,
+        "mean_income": 55859
+    },
+    "30410": {
+        "population": 1833,
+        "%_of_pop_with_post_school_education": 48.4,
+        "mean_income": 43288
+    },
+    "30450": {
+        "population": 185,
+        "%_of_pop_with_post_school_education": 40.9,
+        "mean_income": 40042
+    },
+    "30760": {
+        "population": 1157,
+        "%_of_pop_with_post_school_education": 43.6,
+        "mean_income": 42566
+    },
+    "30900": {
+        "population": 206,
+        "%_of_pop_with_post_school_education": 47.6,
+        "mean_income": 55998
+    },
+    "31000": {
+        "population": 635363,
+        "%_of_pop_with_post_school_education": 65.5,
+        "mean_income": 62533
+    },
+    "31750": {
+        "population": 146,
+        "%_of_pop_with_post_school_education": 56.7,
+        "mean_income": 51989
+    },
+    "31820": {
+        "population": 44227,
+        "%_of_pop_with_post_school_education": 51.4,
+        "mean_income": 44050
+    },
+    "31900": {
+        "population": 9999,
+        "%_of_pop_with_post_school_education": 47.4,
+        "mean_income": 54160
+    },
+    "31950": {
+        "population": 153,
+        "%_of_pop_with_post_school_education": 59.9,
+        "mean_income": 49014
+    },
+    "32080": {
+        "population": 84170,
+        "%_of_pop_with_post_school_education": 61.6,
+        "mean_income": 50814
+    },
+    "32250": {
+        "population": 901,
+        "%_of_pop_with_post_school_education": 48.3,
+        "mean_income": 48156
+    },
+    "32260": {
+        "population": 16031,
+        "%_of_pop_with_post_school_education": 52.7,
+        "mean_income": 41110
+    },
+    "32270": {
+        "population": 16795,
+        "%_of_pop_with_post_school_education": 57.2,
+        "mean_income": 67551
+    },
+    "32310": {
+        "population": 5877,
+        "%_of_pop_with_post_school_education": 47.9,
+        "mean_income": 50522
+    },
+    "32330": {
+        "population": 229,
+        "%_of_pop_with_post_school_education": 28.4,
+        "mean_income": 32606
+    },
+    "32450": {
+        "population": 1580,
+        "%_of_pop_with_post_school_education": 55.9,
+        "mean_income": 65494
+    },
+    "32500": {
+        "population": 1683,
+        "%_of_pop_with_post_school_education": 64.4,
+        "mean_income": 41452
+    },
+    "32600": {
+        "population": 145,
+        "%_of_pop_with_post_school_education": 56.8,
+        "mean_income": 29331
+    },
+    "32750": {
+        "population": 142,
+        "%_of_pop_with_post_school_education": 57.7,
+        "mean_income": 53501
+    },
+    "32770": {
+        "population": 257,
+        "%_of_pop_with_post_school_education": 24.7,
+        "mean_income": 39112
+    },
+    "32810": {
+        "population": 6594,
+        "%_of_pop_with_post_school_education": 64.2,
+        "mean_income": 40561
+    },
+    "33100": {
+        "population": 463,
+        "%_of_pop_with_post_school_education": 44.5,
+        "mean_income": 30013
+    },
+    "33200": {
+        "population": 993,
+        "%_of_pop_with_post_school_education": 42.7,
+        "mean_income": 46580
+    },
+    "33220": {
+        "population": 43014,
+        "%_of_pop_with_post_school_education": 53.8,
+        "mean_income": 42829
+    },
+    "33360": {
+        "population": 33849,
+        "%_of_pop_with_post_school_education": 57.4,
+        "mean_income": 68938
+    },
+    "33430": {
+        "population": 285196,
+        "%_of_pop_with_post_school_education": 60.8,
+        "mean_income": 49223
+    },
+    "33610": {
+        "population": 6311,
+        "%_of_pop_with_post_school_education": 51,
+        "mean_income": 45758
+    },
+    "33620": {
+        "population": 22215,
+        "%_of_pop_with_post_school_education": 53.3,
+        "mean_income": 40150
+    },
+    "33800": {
+        "population": 6170,
+        "%_of_pop_with_post_school_education": 48.9,
+        "mean_income": 46970
+    },
+    "33830": {
+        "population": 310,
+        "%_of_pop_with_post_school_education": 50.8,
+        "mean_income": 37973
+    },
+    "33960": {
+        "population": 86353,
+        "%_of_pop_with_post_school_education": 55.1,
+        "mean_income": 49157
+    },
+    "33980": {
+        "population": 11913,
+        "%_of_pop_with_post_school_education": 60.9,
+        "mean_income": 79886
+    },
+    "34420": {
+        "population": 291,
+        "%_of_pop_with_post_school_education": 32.6,
+        "mean_income": 31537
+    },
+    "34530": {
+        "population": 18417,
+        "%_of_pop_with_post_school_education": 57.5,
+        "mean_income": 59245
+    },
+    "34570": {
+        "population": 200,
+        "%_of_pop_with_post_school_education": 45.6,
+        "mean_income": 30003
+    },
+    "34580": {
+        "population": 18206,
+        "%_of_pop_with_post_school_education": 51.8,
+        "mean_income": 42706
+    },
+    "34590": {
+        "population": 146254,
+        "%_of_pop_with_post_school_education": 53.5,
+        "mean_income": 47649
+    },
+    "34710": {
+        "population": 2385,
+        "%_of_pop_with_post_school_education": 56.2,
+        "mean_income": 49226
+    },
+    "34770": {
+        "population": 69546,
+        "%_of_pop_with_post_school_education": 55.8,
+        "mean_income": 65522
+    },
+    "34800": {
+        "population": 584,
+        "%_of_pop_with_post_school_education": 52.6,
+        "mean_income": 19837
+    },
+    "34830": {
+        "population": null,
+        "%_of_pop_with_post_school_education": 46.4,
+        "mean_income": null
+    },
+    "34860": {
+        "population": 7358,
+        "%_of_pop_with_post_school_education": 54.1,
+        "mean_income": 50088
+    },
+    "34880": {
+        "population": 10615,
+        "%_of_pop_with_post_school_education": 57.2,
+        "mean_income": 42076
+    },
+    "35010": {
+        "population": 208726,
+        "%_of_pop_with_post_school_education": 57.3,
+        "mean_income": 50686
+    },
+    "35250": {
+        "population": 248,
+        "%_of_pop_with_post_school_education": 48.2,
+        "mean_income": 41415
+    },
+    "35300": {
+        "population": 12260,
+        "%_of_pop_with_post_school_education": 58.8,
+        "mean_income": 68759
+    },
+    "35600": {
+        "population": 2564,
+        "%_of_pop_with_post_school_education": 47.1,
+        "mean_income": 45999
+    },
+    "35670": {
+        "population": 211,
+        "%_of_pop_with_post_school_education": 24.8,
+        "mean_income": 36906
+    },
+    "35740": {
+        "population": 28742,
+        "%_of_pop_with_post_school_education": 62.6,
+        "mean_income": 45163
+    },
+    "35760": {
+        "population": 5856,
+        "%_of_pop_with_post_school_education": 48.7,
+        "mean_income": 34996
+    },
+    "35780": {
+        "population": 789,
+        "%_of_pop_with_post_school_education": 52,
+        "mean_income": 39338
+    },
+    "35790": {
+        "population": 491,
+        "%_of_pop_with_post_school_education": 29.8,
+        "mean_income": 37121
+    },
+    "35800": {
+        "population": 873,
+        "%_of_pop_with_post_school_education": 45.4,
+        "mean_income": 42336
+    },
+    "36070": {
+        "population": 244,
+        "%_of_pop_with_post_school_education": 32.5,
+        "mean_income": 33479
+    },
+    "36150": {
+        "population": 550,
+        "%_of_pop_with_post_school_education": 44.4,
+        "mean_income": 46196
+    },
+    "36250": {
+        "population": 80547,
+        "%_of_pop_with_post_school_education": 58.6,
+        "mean_income": 54693
+    },
+    "36300": {
+        "population": 499,
+        "%_of_pop_with_post_school_education": 48.4,
+        "mean_income": 42104
+    },
+    "36370": {
+        "population": 41868,
+        "%_of_pop_with_post_school_education": 52.6,
+        "mean_income": 55470
+    },
+    "36510": {
+        "population": 19694,
+        "%_of_pop_with_post_school_education": 56.3,
+        "mean_income": 43502
+    },
+    "36580": {
+        "population": 10787,
+        "%_of_pop_with_post_school_education": 52.2,
+        "mean_income": 42831
+    },
+    "36630": {
+        "population": 14545,
+        "%_of_pop_with_post_school_education": 51.1,
+        "mean_income": 41114
+    },
+    "36660": {
+        "population": 18274,
+        "%_of_pop_with_post_school_education": 50.5,
+        "mean_income": 37089
+    },
+    "36720": {
+        "population": 149154,
+        "%_of_pop_with_post_school_education": 60.8,
+        "mean_income": 46702
+    },
+    "36820": {
+        "population": 12726,
+        "%_of_pop_with_post_school_education": 56.3,
+        "mean_income": 42662
+    },
+    "36910": {
+        "population": 83683,
+        "%_of_pop_with_post_school_education": 56.9,
+        "mean_income": 48373
+    },
+    "36950": {
+        "population": 1679,
+        "%_of_pop_with_post_school_education": 64.8,
+        "mean_income": 51512
+    },
+    "36960": {
+        "population": 612,
+        "%_of_pop_with_post_school_education": 55.6,
+        "mean_income": 33667
+    },
+    "37010": {
+        "population": 102369,
+        "%_of_pop_with_post_school_education": 58,
+        "mean_income": 56796
+    },
+    "37300": {
+        "population": 1601,
+        "%_of_pop_with_post_school_education": 66.8,
+        "mean_income": 75567
+    },
+    "37310": {
+        "population": 17476,
+        "%_of_pop_with_post_school_education": 53.2,
+        "mean_income": 47972
+    },
+    "37340": {
+        "population": 19416,
+        "%_of_pop_with_post_school_education": 59.5,
+        "mean_income": 52502
+    },
+    "37400": {
+        "population": 731,
+        "%_of_pop_with_post_school_education": 48.3,
+        "mean_income": 54064
+    },
+    "37550": {
+        "population": 205,
+        "%_of_pop_with_post_school_education": 38.6,
+        "mean_income": 38546
+    },
+    "37570": {
+        "population": 79,
+        "%_of_pop_with_post_school_education": 39.6,
+        "mean_income": 33521
+    },
+    "37600": {
+        "population": 440,
+        "%_of_pop_with_post_school_education": 35.9,
+        "mean_income": 34313
+    },
+    "40070": {
+        "population": 12211,
+        "%_of_pop_with_post_school_education": 67.3,
+        "mean_income": 67327
+    },
+    "40120": {
+        "population": 24084,
+        "%_of_pop_with_post_school_education": 65.9,
+        "mean_income": 59960
+    },
+    "40150": {
+        "population": null,
+        "%_of_pop_with_post_school_education": 48.2,
+        "mean_income": null
+    },
+    "40220": {
+        "population": 12613,
+        "%_of_pop_with_post_school_education": 57.8,
+        "mean_income": 40851
+    },
+    "40250": {
+        "population": 221,
+        "%_of_pop_with_post_school_education": 41.8,
+        "mean_income": 29782
+    },
+    "40310": {
+        "population": 13146,
+        "%_of_pop_with_post_school_education": 56.3,
+        "mean_income": 48029
+    },
+    "40430": {
+        "population": 1172,
+        "%_of_pop_with_post_school_education": 45.1,
+        "mean_income": 47673
+    },
+    "40520": {
+        "population": 5423,
+        "%_of_pop_with_post_school_education": 48.5,
+        "mean_income": 40618
+    },
+    "40700": {
+        "population": 27846,
+        "%_of_pop_with_post_school_education": 68.1,
+        "mean_income": 77314
+    },
+    "40910": {
+        "population": 27123,
+        "%_of_pop_with_post_school_education": 57.1,
+        "mean_income": 48521
+    },
+    "41010": {
+        "population": 2124,
+        "%_of_pop_with_post_school_education": 51.4,
+        "mean_income": 48804
+    },
+    "41060": {
+        "population": 58240,
+        "%_of_pop_with_post_school_education": 55.8,
+        "mean_income": 50960
+    },
+    "41140": {
+        "population": 5012,
+        "%_of_pop_with_post_school_education": 55.4,
+        "mean_income": 45186
+    },
+    "41190": {
+        "population": 1071,
+        "%_of_pop_with_post_school_education": 49,
+        "mean_income": 53474
+    },
+    "41330": {
+        "population": 771,
+        "%_of_pop_with_post_school_education": 58.7,
+        "mean_income": 45890
+    },
+    "41560": {
+        "population": 6380,
+        "%_of_pop_with_post_school_education": 48.8,
+        "mean_income": 45000
+    },
+    "41750": {
+        "population": 606,
+        "%_of_pop_with_post_school_education": 48.3,
+        "mean_income": 46329
+    },
+    "41830": {
+        "population": 976,
+        "%_of_pop_with_post_school_education": 51.5,
+        "mean_income": 51279
+    },
+    "41960": {
+        "population": 696,
+        "%_of_pop_with_post_school_education": 47.5,
+        "mean_income": 49887
+    },
+    "42030": {
+        "population": 11108,
+        "%_of_pop_with_post_school_education": 52.7,
+        "mean_income": 47135
+    },
+    "42110": {
+        "population": 2083,
+        "%_of_pop_with_post_school_education": 48.7,
+        "mean_income": 40565
+    },
+    "42250": {
+        "population": 3042,
+        "%_of_pop_with_post_school_education": 55.1,
+        "mean_income": 46011
+    },
+    "42600": {
+        "population": 22033,
+        "%_of_pop_with_post_school_education": 64.3,
+        "mean_income": 60774
+    },
+    "42750": {
+        "population": 2663,
+        "%_of_pop_with_post_school_education": 55.9,
+        "mean_income": 38677
+    },
+    "43080": {
+        "population": 569,
+        "%_of_pop_with_post_school_education": 43.1,
+        "mean_income": 36256
+    },
+    "43220": {
+        "population": 635,
+        "%_of_pop_with_post_school_education": 46.9,
+        "mean_income": 57178
+    },
+    "43360": {
+        "population": 1173,
+        "%_of_pop_with_post_school_education": 48,
+        "mean_income": 44464
+    },
+    "43650": {
+        "population": 7642,
+        "%_of_pop_with_post_school_education": 54.8,
+        "mean_income": 49544
+    },
+    "43710": {
+        "population": 2376,
+        "%_of_pop_with_post_school_education": 56.6,
+        "mean_income": 51936
+    },
+    "43790": {
+        "population": 6130,
+        "%_of_pop_with_post_school_education": 47.6,
+        "mean_income": 39574
+    },
+    "44000": {
+        "population": null,
+        "%_of_pop_with_post_school_education": 94,
+        "mean_income": null
+    },
+    "44060": {
+        "population": 47833,
+        "%_of_pop_with_post_school_education": 59.2,
+        "mean_income": 48015
+    },
+    "44210": {
+        "population": 3890,
+        "%_of_pop_with_post_school_education": 50.6,
+        "mean_income": 38340
+    },
+    "44340": {
+        "population": 38751,
+        "%_of_pop_with_post_school_education": 66.1,
+        "mean_income": 60014
+    },
+    "44550": {
+        "population": 17410,
+        "%_of_pop_with_post_school_education": 60.8,
+        "mean_income": 49511
+    },
+    "44620": {
+        "population": 15073,
+        "%_of_pop_with_post_school_education": 50,
+        "mean_income": 46077
+    },
+    "44830": {
+        "population": 1368,
+        "%_of_pop_with_post_school_education": 50.1,
+        "mean_income": 42630
+    },
+    "45040": {
+        "population": 9893,
+        "%_of_pop_with_post_school_education": 48.2,
+        "mean_income": 39259
+    },
+    "45090": {
+        "population": 5347,
+        "%_of_pop_with_post_school_education": 48.9,
+        "mean_income": 44243
+    },
+    "45120": {
+        "population": 2428,
+        "%_of_pop_with_post_school_education": 50.1,
+        "mean_income": 47238
+    },
+    "45290": {
+        "population": 20610,
+        "%_of_pop_with_post_school_education": 65,
+        "mean_income": 63277
+    },
+    "45340": {
+        "population": 87819,
+        "%_of_pop_with_post_school_education": 56.8,
+        "mean_income": 45765
+    },
+    "45400": {
+        "population": 547,
+        "%_of_pop_with_post_school_education": 49.9,
+        "mean_income": 42924
+    },
+    "45540": {
+        "population": 692,
+        "%_of_pop_with_post_school_education": 41,
+        "mean_income": 39821
+    },
+    "45680": {
+        "population": 35749,
+        "%_of_pop_with_post_school_education": 47.2,
+        "mean_income": 42772
+    },
+    "45890": {
+        "population": 57120,
+        "%_of_pop_with_post_school_education": 55.2,
+        "mean_income": 46920
+    },
+    "46090": {
+        "population": 7017,
+        "%_of_pop_with_post_school_education": 53.7,
+        "mean_income": 53314
+    },
+    "46300": {
+        "population": 8301,
+        "%_of_pop_with_post_school_education": 52.9,
+        "mean_income": 49263
+    },
+    "46450": {
+        "population": 7911,
+        "%_of_pop_with_post_school_education": 45.7,
+        "mean_income": 47437
+    },
+    "46510": {
+        "population": 11917,
+        "%_of_pop_with_post_school_education": 63.9,
+        "mean_income": 58999
+    },
+    "46670": {
+        "population": 5070,
+        "%_of_pop_with_post_school_education": 47.1,
+        "mean_income": 37978
+    },
+    "46860": {
+        "population": 841,
+        "%_of_pop_with_post_school_education": 58.5,
+        "mean_income": 41593
+    },
+    "46970": {
+        "population": 2731,
+        "%_of_pop_with_post_school_education": 64.6,
+        "mean_income": 84137
+    },
+    "47140": {
+        "population": 65130,
+        "%_of_pop_with_post_school_education": 48.8,
+        "mean_income": 44171
+    },
+    "47290": {
+        "population": 1250,
+        "%_of_pop_with_post_school_education": 46.2,
+        "mean_income": 42043
+    },
+    "47490": {
+        "population": 1209,
+        "%_of_pop_with_post_school_education": 50.5,
+        "mean_income": 51358
+    },
+    "47630": {
+        "population": 4112,
+        "%_of_pop_with_post_school_education": 50.1,
+        "mean_income": 39406
+    },
+    "47700": {
+        "population": 56438,
+        "%_of_pop_with_post_school_education": 57.2,
+        "mean_income": 49297
+    },
+    "47800": {
+        "population": 2895,
+        "%_of_pop_with_post_school_education": 44.6,
+        "mean_income": 39491
+    },
+    "47910": {
+        "population": 1366,
+        "%_of_pop_with_post_school_education": 47.8,
+        "mean_income": 45165
+    },
+    "47980": {
+        "population": 22962,
+        "%_of_pop_with_post_school_education": 67.9,
+        "mean_income": 72684
+    },
+    "48050": {
+        "population": 7106,
+        "%_of_pop_with_post_school_education": 55,
+        "mean_income": 37998
+    },
+    "48130": {
+        "population": 3379,
+        "%_of_pop_with_post_school_education": 46.7,
+        "mean_income": 46174
+    },
+    "48260": {
+        "population": 4455,
+        "%_of_pop_with_post_school_education": 66.8,
+        "mean_income": 87001
+    },
+    "48340": {
+        "population": 6404,
+        "%_of_pop_with_post_school_education": 47.9,
+        "mean_income": 47732
+    },
+    "48410": {
+        "population": 31519,
+        "%_of_pop_with_post_school_education": 59.2,
+        "mean_income": 49366
+    },
+    "48540": {
+        "population": 10420,
+        "%_of_pop_with_post_school_education": 51.7,
+        "mean_income": 57034
+    },
+    "48640": {
+        "population": 767,
+        "%_of_pop_with_post_school_education": 44.4,
+        "mean_income": 60574
+    },
+    "48750": {
+        "population": 2391,
+        "%_of_pop_with_post_school_education": 56.2,
+        "mean_income": 40255
+    },
+    "48830": {
+        "population": 5432,
+        "%_of_pop_with_post_school_education": 47,
+        "mean_income": 44779
+    },
+    "49399": {
+        "population": 1550,
+        "%_of_pop_with_post_school_education": 58.2,
+        "mean_income": 57583
+    },
+    "50080": {
+        "population": 19755,
+        "%_of_pop_with_post_school_education": 57.6,
+        "mean_income": 47393
+    },
+    "50210": {
+        "population": 36753,
+        "%_of_pop_with_post_school_education": 58.3,
+        "mean_income": 56877
+    },
+    "50250": {
+        "population": 3366,
+        "%_of_pop_with_post_school_education": 72.3,
+        "mean_income": 90204
+    },
+    "50280": {
+        "population": 8096,
+        "%_of_pop_with_post_school_education": 65.7,
+        "mean_income": 45883
+    },
+    "50350": {
+        "population": 8642,
+        "%_of_pop_with_post_school_education": 60.9,
+        "mean_income": 58920
+    },
+    "50420": {
+        "population": 38548,
+        "%_of_pop_with_post_school_education": 62.9,
+        "mean_income": 57927
+    },
+    "50490": {
+        "population": 21602,
+        "%_of_pop_with_post_school_education": 61.7,
+        "mean_income": 58318
+    },
+    "50560": {
+        "population": 877,
+        "%_of_pop_with_post_school_education": 53.6,
+        "mean_income": 47601
+    },
+    "50630": {
+        "population": 938,
+        "%_of_pop_with_post_school_education": 55.1,
+        "mean_income": 69239
+    },
+    "50770": {
+        "population": 972,
+        "%_of_pop_with_post_school_education": 51,
+        "mean_income": 44705
+    },
+    "50840": {
+        "population": 2411,
+        "%_of_pop_with_post_school_education": 59.4,
+        "mean_income": 47012
+    },
+    "50910": {
+        "population": 520,
+        "%_of_pop_with_post_school_education": 48.1,
+        "mean_income": 45477
+    },
+    "50980": {
+        "population": 7570,
+        "%_of_pop_with_post_school_education": 65.3,
+        "mean_income": 60199
+    },
+    "51080": {
+        "population": 553,
+        "%_of_pop_with_post_school_education": 52.8,
+        "mean_income": 39468
+    },
+    "51120": {
+        "population": 548,
+        "%_of_pop_with_post_school_education": 49.8,
+        "mean_income": 43313
+    },
+    "51190": {
+        "population": 18156,
+        "%_of_pop_with_post_school_education": 57.3,
+        "mean_income": 59357
+    },
+    "51260": {
+        "population": 19010,
+        "%_of_pop_with_post_school_education": 60,
+        "mean_income": 51880
+    },
+    "51310": {
+        "population": 16473,
+        "%_of_pop_with_post_school_education": 73.6,
+        "mean_income": 101468
+    },
+    "51330": {
+        "population": 53726,
+        "%_of_pop_with_post_school_education": 62.3,
+        "mean_income": 56336
+    },
+    "51400": {
+        "population": 8481,
+        "%_of_pop_with_post_school_education": 59.9,
+        "mean_income": 63327
+    },
+    "51470": {
+        "population": 403,
+        "%_of_pop_with_post_school_education": 48.9,
+        "mean_income": 50807
+    },
+    "51540": {
+        "population": 3101,
+        "%_of_pop_with_post_school_education": 55.6,
+        "mean_income": 53136
+    },
+    "51610": {
+        "population": 613,
+        "%_of_pop_with_post_school_education": 57.2,
+        "mean_income": 60220
+    },
+    "51680": {
+        "population": 2674,
+        "%_of_pop_with_post_school_education": 56.5,
+        "mean_income": 54486
+    },
+    "51750": {
+        "population": 6253,
+        "%_of_pop_with_post_school_education": 72.8,
+        "mean_income": 107544
+    },
+    "51820": {
+        "population": 56013,
+        "%_of_pop_with_post_school_education": 61,
+        "mean_income": 61727
+    },
+    "51890": {
+        "population": 4613,
+        "%_of_pop_with_post_school_education": 51.4,
+        "mean_income": 64022
+    },
+    "51960": {
+        "population": 1926,
+        "%_of_pop_with_post_school_education": 51.9,
+        "mean_income": 74197
+    },
+    "52030": {
+        "population": 604,
+        "%_of_pop_with_post_school_education": 48.4,
+        "mean_income": 51396
+    },
+    "52100": {
+        "population": 687,
+        "%_of_pop_with_post_school_education": 47.7,
+        "mean_income": 46254
+    },
+    "52170": {
+        "population": 5318,
+        "%_of_pop_with_post_school_education": 77.1,
+        "mean_income": 132753
+    },
+    "52240": {
+        "population": 598,
+        "%_of_pop_with_post_school_education": 51.4,
+        "mean_income": 43266
+    },
+    "52310": {
+        "population": 424,
+        "%_of_pop_with_post_school_education": 54.1,
+        "mean_income": 45305
+    },
+    "52380": {
+        "population": 129,
+        "%_of_pop_with_post_school_education": 54.8,
+        "mean_income": 52122
+    },
+    "52450": {
+        "population": 740,
+        "%_of_pop_with_post_school_education": 46,
+        "mean_income": 47244
+    },
+    "52520": {
+        "population": 956,
+        "%_of_pop_with_post_school_education": 47.6,
+        "mean_income": 50122
+    },
+    "52590": {
+        "population": 1684,
+        "%_of_pop_with_post_school_education": 53.6,
+        "mean_income": 51285
+    },
+    "52660": {
+        "population": 7491,
+        "%_of_pop_with_post_school_education": 56.1,
+        "mean_income": 58722
+    },
+    "52730": {
+        "population": 3092,
+        "%_of_pop_with_post_school_education": 64.8,
+        "mean_income": 41920
+    },
+    "52800": {
+        "population": 2336,
+        "%_of_pop_with_post_school_education": 53.9,
+        "mean_income": 53240
+    },
+    "52870": {
+        "population": 3214,
+        "%_of_pop_with_post_school_education": 58.2,
+        "mean_income": 49315
+    },
+    "52940": {
+        "population": 399,
+        "%_of_pop_with_post_school_education": 45.4,
+        "mean_income": 42849
+    },
+    "53010": {
+        "population": 400,
+        "%_of_pop_with_post_school_education": 49.1,
+        "mean_income": 37067
+    },
+    "53080": {
+        "population": 380,
+        "%_of_pop_with_post_school_education": 51.4,
+        "mean_income": 59392
+    },
+    "53150": {
+        "population": 4515,
+        "%_of_pop_with_post_school_education": 72.4,
+        "mean_income": 83410
+    },
+    "53220": {
+        "population": 3137,
+        "%_of_pop_with_post_school_education": 66.7,
+        "mean_income": 86822
+    },
+    "53290": {
+        "population": 8062,
+        "%_of_pop_with_post_school_education": 55,
+        "mean_income": 50559
+    },
+    "53360": {
+        "population": 1475,
+        "%_of_pop_with_post_school_education": 66.1,
+        "mean_income": 59508
+    },
+    "53430": {
+        "population": 17358,
+        "%_of_pop_with_post_school_education": 68.7,
+        "mean_income": 69312
+    },
+    "53570": {
+        "population": 2746,
+        "%_of_pop_with_post_school_education": 53.4,
+        "mean_income": 48726
+    },
+    "53640": {
+        "population": 801,
+        "%_of_pop_with_post_school_education": 51.1,
+        "mean_income": 50879
+    },
+    "53710": {
+        "population": 529,
+        "%_of_pop_with_post_school_education": 49.8,
+        "mean_income": 46537
+    },
+    "53780": {
+        "population": 62420,
+        "%_of_pop_with_post_school_education": 55.6,
+        "mean_income": 54343
+    },
+    "53800": {
+        "population": 21672,
+        "%_of_pop_with_post_school_education": 55.4,
+        "mean_income": 58744
+    },
+    "53920": {
+        "population": 807,
+        "%_of_pop_with_post_school_education": 53.9,
+        "mean_income": 44855
+    },
+    "53990": {
+        "population": 14000,
+        "%_of_pop_with_post_school_education": 56.7,
+        "mean_income": 61112
+    },
+    "54060": {
+        "population": 2022,
+        "%_of_pop_with_post_school_education": 53.2,
+        "mean_income": 58280
+    },
+    "54130": {
+        "population": 682,
+        "%_of_pop_with_post_school_education": 55,
+        "mean_income": 49459
+    },
+    "54170": {
+        "population": 100349,
+        "%_of_pop_with_post_school_education": 63.2,
+        "mean_income": 64260
+    },
+    "54200": {
+        "population": 33853,
+        "%_of_pop_with_post_school_education": 58.5,
+        "mean_income": 61826
+    },
+    "54280": {
+        "population": 18765,
+        "%_of_pop_with_post_school_education": 57.1,
+        "mean_income": 70271
+    },
+    "54310": {
+        "population": 11878,
+        "%_of_pop_with_post_school_education": 67.2,
+        "mean_income": 90304
+    },
+    "54340": {
+        "population": 2240,
+        "%_of_pop_with_post_school_education": 49.8,
+        "mean_income": 44355
+    },
+    "54410": {
+        "population": 586,
+        "%_of_pop_with_post_school_education": 48.6,
+        "mean_income": 44115
+    },
+    "54480": {
+        "population": 324,
+        "%_of_pop_with_post_school_education": 53.2,
+        "mean_income": 53142
+    },
+    "54550": {
+        "population": 1422,
+        "%_of_pop_with_post_school_education": 52.6,
+        "mean_income": 44263
+    },
+    "54620": {
+        "population": 613,
+        "%_of_pop_with_post_school_education": 47.2,
+        "mean_income": 35585
+    },
+    "54690": {
+        "population": 243,
+        "%_of_pop_with_post_school_education": 41.4,
+        "mean_income": 32114
+    },
+    "54760": {
+        "population": 487,
+        "%_of_pop_with_post_school_education": 48.1,
+        "mean_income": 40158
+    },
+    "54830": {
+        "population": 15924,
+        "%_of_pop_with_post_school_education": 58.8,
+        "mean_income": 56653
+    },
+    "54900": {
+        "population": 975,
+        "%_of_pop_with_post_school_education": 50.7,
+        "mean_income": 44506
+    },
+    "54970": {
+        "population": 232,
+        "%_of_pop_with_post_school_education": 60.5,
+        "mean_income": 54070
+    },
+    "55040": {
+        "population": 704,
+        "%_of_pop_with_post_school_education": 63.2,
+        "mean_income": 68421
+    },
+    "55110": {
+        "population": 39116,
+        "%_of_pop_with_post_school_education": 55.4,
+        "mean_income": 58927
+    },
+    "55180": {
+        "population": 5275,
+        "%_of_pop_with_post_school_education": 51.1,
+        "mean_income": 43640
+    },
+    "55250": {
+        "population": 379,
+        "%_of_pop_with_post_school_education": 61.9,
+        "mean_income": 50317
+    },
+    "55320": {
+        "population": 63154,
+        "%_of_pop_with_post_school_education": 66.5,
+        "mean_income": 72297
+    },
+    "55390": {
+        "population": 54,
+        "%_of_pop_with_post_school_education": 53.8,
+        "mean_income": 52088
+    },
+    "55460": {
+        "population": 1788,
+        "%_of_pop_with_post_school_education": 48.1,
+        "mean_income": 54125
+    },
+    "55530": {
+        "population": 269,
+        "%_of_pop_with_post_school_education": 49.5,
+        "mean_income": 63304
+    },
+    "55600": {
+        "population": 1487,
+        "%_of_pop_with_post_school_education": 48.5,
+        "mean_income": 49745
+    },
+    "55670": {
+        "population": 438,
+        "%_of_pop_with_post_school_education": 48.4,
+        "mean_income": 63535
+    },
+    "55740": {
+        "population": 5455,
+        "%_of_pop_with_post_school_education": 72,
+        "mean_income": 112197
+    },
+    "55810": {
+        "population": 229,
+        "%_of_pop_with_post_school_education": 58.9,
+        "mean_income": 48616
+    },
+    "55880": {
+        "population": 296,
+        "%_of_pop_with_post_school_education": 42.1,
+        "mean_income": 29593
+    },
+    "55950": {
+        "population": 365,
+        "%_of_pop_with_post_school_education": 46.9,
+        "mean_income": 29949
+    },
+    "56090": {
+        "population": 21701,
+        "%_of_pop_with_post_school_education": 63.3,
+        "mean_income": 61895
+    },
+    "56160": {
+        "population": null,
+        "%_of_pop_with_post_school_education": 55,
+        "mean_income": null
+    },
+    "56230": {
+        "population": 7712,
+        "%_of_pop_with_post_school_education": 52,
+        "mean_income": 59558
+    },
+    "56300": {
+        "population": 726,
+        "%_of_pop_with_post_school_education": 55.7,
+        "mean_income": 42293
+    },
+    "56370": {
+        "population": 518,
+        "%_of_pop_with_post_school_education": 39.3,
+        "mean_income": 32231
+    },
+    "56460": {
+        "population": 2573,
+        "%_of_pop_with_post_school_education": 55.4,
+        "mean_income": 50052
+    },
+    "56580": {
+        "population": 13656,
+        "%_of_pop_with_post_school_education": 73.4,
+        "mean_income": 122103
+    },
+    "56620": {
+        "population": null,
+        "%_of_pop_with_post_school_education": 43,
+        "mean_income": null
+    },
+    "56730": {
+        "population": 5334,
+        "%_of_pop_with_post_school_education": 55.1,
+        "mean_income": 52632
+    },
+    "56790": {
+        "population": 1782,
+        "%_of_pop_with_post_school_education": 52.7,
+        "mean_income": 46552
+    },
+    "56860": {
+        "population": 114,
+        "%_of_pop_with_post_school_education": 42.2,
+        "mean_income": 54853
+    },
+    "56930": {
+        "population": 1074,
+        "%_of_pop_with_post_school_education": 67.6,
+        "mean_income": 195343
+    },
+    "57000": {
+        "population": 283,
+        "%_of_pop_with_post_school_education": 56,
+        "mean_income": 50638
+    },
+    "57080": {
+        "population": 14756,
+        "%_of_pop_with_post_school_education": 75,
+        "mean_income": 78760
+    },
+    "57140": {
+        "population": 614,
+        "%_of_pop_with_post_school_education": 47.6,
+        "mean_income": 43177
+    },
+    "57210": {
+        "population": 2728,
+        "%_of_pop_with_post_school_education": 55.1,
+        "mean_income": 41654
+    },
+    "57280": {
+        "population": 8099,
+        "%_of_pop_with_post_school_education": 66,
+        "mean_income": 84490
+    },
+    "57350": {
+        "population": 566,
+        "%_of_pop_with_post_school_education": 48.2,
+        "mean_income": 52407
+    },
+    "57420": {
+        "population": 1144,
+        "%_of_pop_with_post_school_education": 55,
+        "mean_income": 53200
+    },
+    "57490": {
+        "population": 60343,
+        "%_of_pop_with_post_school_education": 58,
+        "mean_income": 61543
+    },
+    "57630": {
+        "population": 43,
+        "%_of_pop_with_post_school_education": 58.1,
+        "mean_income": 48673
+    },
+    "57700": {
+        "population": 10927,
+        "%_of_pop_with_post_school_education": 58.3,
+        "mean_income": 63014
+    },
+    "57770": {
+        "population": 422,
+        "%_of_pop_with_post_school_education": 59.8,
+        "mean_income": 50032
+    },
+    "57840": {
+        "population": 26617,
+        "%_of_pop_with_post_school_education": 69.4,
+        "mean_income": 77480
+    },
+    "57910": {
+        "population": 124526,
+        "%_of_pop_with_post_school_education": 64.6,
+        "mean_income": 65145
+    },
+    "57980": {
+        "population": 11160,
+        "%_of_pop_with_post_school_education": 77,
+        "mean_income": 91312
+    },
+    "58050": {
+        "population": 64350,
+        "%_of_pop_with_post_school_education": 56.4,
+        "mean_income": 57197
+    },
+    "58190": {
+        "population": 222,
+        "%_of_pop_with_post_school_education": 46.8,
+        "mean_income": 43884
+    },
+    "58260": {
+        "population": 324,
+        "%_of_pop_with_post_school_education": 51.3,
+        "mean_income": 47671
+    },
+    "58330": {
+        "population": 2310,
+        "%_of_pop_with_post_school_education": 57.4,
+        "mean_income": 54932
+    },
+    "58400": {
+        "population": 178,
+        "%_of_pop_with_post_school_education": 47.6,
+        "mean_income": 36313
+    },
+    "58470": {
+        "population": 36,
+        "%_of_pop_with_post_school_education": 49.5,
+        "mean_income": 60015
+    },
+    "58510": {
+        "population": 20867,
+        "%_of_pop_with_post_school_education": 68.3,
+        "mean_income": 62518
+    },
+    "58540": {
+        "population": 568,
+        "%_of_pop_with_post_school_education": 48.1,
+        "mean_income": 43790
+    },
+    "58570": {
+        "population": 21494,
+        "%_of_pop_with_post_school_education": 73.3,
+        "mean_income": 70673
+    },
+    "58610": {
+        "population": 1225,
+        "%_of_pop_with_post_school_education": 47.4,
+        "mean_income": 44520
+    },
+    "58680": {
+        "population": 217,
+        "%_of_pop_with_post_school_education": 51.1,
+        "mean_income": 61915
+    },
+    "58760": {
+        "population": 89250,
+        "%_of_pop_with_post_school_education": 57.5,
+        "mean_income": 57055
+    },
+    "58820": {
+        "population": 2028,
+        "%_of_pop_with_post_school_education": 53.7,
+        "mean_income": 59406
+    },
+    "58890": {
+        "population": 505,
+        "%_of_pop_with_post_school_education": 45.5,
+        "mean_income": 51629
+    },
+    "59030": {
+        "population": 132,
+        "%_of_pop_with_post_school_education": 56,
+        "mean_income": 45482
+    },
+    "59100": {
+        "population": 493,
+        "%_of_pop_with_post_school_education": 45.8,
+        "mean_income": 45350
+    },
+    "59170": {
+        "population": 645,
+        "%_of_pop_with_post_school_education": 51.4,
+        "mean_income": 46505
+    },
+    "59250": {
+        "population": 131,
+        "%_of_pop_with_post_school_education": 60.6,
+        "mean_income": 46860
+    },
+    "59310": {
+        "population": 953,
+        "%_of_pop_with_post_school_education": 49,
+        "mean_income": 52053
+    },
+    "59320": {
+        "population": 208,
+        "%_of_pop_with_post_school_education": 50.3,
+        "mean_income": 46539
+    },
+    "59330": {
+        "population": 260,
+        "%_of_pop_with_post_school_education": 47.8,
+        "mean_income": 48521
+    },
+    "59340": {
+        "population": 4023,
+        "%_of_pop_with_post_school_education": 59.7,
+        "mean_income": 61064
+    },
+    "59350": {
+        "population": 75,
+        "%_of_pop_with_post_school_education": 61.9,
+        "mean_income": 48061
+    },
+    "59360": {
+        "population": 685,
+        "%_of_pop_with_post_school_education": 50.1,
+        "mean_income": 53685
+    },
+    "59370": {
+        "population": 1986,
+        "%_of_pop_with_post_school_education": 57,
+        "mean_income": 47358
+    },
+    "60210": {
+        "population": 2721,
+        "%_of_pop_with_post_school_education": 52.8,
+        "mean_income": 38062
+    },
+    "60410": {
+        "population": 6985,
+        "%_of_pop_with_post_school_education": 47.3,
+        "mean_income": 42833
+    },
+    "60610": {
+        "population": 9664,
+        "%_of_pop_with_post_school_education": 50.9,
+        "mean_income": 46351
+    },
+    "60810": {
+        "population": 11236,
+        "%_of_pop_with_post_school_education": 53.6,
+        "mean_income": 44179
+    },
+    "61010": {
+        "population": 1081,
+        "%_of_pop_with_post_school_education": 47.7,
+        "mean_income": 37606
+    },
+    "61210": {
+        "population": 4400,
+        "%_of_pop_with_post_school_education": 47.4,
+        "mean_income": 42511
+    },
+    "61410": {
+        "population": 29109,
+        "%_of_pop_with_post_school_education": 58.7,
+        "mean_income": 49376
+    },
+    "61510": {
+        "population": 4632,
+        "%_of_pop_with_post_school_education": 47.4,
+        "mean_income": 41740
+    },
+    "61610": {
+        "population": 12477,
+        "%_of_pop_with_post_school_education": 51.7,
+        "mean_income": 42891
+    },
+    "61810": {
+        "population": 3466,
+        "%_of_pop_with_post_school_education": 47.5,
+        "mean_income": 39370
+    },
+    "62010": {
+        "population": 461,
+        "%_of_pop_with_post_school_education": 61.2,
+        "mean_income": 40945
+    },
+    "62210": {
+        "population": 2876,
+        "%_of_pop_with_post_school_education": 48.8,
+        "mean_income": 44807
+    },
+    "62410": {
+        "population": 2211,
+        "%_of_pop_with_post_school_education": 55.8,
+        "mean_income": 37376
+    },
+    "62610": {
+        "population": 22115,
+        "%_of_pop_with_post_school_education": 50.5,
+        "mean_income": 42861
+    },
+    "62810": {
+        "population": 30389,
+        "%_of_pop_with_post_school_education": 68.5,
+        "mean_income": 58451
+    },
+    "63010": {
+        "population": 7867,
+        "%_of_pop_with_post_school_education": 57.7,
+        "mean_income": 39398
+    },
+    "63210": {
+        "population": 3147,
+        "%_of_pop_with_post_school_education": 53.4,
+        "mean_income": 39076
+    },
+    "63410": {
+        "population": 1032,
+        "%_of_pop_with_post_school_education": 57.6,
+        "mean_income": 44522
+    },
+    "63610": {
+        "population": 19770,
+        "%_of_pop_with_post_school_education": 64.1,
+        "mean_income": 49589
+    },
+    "63810": {
+        "population": 5337,
+        "%_of_pop_with_post_school_education": 53.3,
+        "mean_income": 44905
+    },
+    "64010": {
+        "population": 33619,
+        "%_of_pop_with_post_school_education": 54.4,
+        "mean_income": 46546
+    },
+    "64210": {
+        "population": 10115,
+        "%_of_pop_with_post_school_education": 52.9,
+        "mean_income": 43485
+    },
+    "64610": {
+        "population": 6590,
+        "%_of_pop_with_post_school_education": 51.8,
+        "mean_income": 45372
+    },
+    "64810": {
+        "population": 7015,
+        "%_of_pop_with_post_school_education": 54.9,
+        "mean_income": 42484
+    },
+    "65010": {
+        "population": 3010,
+        "%_of_pop_with_post_school_education": 47.1,
+        "mean_income": 41007
+    },
+    "65210": {
+        "population": 1130,
+        "%_of_pop_with_post_school_education": 59,
+        "mean_income": 36059
+    },
+    "65410": {
+        "population": 6826,
+        "%_of_pop_with_post_school_education": 52.3,
+        "mean_income": 45680
+    },
+    "65610": {
+        "population": 2197,
+        "%_of_pop_with_post_school_education": 49.2,
+        "mean_income": 57250
+    },
+    "65810": {
+        "population": 12207,
+        "%_of_pop_with_post_school_education": 59.1,
+        "mean_income": 46954
+    },
+    "70200": {
+        "population": 16759,
+        "%_of_pop_with_post_school_education": 65.8,
+        "mean_income": 54772
+    },
+    "70420": {
+        "population": 1703,
+        "%_of_pop_with_post_school_education": 44,
+        "mean_income": 48400
+    },
+    "70540": {
+        "population": null,
+        "%_of_pop_with_post_school_education": 26.7,
+        "mean_income": null
+    },
+    "70620": {
+        "population": 152,
+        "%_of_pop_with_post_school_education": 34.3,
+        "mean_income": 33289
+    },
+    "70700": {
+        "population": 540,
+        "%_of_pop_with_post_school_education": 63.1,
+        "mean_income": 49324
+    },
+    "71000": {
+        "population": 49821,
+        "%_of_pop_with_post_school_education": 67.4,
+        "mean_income": 61683
+    },
+    "71300": {
+        "population": 408,
+        "%_of_pop_with_post_school_education": 35.8,
+        "mean_income": 35880
+    },
+    "72200": {
+        "population": 4797,
+        "%_of_pop_with_post_school_education": 67.5,
+        "mean_income": 55692
+    },
+    "72300": {
+        "population": 9815,
+        "%_of_pop_with_post_school_education": 68.9,
+        "mean_income": 62026
+    },
+    "72330": {
+        "population": 354,
+        "%_of_pop_with_post_school_education": 54.5,
+        "mean_income": 38830
+    },
+    "72800": {
+        "population": 17665,
+        "%_of_pop_with_post_school_education": 63.1,
+        "mean_income": 61175
+    },
+    "73600": {
+        "population": 670,
+        "%_of_pop_with_post_school_education": 43.4,
+        "mean_income": 42562
+    },
+    "74050": {
+        "population": 292,
+        "%_of_pop_with_post_school_education": 28.5,
+        "mean_income": 35587
+    },
+    "74550": {
+        "population": 554,
+        "%_of_pop_with_post_school_education": 54.2,
+        "mean_income": 41041
+    },
+    "74560": {
+        "population": 208,
+        "%_of_pop_with_post_school_education": 68.1,
+        "mean_income": 60164
+    },
+    "74660": {
+        "population": 732,
+        "%_of_pop_with_post_school_education": 45.6,
+        "mean_income": 64900
+    },
+    "74680": {
+        "population": 295,
+        "%_of_pop_with_post_school_education": 35.9,
+        "mean_income": 30958
+    },
+    "79399": {
+        "population": 3823,
+        "%_of_pop_with_post_school_education": 70.6,
+        "mean_income": 66653
+    },
+    "89399": {
+        "population": 229245,
+        "%_of_pop_with_post_school_education": 68,
+        "mean_income": 65550
+    },
+    "99399": {
+        "population": 969,
+        "%_of_pop_with_post_school_education": 62.9,
+        "mean_income": 67065
+    }
+}
