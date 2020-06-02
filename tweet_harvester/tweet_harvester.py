@@ -37,11 +37,13 @@ def search_tags(api_key, api_secret_key, access_token, access_token_secret, hash
 
     print('hashtags: ', hashtags)
     # API query string
+    hashtags = hashtags.split()
     query = hashtags[0]
     i = 1
     while i < len(hashtags):
-        query += 'OR ' + hashtags[i]
+        query += ' OR ' + hashtags[i]
         i += 1
+    print('query: ', query)
 
     # extract tweets with the relevant tag, write to database
     for tweet in tweepy.Cursor(api.search, q=query + ' -filter:retweets', lang="en", tweet_mode='extended',
@@ -56,7 +58,7 @@ def search_tags(api_key, api_secret_key, access_token, access_token_secret, hash
                           'user_screen_name': tweet.user.screen_name,
                           'hashtags': [e['text'] for e in tweet._json['entities']['hashtags']],
                           'user_followers': tweet.user.followers_count}
-            print(tweet_data)
+            #print(tweet_data)
             if tweet.place:
                 place_data = {'id': tweet.place.id,
                               'place_type': tweet.place.place_type,
