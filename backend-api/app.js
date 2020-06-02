@@ -31,9 +31,14 @@ app.get('/api', function(req, res) {
 })
 
 // Get views
-app.get('/api/view/:design_name/:route_name', function (req, res) {
-    tweets.view(req.params['design_name'], req.params['route_name']).then((body)=> {
-        res.send(body)
+app.get('/api/view/:design_name/:view_name', function (req, res) {
+    tweets.view(req.params['design_name'], req.params['view_name'], req.query, function (err, body) {
+        if (err) {
+            res.send(err)
+        }
+        else {
+            res.send(body.rows)
+        }
     })
 })
 
