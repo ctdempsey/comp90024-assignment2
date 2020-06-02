@@ -30,6 +30,13 @@ app.get('/api', function(req, res) {
     res.send('<h1> Hi from Group 67 :D <h1>');
 })
 
+// Get views
+app.get('/api/view/:design_name/:route_name', function (req, res) {
+    tweets.view(req.params['design_name'], req.params['route_name']).then((body)=> {
+        res.send(body)
+    })
+})
+
 // Start the app.
 const PORT = process.env.PORT || 5555;
 const HOST = process.env.HOST || '0.0.0.0';
