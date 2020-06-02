@@ -24,13 +24,13 @@ couchdb_databases:
  - _users
 
 # Twitter API credentials.
-twitter_api_key: 8ETE5q77ZFdJ1YfKeHzML0tam
-twitter_api_secret_key: hSy3Hehmox6M07lOlhUEursvTX3sYf8LPddFpOVMvr03jeZfVp
-twitter_access_token: 1252231255711608835-6w5avNvaTQfcI2yAt9PUxFnai4Wk9z
-twitter_access_token_secret: h36RKFNb2m3ptrfprreXAJh0r42xfic7bAwA9AMzXJq2J
+twitter_api_key: "{{ api_key }}"
+twitter_api_secret_key: "{{ api_secret_key }}"
+twitter_access_token: "{{ access_token }}"
+twitter_access_token_secret: "{{ access_token_secret }}"
 
 # Twitter hashtag(s).
-twitter_hashtag: "{{ hashtag }}"
+twitter_hashtags: "{{ hashtags }}"
 
 # Harvester variables.
 harvester_name: '{{ ansible_hostname }}_harvester'

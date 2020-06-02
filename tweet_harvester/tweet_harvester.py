@@ -26,7 +26,7 @@ def get_couchdb_details(sys_args):
     return cdb_user, cdb_password, cdb_ip, cdb_port
 
 
-def search_tags(api_key, api_secret_key, access_token, access_token_secret, hashtag, tweetdb, lyr_in, idx_reg, ctran):
+def search_tags(api_key, api_secret_key, access_token, access_token_secret, hashtags, tweetdb, lyr_in, idx_reg, ctran):
     
     # Handles Twitter authentication
     access = tweepy.OAuthHandler(api_key, api_secret_key)
@@ -35,10 +35,16 @@ def search_tags(api_key, api_secret_key, access_token, access_token_secret, hash
     # start api with tweepy
     api = tweepy.API(access, wait_on_rate_limit=True)
 
-    print('hashtag: ', hashtag)
-    
+    print('hashtags: ', hashtags)
+    # API query string
+    query = hashtags[0]
+    i = 1
+    while i < len(hashtags):
+        query += 'OR ' + hashtags[i]
+        i += 1
+
     # extract tweets with the relevant tag, write to database
-    for tweet in tweepy.Cursor(api.search, q=hashtag + ' -filter:retweets', lang="en", tweet_mode='extended',
+    for tweet in tweepy.Cursor(api.search, q=query + ' -filter:retweets', lang="en", tweet_mode='extended',
                                geocode='-28.04234848,133.49058772,2100km').items():
         try:
             tweet_data = {'_id': tweet.id_str,
@@ -111,7 +117,7 @@ def main():
     ctran=ogr.osr.CoordinateTransformation(point_ref,geo_ref)
 
     # sys.stderr = open(os.path.expanduser('~/tweet_harvester.err'), 'a')
-    hashtag = sys.argv[1]
+    hashtags = sys.argv[1]
 
     # get twitter api credentials.
     api_key, api_secret_key, access_token, access_token_secret = get_authentication(sys.argv[2:6])
@@ -125,7 +131,7 @@ def main():
 
     tweetdb = couch['tweets']
 
-    search_tags(api_key, api_secret_key, access_token, access_token_secret, hashtag, tweetdb, lyr_in, idx_reg, ctran)
+    search_tags(api_key, api_secret_key, access_token, access_token_secret, hashtags, tweetdb, lyr_in, idx_reg, ctran)
 
 
 
