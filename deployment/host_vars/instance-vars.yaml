@@ -9,6 +9,7 @@ harvester_dir: /home/{{ ansible_user }}/tweet_harvester
 harvester_stream_dir: /home/{{ ansible_user }}/tweet_harvester_stream
 backend_api_dir: /home/{{ ansible_user }}/backend-api
 backend_nginx_dir: /home/{{ ansible_user }}/backend_nginx
+frontend_dir: /home/{{ ansible_user }}/frontend
 
 # CouchDB credentials.
 couchdb_user: admin

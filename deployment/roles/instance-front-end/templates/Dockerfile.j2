@@ -1,4 +1,33 @@
-FROM node:12.17.0
+## -- Stage 1: Build -- ##
 
-WORKDIR /app
+# Pull official node Docker image.
+FROM node:12.17.0 as react-build
 
+# Working directory.
+WORKDIR /front-end
+
+ENV PATH /app/node_modules/.bin:$PATH
+
+# Copy app files.
+COPY . /front-end/
+
+# Install dependencies.
+RUN npm install
+
+# Build the app.
+RUN npm run build
+
+## -- Stage 2: Production environment -- ##.
+FROM nginx:alpine
+COPY --from=react-build /front-end/build /usr/share/nginx/html
+
+EXPOSE 5555
+EXPOSE 4789
+EXPOSE 5984
+EXPOSE 4369
+EXPOSE 9100-9200:9100-9200
+EXPOSE 8000
+EXPOSE 80
+
+# Start the frontend app.
+CMD ["nginx", "-g", "daemon off;"]

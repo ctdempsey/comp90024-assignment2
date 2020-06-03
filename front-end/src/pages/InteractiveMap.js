@@ -18,6 +18,7 @@ import L from "leaflet";
 
 const tweet_query = `http://172.26.130.183:5555/api/view/tweet_view/LGAcount?group=true`
 //const tweet_query = `https://testapi.io/api/emilylm/tweets`
+//const tweet_query = `http://localhost:5555/api/view/tweet_view/LGAcount?group=true`
 
 
 function getColor(d, max) {
@@ -67,7 +68,6 @@ export default class InteractiveMap extends Component {
     this.updateInfo = this.updateInfo.bind(this)
     //this.infoShow = this.infoShow.bind(this)
   }
-
 
   async componentDidMount() {
     let features = await this.getCasesLGA();
@@ -167,7 +167,8 @@ export default class InteractiveMap extends Component {
       let data = await this.fetchJson(tweet_query,{
     mode: 'no-cors',
     method: 'post',
-    url: `http://172.26.130.183:5555`,
+    //url: `http://172.26.130.183:5555`,
+    url: `http://localhost:5555`
   });
       return data;
     } catch(err){

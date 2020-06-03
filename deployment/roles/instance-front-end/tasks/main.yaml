@@ -1,0 +1,62 @@
+# Deploy front-end app.
+
+# Remove old front-end directory.
+- name: Remove old front-end directory
+  become: yes
+  command: rm -r front-end
+  args: 
+    chdir: /home/{{ansible_user}}
+  ignore_errors: yes
+
+# Create frond-end directory.
+- name: Create front-end directory
+  become: yes
+  file:
+    path: '{{ frontend_dir }}'
+    state: directory
+    mode: 0755
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"    
+
+# Remove old front-end container.
+- name: Remove old front-end container
+  become: yes
+  shell: |
+    docker stop frontend-app
+    docker rm frontend-app
+  ignore_errors: yes
+
+# Upload frond-end files to configuration instance(s).
+- name: Upload frond-ent Dockerfile
+  template:
+    src: './roles/instance-front-end/templates/Dockerfile.j2'
+    dest: "{{ frontend_dir }}/Dockerfile"
+    mode: 700
+    owner: '{{ ansible_user }}'
+    group: '{{ ansible_user }}'
+
+- name: Upload front-end app.
+  synchronize:
+    src: '../front-end/'
+    dest: '{{ frontend_dir }}'
+    mode: push
+    group: False
+    rsync_opts:
+        - "--exclude=node_modules"
+
+# Build front-end image from Dockerfile.
+- name: Build front-end image
+  become: yes
+  command: 'docker build -f Dockerfile -t frontend-image .'
+  args: 
+    chdir: '{{ frontend_dir }}'
+
+# Start up the front-end app.
+- name: Start front-end app
+  become: yes
+  command: 'docker run -d -it --restart always -p 0.0.0.0:8000:80 --link backend_api:backend_api --name frontend-app frontend-image'
+  args: 
+    chdir: '{{ frontend_dir }}'
+
+
+

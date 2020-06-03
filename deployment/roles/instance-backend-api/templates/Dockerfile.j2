@@ -11,7 +11,7 @@ COPY package*.json ./
 # Install dependencies
 RUN npm install
 
-# App source code.
+# Copy app directory into image.
 COPY app.js ./
 
 # PORT.

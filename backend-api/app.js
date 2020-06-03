@@ -2,6 +2,10 @@
 const express = require('express');
 const app = express();
 
+// Enable cors.
+const cors = require('cors')
+app.use(cors())
+
 require('dotenv').config();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -26,6 +30,11 @@ app.get('/api/tweets', function(req, res) {
 })
 
 // Homepage.
+app.get('/', function(req, res) {
+    res.send('<h1> Visit port 5555 for our API :D <h1>');
+})
+
+// API Homepage.
 app.get('/api', function(req, res) {
     res.send('<h1> Hi from Group 67 :D <h1>');
 })

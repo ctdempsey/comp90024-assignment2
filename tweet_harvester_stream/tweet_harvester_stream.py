@@ -24,15 +24,6 @@ def get_couchdb_details(sys_args):
     cdb_port = sys_args[3]
     return cdb_user, cdb_password, cdb_ip, cdb_port
 
-# Handles API limit, from official docs.
-def limit_handler(cursor):
-    while True:
-        try:
-            yield cursor.next()
-        except tweepy.RateLimitError:
-            # Wait 15 minutes.
-            time.sleep(15 * 60)
-
 # Create a stream listener.
 class MyStreamListener(tweepy.StreamListener):
 
@@ -119,7 +110,6 @@ def search_tags(api_key, api_secret_key, access_token, access_token_secret,
                                         access_token, access_token_secret,
                                         hashtags, tweetdb, lyr_in,
                                         idx_reg, ctran)
-    print('hashtags: ', myStreamListener.hashtags)
 
     myStream = tweepy.Stream(auth = myStreamListener.api.auth,
                              listener=myStreamListener)

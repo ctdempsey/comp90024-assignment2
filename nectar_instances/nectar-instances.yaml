@@ -9,5 +9,4 @@
     - role: openstack-volumes
     - role: openstack-security-groups
     - role: openstack-instances
-    #- role: openstack-volume-snapshots # Got an error creating snapshot, need debugging first.
 

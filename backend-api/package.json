@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/ctdempsey/comp90024-assignment2#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "nano": "^8.2.2"
