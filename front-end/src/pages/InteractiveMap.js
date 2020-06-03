@@ -9,12 +9,14 @@ import LegendControl from '../components/LegendControl2'
 import InfoPanel from '../components/InfoPanel'
 import BarChartSingle from '../components/BarChartSingle'
 import BarChartRatios from '../components/BarChartRatios'
+import LineChartRatios from '../components/LineChartRatios'
+
+
 
 //import Legend from '../components/Legend'
 import L from "leaflet";
 
 const tweet_query = `http://172.26.130.183:5555/api/view/tweet_view/LGAcount?group=true`
-//mock api:
 //const tweet_query = `https://testapi.io/api/emilylm/tweets`
 
 
@@ -49,8 +51,11 @@ export default class InteractiveMap extends Component {
       maxTweets: undefined,
       ratiosHigh: [],
       ratiosLow: [],
-      ratios: []
+      ratios: [],
+      view: 0,
+      page: "map"
     }
+    this.handleOptionChange = this.handleOptionChange.bind(this);
     this.onEachLGA = this.onEachLGA.bind(this)
     this.handleClickFeature = this.handleClickFeature.bind(this)
     this.getCasesLGA = this.getCasesLGA.bind(this)
@@ -109,7 +114,7 @@ export default class InteractiveMap extends Component {
         if (cases == 0){
           ratio = count/1
         } else {
-          ratio = count/cases
+          ratio = (count/cases).toFixed(3)
         }
       }
 
@@ -131,8 +136,8 @@ export default class InteractiveMap extends Component {
     ratios.sort(function(a, b) {
       return b.ratio - a.ratio;
     });
-    let ratiosHigh = ratios.slice(0, 9);
-    let ratiosLow = ratios.slice(ratios.length-10, ratios.length-1)
+    let ratiosHigh = ratios.slice(0, 24);
+    let ratiosLow = ratios.slice(ratios.length-25, ratios.length-1)
     //console.log("RATIOS", ratiosHigh, ratiosLow)
     this.setState({ratiosHigh, ratiosLow, ratios})
   }
@@ -218,16 +223,34 @@ export default class InteractiveMap extends Component {
 
 
   onEachLGA(feature: Object, layer: Object) {
+    let view = this.state.view
+    let max
+    let attribute
     let lga = feature.properties.LGA_CODE19
     let cases = this.state.lga_data[lga].cases
+    let tweets = this.state.lga_data[lga].tweet_count
+    if (view == 0){
+      max = this.state.maxCases
+      attribute = cases
+    }
+    if (view == 1){
+      max = this.state.maxTweets
+      attribute = tweets
+    }
+    /*
+    if (view == 0){
+      max = this.state.maxRatio
+      attribute = this.state.ratios[lga].ratio
+    }
+    */
     //console.log("FEATURE", feature.properties.cases)
     layer.setStyle({
-      fillColor: this.getJSONstyle(this.state.lga_data[lga].cases, this.state.maxCases),
+      fillColor: this.getJSONstyle(attribute, max),
       color: 'white',
       weight: 1,
       fillOpacity: 0.5,
     })
-    const popupContent = `<Popup>${feature.properties.LGA_NAME19}</br><b>No. Cases: </b>${cases}</br><b>Total Population: </b>${lga_data[lga]['population']}</br><b>Area: </b>${lga_data[lga]['area']}</br></Popup>`
+    const popupContent = `<Popup>${feature.properties.LGA_NAME19}</br><b>No. Cases: </b>${cases}</br><b>No. Tweets: </b>${tweets}</br><b>Total Population: </b>${lga_data[lga]['population']}</br><b>Area: </b>${lga_data[lga]['area']}</br></Popup>`
     /*const popupContent = ReactDOMServer.renderToString(
       <CustomPopup feature={feature} />
     );*/
@@ -268,6 +291,13 @@ mouseover: () => (this.highlightFeature, this.infoShow(feature)),
     });
   }
 
+	handleOptionChange = e => {
+		const view = e.target.value;
+		this.setState({
+			view,
+		});
+	}
+
   handleClickFeature = (feature) => {
     const bboxArray = bbox(feature);
     const corner1 = [bboxArray[1], bboxArray[0]];
@@ -288,12 +318,24 @@ mouseover: () => (this.highlightFeature, this.infoShow(feature)),
 
 
   render() {
-    const legend = this.getLegend(this.state.maxCases);
+    const legendCases = this.getLegend(this.state.maxCases);
+    const legendTweets = this.getLegend(this.state.maxTweets);
     const position = [this.state.lat, this.state.lng]
     return (
+      <div className="container-fluid" id="pageContainer">
+        <div className="row align-items-center" id="page-header">
+          <div class="col-12 text-center">
+          <button type="button" class="btn btn-light" aria-pressed={(this.state.page == "map")} onClick={() => this.setState({page: "map"})}>Map View</button>
+          &nbsp;&nbsp;
+          <button type="button" class="btn btn-light" aria-pressed={(this.state.page == "chart")} onClick={() => this.setState({page: "chart"})}>Summary Charts</button>
+          </div>
+      </div>
+
+
+
+      <div id="mapContainer">
+      {(this.state.page == "map") ?
       <div>
-      {JSON.stringify(this.state.features.features[0].properties)}
-      {JSON.stringify(this.state.maxCases)}
       {('cases' in this.state.lga_data["10050"]) ?
         <div>
         <Map bounds={this.state.bounds} zoomSnap={0.1} ref="map" center={position} zoom={this.state.zoom}>
@@ -304,26 +346,56 @@ mouseover: () => (this.highlightFeature, this.infoShow(feature)),
         />
           <FeatureGroup ref="features" onAdd={this.onFeatureGroupAdd}>
           <GeoJSON
+            key={this.state.view}
             data={this.state.features}
             ref="geojson"
-            style={this.getJSONstyle}
             onEachFeature={this.onEachLGA}
           />
           </ FeatureGroup>
+          <LegendControl position="topright">
+          <div class="info legend leaflet-control">
+          <h6><b>Colour map by:</b></h6>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value={0} checked={this.state.view == 0} onClick={this.handleOptionChange} />
+            <label class="form-check-label" for="exampleRadios1">
+              # of Covid-19 Cases
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value={1} checked={this.state.view == 1} onClick={this.handleOptionChange} />
+            <label class="form-check-label" for="exampleRadios2">
+              # of Covid-19 Tweets
+            </label>
+          </div>
+          </div>
+          </LegendControl>
           <LegendControl position="bottomleft">
             <InfoPanel key={[this.state.lga_data, this.state.lgaCode]} lgaData={this.state.lga_data} lgaCode={this.state.lgaCode}/>
           </LegendControl>
+          {(this.state.view == 0) ?
           <LegendControl position="bottomright">
-            {legend}
+            {legendCases}
           </LegendControl>
+           :
+           <LegendControl position="bottomright">
+             {legendTweets}
+           </LegendControl>}
         </Map>
         </div>
       : null}
-
-      <BarChartRatios ratiosHigh={this.state.ratiosHigh} ratiosLow={this.state.ratiosLow} ratios={this.state.ratios}/>
-
-
       </div>
+      :
+      <div>
+        <h6 style={{textAlign: "center"}}>10 LGAs with the highest ratio of tweets per covid-19 case</h6>
+        <BarChartRatios ratios={this.state.ratiosHigh} />
+        <h6 style={{textAlign: "center"}}>10 LGAs with the lowest ratio of tweets per covid-19 case</h6>
+        <BarChartRatios ratios={this.state.ratiosLow} />
+        <h6 style={{textAlign: "center"}}>Summary of all LGAs</h6>
+        <LineChartRatios ratios={this.state.ratios} />
+      </div>
+      }
+      </div>
+    </div>
     )
   }
 }

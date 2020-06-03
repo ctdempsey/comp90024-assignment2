@@ -16,16 +16,16 @@ export default class InfoPanel extends React.PureComponent {
 	render() {
 		const { lgaData, lgaCode } = this.props;
     //const properties =
-    console.log("INFO PANEL", lgaData, lgaCode)
+    //console.log("INFO PANEL", lgaData, lgaCode)
 		return (
       <div class="info legend leaflet-control">
       <div className="container container-fluid">
         {(lgaCode == undefined) ? <div className="row" id="info-header">
-          <h6> LGA Details </h6>
+          <h6> Click on a map region to view details... </h6>
         </div>
         :
         <div className="row" id="info-header">
-          <h6> LGA Details: <b>{lgaData[lgaCode]['lga_name18']}</b>,<t/> {lgaData[lgaCode]['state_abr']}</h6>
+          <h6> <b>{lgaData[lgaCode]['lga_name18']}</b>,<t/> {lgaData[lgaCode]['state_abr']}</h6>
         </div>
         }
         {(lgaCode != undefined) ?
