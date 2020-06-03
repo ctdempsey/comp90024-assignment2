@@ -6,6 +6,7 @@ couchdb_dir: /home/{{ ansible_user }}/opt/couchdb
 couchdb_data_dir: /home/{{ ansible_user }}/opt/couchdb/data
 couchdb_config_dir: /home/{{ ansible_user }}/opt/couchdb/etc
 harvester_dir: /home/{{ ansible_user }}/tweet_harvester
+harvester_stream_dir: /home/{{ ansible_user }}/tweet_harvester_stream
 backend_api_dir: /home/{{ ansible_user }}/backend-api
 backend_nginx_dir: /home/{{ ansible_user }}/backend_nginx
 
@@ -35,6 +36,10 @@ twitter_hashtags: "{{ hashtags }}"
 # Harvester variables.
 harvester_name: '{{ ansible_hostname }}_harvester'
 harvester_database: tweets
+
+# Stream harvester variables.
+harvester_stream_name: '{{ ansible_hostname }}_harvester'
+harvester_stream_database: tweets
 
 # IP address(es) of CouchDB configuration node(s).
 configuration_node: 172.26.130.183

@@ -1,0 +1,69 @@
+---
+# Setup twitter harvesters.
+
+# Remove dead containers.
+- name : remove dead containers
+  become: yes
+  shell: docker rm -v $(docker ps -aq -f status=exited)
+  ignore_errors: yes
+
+# Remove old tweet_harvester directory.
+- name: Remove old stream harvester directory
+  become: yes
+  command: rm -r tweet_harvester_stream
+  args: 
+    chdir: /home/{{ansible_user}}/
+  ignore_errors: yes
+
+# Create tweet_harvester directory.
+- name: Create stream harvester directory
+  become: yes
+  file:
+    path: '{{ harvester_stream_dir }}'
+    state: directory
+    mode: 0755
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+
+# Upload harvester Dockerfile to instance(s).
+- name: Upload tweet_harvester Dockerfile
+  become: yes
+  template:
+    src: "./roles/instance-tweet-harvester-stream/templates/Dockerfile.j2"
+    dest: "{{ harvester_stream_dir }}/Dockerfile"
+    mode: 700
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
+
+# Upload local tweet_harvester directory to remote.
+- name: Upload local tweet_harvester_stream directory to remove
+  become: yes
+  copy:
+    src: '../tweet_harvester_stream/'
+    dest: '{{ harvester_stream_dir }}'
+    mode: 700
+    owner: '{{ ansible_user }}'
+    group: '{{ ansible_user }}'
+
+# Stop and remove existing harvester.
+- name: Remove existing harvester
+  become: yes
+  shell: |
+    docker stop harvester_stream
+    docker rm harvester_stream
+  ignore_errors: yes
+
+# Build the stream harvester from Dockerfile.
+- name: Build stream harvester
+  become: yes
+  command: 'docker build -f Dockerfile -t {{ harvester_stream_name }} .'
+  args: 
+    chdir: '{{ harvester_stream_dir }}'
+
+# Start up the stream harvester.
+- name: Start stream harvester
+  become: yes
+  command: 'docker run -d --restart always --name harvester_stream {{ harvester_stream_name }}'
+  args: 
+    chdir: '{{ harvester_stream_dir }}'
+

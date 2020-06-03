@@ -10,9 +10,8 @@
     #- role: instance-couchdb-cluster
     #- role: instance-couchdb-verify
       #when: ansible_default_ipv4.address == configuration_node
-    - role: instance-tweet-harvester
-      when: ansible_default_ipv4.address == configuration_node
-
+    #- role: instance-tweet-harvester
+    - role: instance-tweet-harvester-stream
     #- role: instance-backend-api
       #when: ansible_default_ipv4.address == configuration_node
     #- role: instance-backend-nginx

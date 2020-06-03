@@ -1,9 +1,11 @@
 ---
 # Setup twitter harvesters.
+
+# Remove dead containers.
 - name : remove dead containers
   become: yes
   shell: docker rm -v $(docker ps -aq -f status=exited)
-  ignore_errors: true
+  ignore_errors: yes
 
 # Remove old tweet_harvester directory.
 - name: Remove old harvester directory
