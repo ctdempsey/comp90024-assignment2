@@ -1,0 +1,2722 @@
+{
+    "10050": {
+        "total_pop": 53767,
+        "area": 30594.6,
+        "hcsa_bus": 363
+    },
+    "10130": {
+        "total_pop": 30707,
+        "area": 862069.9,
+        "hcsa_bus": 165
+    },
+    "10250": {
+        "total_pop": 44208,
+        "area": 48493.9,
+        "hcsa_bus": 309
+    },
+    "10300": {
+        "total_pop": 2340,
+        "area": 2169067.5,
+        "hcsa_bus": 3
+    },
+    "10470": {
+        "total_pop": 43206,
+        "area": 381786.5,
+        "hcsa_bus": 171
+    },
+    "10500": {
+        "total_pop": 174378,
+        "area": 4989,
+        "hcsa_bus": 642
+    },
+    "10550": {
+        "total_pop": 34348,
+        "area": 627888.1,
+        "hcsa_bus": 154
+    },
+    "10600": {
+        "total_pop": 12963,
+        "area": 160043.4,
+        "hcsa_bus": 61
+    },
+    "10650": {
+        "total_pop": 8707,
+        "area": 206577.6,
+        "hcsa_bus": 22
+    },
+    "10750": {
+        "total_pop": 366534,
+        "area": 24004.9,
+        "hcsa_bus": 1077
+    },
+    "10800": {
+        "total_pop": 5985,
+        "area": 855765.4,
+        "hcsa_bus": 17
+    },
+    "10850": {
+        "total_pop": 7342,
+        "area": 152464.7,
+        "hcsa_bus": 22
+    },
+    "10900": {
+        "total_pop": 79260,
+        "area": 143114.4,
+        "hcsa_bus": 417
+    },
+    "10950": {
+        "total_pop": 2621,
+        "area": 1459990,
+        "hcsa_bus": 5
+    },
+    "11150": {
+        "total_pop": 2630,
+        "area": 4159950.8,
+        "hcsa_bus": 3
+    },
+    "11200": {
+        "total_pop": 1655,
+        "area": 1916348,
+        "hcsa_bus": 3
+    },
+    "11250": {
+        "total_pop": 17734,
+        "area": 17011.5,
+        "hcsa_bus": 48
+    },
+    "11300": {
+        "total_pop": 39886,
+        "area": 712.8,
+        "hcsa_bus": 405
+    },
+    "11350": {
+        "total_pop": 34574,
+        "area": 56580.3,
+        "hcsa_bus": 361
+    },
+    "11400": {
+        "total_pop": 13680,
+        "area": 602235,
+        "hcsa_bus": 52
+    },
+    "11450": {
+        "total_pop": 94159,
+        "area": 20102.8,
+        "hcsa_bus": 299
+    },
+    "11500": {
+        "total_pop": 168139,
+        "area": 31191.1,
+        "hcsa_bus": 592
+    },
+    "11520": {
+        "total_pop": 95159,
+        "area": 1992.3,
+        "hcsa_bus": 899
+    },
+    "11570": {
+        "total_pop": 373931,
+        "area": 11023.7,
+        "hcsa_bus": 1597
+    },
+    "11600": {
+        "total_pop": 2802,
+        "area": 1893448.5,
+        "hcsa_bus": 9
+    },
+    "11650": {
+        "total_pop": 342047,
+        "area": 168107,
+        "hcsa_bus": 1566
+    },
+    "11700": {
+        "total_pop": 1837,
+        "area": 5349219.5,
+        "hcsa_bus": 3
+    },
+    "11720": {
+        "total_pop": 59101,
+        "area": 196515.9,
+        "hcsa_bus": 148
+    },
+    "11730": {
+        "total_pop": 51647,
+        "area": 1042868,
+        "hcsa_bus": 199
+    },
+    "11750": {
+        "total_pop": 4722,
+        "area": 4557933,
+        "hcsa_bus": 18
+    },
+    "11800": {
+        "total_pop": 76551,
+        "area": 117374.4,
+        "hcsa_bus": 459
+    },
+    "12000": {
+        "total_pop": 4368,
+        "area": 243090.4,
+        "hcsa_bus": 5
+    },
+    "12150": {
+        "total_pop": 4014,
+        "area": 991605.4,
+        "hcsa_bus": 11
+    },
+    "12160": {
+        "total_pop": 11260,
+        "area": 398141.7,
+        "hcsa_bus": 20
+    },
+    "12350": {
+        "total_pop": 12767,
+        "area": 280878.2,
+        "hcsa_bus": 26
+    },
+    "12380": {
+        "total_pop": 236893,
+        "area": 7155.1,
+        "hcsa_bus": 36
+    },
+    "12390": {
+        "total_pop": 53240,
+        "area": 753452.5,
+        "hcsa_bus": 8
+    },
+    "12700": {
+        "total_pop": 9346,
+        "area": 224999.8,
+        "hcsa_bus": 993
+    },
+    "12730": {
+        "total_pop": 8995,
+        "area": 888344.6,
+        "hcsa_bus": 252
+    },
+    "12750": {
+        "total_pop": 38288,
+        "area": 342817,
+        "hcsa_bus": 28
+    },
+    "12850": {
+        "total_pop": 210612,
+        "area": 10150.7,
+        "hcsa_bus": 23
+    },
+    "12870": {
+        "total_pop": 12462,
+        "area": 568504.9,
+        "hcsa_bus": 154
+    },
+    "12900": {
+        "total_pop": 9910,
+        "area": 471012.8,
+        "hcsa_bus": 789
+    },
+    "12930": {
+        "total_pop": 158411,
+        "area": 3834.6,
+        "hcsa_bus": 29
+    },
+    "12950": {
+        "total_pop": 4226,
+        "area": 483150.6,
+        "hcsa_bus": 17
+    },
+    "13010": {
+        "total_pop": 8908,
+        "area": 547997.7,
+        "hcsa_bus": 1179
+    },
+    "13310": {
+        "total_pop": 30852,
+        "area": 322008,
+        "hcsa_bus": 6
+    },
+    "13340": {
+        "total_pop": 10686,
+        "area": 574951.9,
+        "hcsa_bus": 23
+    },
+    "13450": {
+        "total_pop": 26882,
+        "area": 163917.3,
+        "hcsa_bus": 100
+    },
+    "13550": {
+        "total_pop": 12661,
+        "area": 498703,
+        "hcsa_bus": 88
+    },
+    "13660": {
+        "total_pop": 5349,
+        "area": 925965.4,
+        "hcsa_bus": 47
+    },
+    "13800": {
+        "total_pop": 67083,
+        "area": 277513.8,
+        "hcsa_bus": 9
+    },
+    "13850": {
+        "total_pop": 2979,
+        "area": 1132593.2,
+        "hcsa_bus": 225
+    },
+    "13910": {
+        "total_pop": 18782,
+        "area": 714088.6,
+        "hcsa_bus": 5
+    },
+    "14000": {
+        "total_pop": 150752,
+        "area": 45503.8,
+        "hcsa_bus": 51
+    },
+    "14100": {
+        "total_pop": 14909,
+        "area": 571.7,
+        "hcsa_bus": 1024
+    },
+    "14170": {
+        "total_pop": 198024,
+        "area": 3537.1,
+        "hcsa_bus": 204
+    },
+    "14200": {
+        "total_pop": 16844,
+        "area": 859720.8,
+        "hcsa_bus": 1519
+    },
+    "14300": {
+        "total_pop": 6631,
+        "area": 203002.2,
+        "hcsa_bus": 70
+    },
+    "14350": {
+        "total_pop": 29665,
+        "area": 337567.1,
+        "hcsa_bus": 14
+    },
+    "14400": {
+        "total_pop": 23006,
+        "area": 25766.4,
+        "hcsa_bus": 97
+    },
+    "14500": {
+        "total_pop": 126046,
+        "area": 8541,
+        "hcsa_bus": 133
+    },
+    "14550": {
+        "total_pop": 8870,
+        "area": 358416.4,
+        "hcsa_bus": 1588
+    },
+    "14600": {
+        "total_pop": 6151,
+        "area": 1496427.5,
+        "hcsa_bus": 31
+    },
+    "14650": {
+        "total_pop": 204914,
+        "area": 64864,
+        "hcsa_bus": 11
+    },
+    "14700": {
+        "total_pop": 39486,
+        "area": 1047.9,
+        "hcsa_bus": 1074
+    },
+    "14750": {
+        "total_pop": 11438,
+        "area": 116718.8,
+        "hcsa_bus": 539
+    },
+    "14850": {
+        "total_pop": 43843,
+        "area": 128770.4,
+        "hcsa_bus": 35
+    },
+    "14870": {
+        "total_pop": 21636,
+        "area": 451225.6,
+        "hcsa_bus": 312
+    },
+    "14900": {
+        "total_pop": 223304,
+        "area": 30574,
+        "hcsa_bus": 66
+    },
+    "14920": {
+        "total_pop": 7893,
+        "area": 508224,
+        "hcsa_bus": 907
+    },
+    "14950": {
+        "total_pop": 3295,
+        "area": 289580.5,
+        "hcsa_bus": 16
+    },
+    "15050": {
+        "total_pop": 83203,
+        "area": 39150.9,
+        "hcsa_bus": 8
+    },
+    "15240": {
+        "total_pop": 93288,
+        "area": 1005386.3,
+        "hcsa_bus": 321
+    },
+    "15270": {
+        "total_pop": 25086,
+        "area": 875225.9,
+        "hcsa_bus": 330
+    },
+    "15300": {
+        "total_pop": 13350,
+        "area": 1790652.4,
+        "hcsa_bus": 80
+    },
+    "15350": {
+        "total_pop": 30877,
+        "area": 865,
+        "hcsa_bus": 46
+    },
+    "15520": {
+        "total_pop": 12118,
+        "area": 1186347.8,
+        "hcsa_bus": 382
+    },
+    "15560": {
+        "total_pop": 3961,
+        "area": 688079,
+        "hcsa_bus": 28
+    },
+    "15650": {
+        "total_pop": 16383,
+        "area": 340488.4,
+        "hcsa_bus": 5
+    },
+    "15700": {
+        "total_pop": 19773,
+        "area": 149134.3,
+        "hcsa_bus": 41
+    },
+    "15750": {
+        "total_pop": 13231,
+        "area": 1301499.4,
+        "hcsa_bus": 83
+    },
+    "15800": {
+        "total_pop": 5931,
+        "area": 411634.6,
+        "hcsa_bus": 39
+    },
+    "15850": {
+        "total_pop": 6567,
+        "area": 526151.7,
+        "hcsa_bus": 14
+    },
+    "15900": {
+        "total_pop": 164104,
+        "area": 18675.5,
+        "hcsa_bus": 20
+    },
+    "15950": {
+        "total_pop": 74172,
+        "area": 1048.6,
+        "hcsa_bus": 1530
+    },
+    "15990": {
+        "total_pop": 271278,
+        "area": 25420.7,
+        "hcsa_bus": 973
+    },
+    "16100": {
+        "total_pop": 5408,
+        "area": 362504.7,
+        "hcsa_bus": 1663
+    },
+    "16150": {
+        "total_pop": 42056,
+        "area": 28421.6,
+        "hcsa_bus": 9
+    },
+    "16200": {
+        "total_pop": 14894,
+        "area": 595761.4,
+        "hcsa_bus": 282
+    },
+    "16260": {
+        "total_pop": 251311,
+        "area": 8382.9,
+        "hcsa_bus": 42
+    },
+    "16350": {
+        "total_pop": 209210,
+        "area": 40470.2,
+        "hcsa_bus": 1692
+    },
+    "16380": {
+        "total_pop": 83131,
+        "area": 368239.2,
+        "hcsa_bus": 700
+    },
+    "16400": {
+        "total_pop": 72695,
+        "area": 85843.6,
+        "hcsa_bus": 506
+    },
+    "16490": {
+        "total_pop": 59959,
+        "area": 531888.2,
+        "hcsa_bus": 199
+    },
+    "16550": {
+        "total_pop": 154265,
+        "area": 3633.1,
+        "hcsa_bus": 143
+    },
+    "16610": {
+        "total_pop": 23399,
+        "area": 304737.5,
+        "hcsa_bus": 1319
+    },
+    "16700": {
+        "total_pop": 127446,
+        "area": 4047.5,
+        "hcsa_bus": 70
+    },
+    "16900": {
+        "total_pop": 72240,
+        "area": 14742.1,
+        "hcsa_bus": 921
+    },
+    "16950": {
+        "total_pop": 104371,
+        "area": 456668,
+        "hcsa_bus": 206
+    },
+    "17000": {
+        "total_pop": 23422,
+        "area": 489271.7,
+        "hcsa_bus": 406
+    },
+    "17040": {
+        "total_pop": 20733,
+        "area": 1516354.6,
+        "hcsa_bus": 58
+    },
+    "17080": {
+        "total_pop": 14532,
+        "area": 895900.3,
+        "hcsa_bus": 93
+    },
+    "17100": {
+        "total_pop": 45143,
+        "area": 1400.1,
+        "hcsa_bus": 32
+    },
+    "17150": {
+        "total_pop": 229213,
+        "area": 33359.3,
+        "hcsa_bus": 533
+    },
+    "17200": {
+        "total_pop": 240229,
+        "area": 2674.3,
+        "hcsa_bus": 1254
+    },
+    "17310": {
+        "total_pop": 62156,
+        "area": 988435.1,
+        "hcsa_bus": 2920
+    },
+    "17350": {
+        "total_pop": 6274,
+        "area": 280201.6,
+        "hcsa_bus": 277
+    },
+    "17400": {
+        "total_pop": 6638,
+        "area": 732279.3,
+        "hcsa_bus": 18
+    },
+    "17420": {
+        "total_pop": 172473,
+        "area": 38615.9,
+        "hcsa_bus": 24
+    },
+    "17550": {
+        "total_pop": 96108,
+        "area": 130765.6,
+        "hcsa_bus": 1639
+    },
+    "17620": {
+        "total_pop": 14220,
+        "area": 809608.9,
+        "hcsa_bus": 461
+    },
+    "17640": {
+        "total_pop": 7961,
+        "area": 712739.6,
+        "hcsa_bus": 30
+    },
+    "17650": {
+        "total_pop": 6062,
+        "area": 322653.3,
+        "hcsa_bus": 21
+    },
+    "17750": {
+        "total_pop": 64820,
+        "area": 482448.9,
+        "hcsa_bus": 6
+    },
+    "17850": {
+        "total_pop": 3132,
+        "area": 626102.4,
+        "hcsa_bus": 388
+    },
+    "17900": {
+        "total_pop": 6051,
+        "area": 2230838.5,
+        "hcsa_bus": 8
+    },
+    "17950": {
+        "total_pop": 2745,
+        "area": 1075376.8,
+        "hcsa_bus": 18
+    },
+    "18020": {
+        "total_pop": 9399,
+        "area": 1237212,
+        "hcsa_bus": 4
+    },
+    "18050": {
+        "total_pop": 74114,
+        "area": 935.1,
+        "hcsa_bus": 29
+    },
+    "18100": {
+        "total_pop": 3636,
+        "area": 341485.7,
+        "hcsa_bus": 919
+    },
+    "18200": {
+        "total_pop": 7042,
+        "area": 2625624,
+        "hcsa_bus": 5
+    },
+    "18250": {
+        "total_pop": 80339,
+        "area": 2242.6,
+        "hcsa_bus": 1041
+    },
+    "18350": {
+        "total_pop": 50493,
+        "area": 268934.1,
+        "hcsa_bus": 290
+    },
+    "18400": {
+        "total_pop": 52230,
+        "area": 255543.4,
+        "hcsa_bus": 122
+    },
+    "18450": {
+        "total_pop": 216071,
+        "area": 68398.6,
+        "hcsa_bus": 1240
+    },
+    "18500": {
+        "total_pop": 58964,
+        "area": 1227.8,
+        "hcsa_bus": 951
+    },
+    "18710": {
+        "total_pop": 16953,
+        "area": 399532.6,
+        "hcsa_bus": 56
+    },
+    "19399": {
+        "total_pop": 1080,
+        "area": 9321416,
+        "hcsa_bus": 3
+    },
+    "20110": {
+        "total_pop": 12730,
+        "area": 478815.7,
+        "hcsa_bus": 38
+    },
+    "20260": {
+        "total_pop": 11795,
+        "area": 421111.7,
+        "hcsa_bus": 31
+    },
+    "20570": {
+        "total_pop": 107325,
+        "area": 73903.2,
+        "hcsa_bus": 620
+    },
+    "20660": {
+        "total_pop": 130237,
+        "area": 6254,
+        "hcsa_bus": 954
+    },
+    "20740": {
+        "total_pop": 35327,
+        "area": 86581,
+        "hcsa_bus": 96
+    },
+    "20830": {
+        "total_pop": 52015,
+        "area": 402762.9,
+        "hcsa_bus": 195
+    },
+    "20910": {
+        "total_pop": 105718,
+        "area": 3721.1,
+        "hcsa_bus": 1025
+    },
+    "21010": {
+        "total_pop": 14024,
+        "area": 235264,
+        "hcsa_bus": 37
+    },
+    "21110": {
+        "total_pop": 181289,
+        "area": 6017.7,
+        "hcsa_bus": 2804
+    },
+    "21180": {
+        "total_pop": 208714,
+        "area": 12339.9,
+        "hcsa_bus": 560
+    },
+    "21270": {
+        "total_pop": 6184,
+        "area": 800040.3,
+        "hcsa_bus": 15
+    },
+    "21370": {
+        "total_pop": 37592,
+        "area": 451885.8,
+        "hcsa_bus": 125
+    },
+    "21450": {
+        "total_pop": 107120,
+        "area": 128256.8,
+        "hcsa_bus": 228
+    },
+    "21610": {
+        "total_pop": 340419,
+        "area": 40942.9,
+        "hcsa_bus": 942
+    },
+    "21670": {
+        "total_pop": 13209,
+        "area": 153278.4,
+        "hcsa_bus": 35
+    },
+    "21750": {
+        "total_pop": 21503,
+        "area": 343747,
+        "hcsa_bus": 78
+    },
+    "21830": {
+        "total_pop": 16140,
+        "area": 440749.2,
+        "hcsa_bus": 33
+    },
+    "21890": {
+        "total_pop": 161609,
+        "area": 5347.1,
+        "hcsa_bus": 788
+    },
+    "22110": {
+        "total_pop": 46818,
+        "area": 2094023.2,
+        "hcsa_bus": 149
+    },
+    "22170": {
+        "total_pop": 141845,
+        "area": 12959.8,
+        "hcsa_bus": 533
+    },
+    "22250": {
+        "total_pop": 10547,
+        "area": 373533.5,
+        "hcsa_bus": 24
+    },
+    "22310": {
+        "total_pop": 153858,
+        "area": 3869.1,
+        "hcsa_bus": 1234
+    },
+    "22410": {
+        "total_pop": 19665,
+        "area": 621857.3,
+        "hcsa_bus": 51
+    },
+    "22490": {
+        "total_pop": 23120,
+        "area": 270339,
+        "hcsa_bus": 36
+    },
+    "22620": {
+        "total_pop": 116045,
+        "area": 299997.2,
+        "hcsa_bus": 530
+    },
+    "22670": {
+        "total_pop": 166094,
+        "area": 12954.7,
+        "hcsa_bus": 546
+    },
+    "22750": {
+        "total_pop": 252217,
+        "area": 124798.8,
+        "hcsa_bus": 1351
+    },
+    "22830": {
+        "total_pop": 66007,
+        "area": 242190.9,
+        "hcsa_bus": 348
+    },
+    "22910": {
+        "total_pop": 15812,
+        "area": 147298.4,
+        "hcsa_bus": 66
+    },
+    "22980": {
+        "total_pop": 5645,
+        "area": 752418.2,
+        "hcsa_bus": 10
+    },
+    "23110": {
+        "total_pop": 96470,
+        "area": 6424,
+        "hcsa_bus": 417
+    },
+    "23190": {
+        "total_pop": 19875,
+        "area": 426676.9,
+        "hcsa_bus": 61
+    },
+    "23270": {
+        "total_pop": 224394,
+        "area": 50385.1,
+        "hcsa_bus": 648
+    },
+    "23350": {
+        "total_pop": 16490,
+        "area": 204006.9,
+        "hcsa_bus": 39
+    },
+    "23430": {
+        "total_pop": 163431,
+        "area": 9136.8,
+        "hcsa_bus": 698
+    },
+    "23670": {
+        "total_pop": 163203,
+        "area": 11391.2,
+        "hcsa_bus": 659
+    },
+    "23810": {
+        "total_pop": 75211,
+        "area": 142561.3,
+        "hcsa_bus": 234
+    },
+    "23940": {
+        "total_pop": 7513,
+        "area": 669644.5,
+        "hcsa_bus": 5
+    },
+    "24130": {
+        "total_pop": 49388,
+        "area": 174828.4,
+        "hcsa_bus": 189
+    },
+    "24210": {
+        "total_pop": 125508,
+        "area": 11334.8,
+        "hcsa_bus": 1022
+    },
+    "24250": {
+        "total_pop": 8979,
+        "area": 384385.4,
+        "hcsa_bus": 40
+    },
+    "24330": {
+        "total_pop": 91387,
+        "area": 3122.5,
+        "hcsa_bus": 456
+    },
+    "24410": {
+        "total_pop": 117498,
+        "area": 6141,
+        "hcsa_bus": 480
+    },
+    "24600": {
+        "total_pop": 169961,
+        "area": 3735.1,
+        "hcsa_bus": 2115
+    },
+    "24650": {
+        "total_pop": 156713,
+        "area": 52753.7,
+        "hcsa_bus": 408
+    },
+    "24780": {
+        "total_pop": 55515,
+        "area": 2208248.5,
+        "hcsa_bus": 219
+    },
+    "24850": {
+        "total_pop": 44299,
+        "area": 286208.3,
+        "hcsa_bus": 96
+    },
+    "24900": {
+        "total_pop": 29799,
+        "area": 404637.4,
+        "hcsa_bus": 77
+    },
+    "24970": {
+        "total_pop": 200077,
+        "area": 8148.3,
+        "hcsa_bus": 1446
+    },
+    "25060": {
+        "total_pop": 127883,
+        "area": 4313.9,
+        "hcsa_bus": 888
+    },
+    "25150": {
+        "total_pop": 34158,
+        "area": 211055,
+        "hcsa_bus": 73
+    },
+    "25250": {
+        "total_pop": 181725,
+        "area": 5095.2,
+        "hcsa_bus": 844
+    },
+    "25340": {
+        "total_pop": 165822,
+        "area": 72416.8,
+        "hcsa_bus": 811
+    },
+    "25430": {
+        "total_pop": 19514,
+        "area": 152961.8,
+        "hcsa_bus": 70
+    },
+    "25490": {
+        "total_pop": 16887,
+        "area": 548168.6,
+        "hcsa_bus": 35
+    },
+    "25620": {
+        "total_pop": 14478,
+        "area": 387975.1,
+        "hcsa_bus": 31
+    },
+    "25710": {
+        "total_pop": 64941,
+        "area": 43233.7,
+        "hcsa_bus": 315
+    },
+    "25810": {
+        "total_pop": 11431,
+        "area": 572987.6,
+        "hcsa_bus": 18
+    },
+    "25900": {
+        "total_pop": 113200,
+        "area": 2070.9,
+        "hcsa_bus": 1368
+    },
+    "25990": {
+        "total_pop": 7353,
+        "area": 343456.9,
+        "hcsa_bus": 6
+    },
+    "26080": {
+        "total_pop": 2982,
+        "area": 861.7,
+        "hcsa_bus": 23
+    },
+    "26170": {
+        "total_pop": 29576,
+        "area": 329633.1,
+        "hcsa_bus": 94
+    },
+    "26260": {
+        "total_pop": 16135,
+        "area": 665401.9,
+        "hcsa_bus": 53
+    },
+    "26350": {
+        "total_pop": 116207,
+        "area": 2565.1,
+        "hcsa_bus": 1747
+    },
+    "26430": {
+        "total_pop": 10645,
+        "area": 330325.7,
+        "hcsa_bus": 18
+    },
+    "26490": {
+        "total_pop": 32251,
+        "area": 155294.4,
+        "hcsa_bus": 211
+    },
+    "26610": {
+        "total_pop": 20759,
+        "area": 611530.9,
+        "hcsa_bus": 56
+    },
+    "26670": {
+        "total_pop": 6054,
+        "area": 667494.7,
+        "hcsa_bus": 12
+    },
+    "26700": {
+        "total_pop": 29087,
+        "area": 364511,
+        "hcsa_bus": 151
+    },
+    "26730": {
+        "total_pop": 34862,
+        "area": 12094.9,
+        "hcsa_bus": 223
+    },
+    "26810": {
+        "total_pop": 44019,
+        "area": 1081733.5,
+        "hcsa_bus": 144
+    },
+    "26890": {
+        "total_pop": 3862,
+        "area": 910820.4,
+        "hcsa_bus": 7
+    },
+    "26980": {
+        "total_pop": 176196,
+        "area": 6428,
+        "hcsa_bus": 1157
+    },
+    "27070": {
+        "total_pop": 223322,
+        "area": 48969.4,
+        "hcsa_bus": 710
+    },
+    "27170": {
+        "total_pop": 41429,
+        "area": 43268.9,
+        "hcsa_bus": 165
+    },
+    "27260": {
+        "total_pop": 255322,
+        "area": 54209.5,
+        "hcsa_bus": 948
+    },
+    "27350": {
+        "total_pop": 98521,
+        "area": 1954.3,
+        "hcsa_bus": 1276
+    },
+    "27450": {
+        "total_pop": 158173,
+        "area": 246820.5,
+        "hcsa_bus": 425
+    },
+    "27630": {
+        "total_pop": 6658,
+        "area": 732579.7,
+        "hcsa_bus": 13
+    },
+    "29399": {
+        "total_pop": 889,
+        "area": 28301.4,
+        "hcsa_bus": 5
+    },
+    "30250": {
+        "total_pop": 1382,
+        "area": 742398.9,
+        "hcsa_bus": null
+    },
+    "30300": {
+        "total_pop": 4334,
+        "area": 3110370.8,
+        "hcsa_bus": 8
+    },
+    "30370": {
+        "total_pop": 14291,
+        "area": 2855016.2,
+        "hcsa_bus": 32
+    },
+    "30410": {
+        "total_pop": 2852,
+        "area": 5338265.5,
+        "hcsa_bus": 3
+    },
+    "30450": {
+        "total_pop": 267,
+        "area": 6183009,
+        "hcsa_bus": null
+    },
+    "30760": {
+        "total_pop": 1863,
+        "area": 3053724.8,
+        "hcsa_bus": 4
+    },
+    "30900": {
+        "total_pop": 425,
+        "area": 6090573.5,
+        "hcsa_bus": null
+    },
+    "31000": {
+        "total_pop": 1231605,
+        "area": 134271.9,
+        "hcsa_bus": 10271
+    },
+    "31750": {
+        "total_pop": 330,
+        "area": 7372375,
+        "hcsa_bus": null
+    },
+    "31820": {
+        "total_pop": 95302,
+        "area": 643100.3,
+        "hcsa_bus": 355
+    },
+    "31900": {
+        "total_pop": 17077,
+        "area": 504393.2,
+        "hcsa_bus": 53
+    },
+    "31950": {
+        "total_pop": 352,
+        "area": 3968405.2,
+        "hcsa_bus": null
+    },
+    "32080": {
+        "total_pop": 165525,
+        "area": 168931.3,
+        "hcsa_bus": 839
+    },
+    "32250": {
+        "total_pop": 1974,
+        "area": 6412101,
+        "hcsa_bus": 3
+    },
+    "32260": {
+        "total_pop": 29689,
+        "area": 468782.4,
+        "hcsa_bus": 77
+    },
+    "32270": {
+        "total_pop": 28645,
+        "area": 5983483.5,
+        "hcsa_bus": 63
+    },
+    "32310": {
+        "total_pop": 11850,
+        "area": 6838216.5,
+        "hcsa_bus": 31
+    },
+    "32330": {
+        "total_pop": 1315,
+        "area": 3160,
+        "hcsa_bus": 3
+    },
+    "32450": {
+        "total_pop": 3091,
+        "area": 4797126,
+        "hcsa_bus": 3
+    },
+    "32500": {
+        "total_pop": 4445,
+        "area": 10571876,
+        "hcsa_bus": 5
+    },
+    "32600": {
+        "total_pop": 288,
+        "area": 2949790.2,
+        "hcsa_bus": null
+    },
+    "32750": {
+        "total_pop": 292,
+        "area": 9473046,
+        "hcsa_bus": null
+    },
+    "32770": {
+        "total_pop": 1507,
+        "area": 182765.2,
+        "hcsa_bus": null
+    },
+    "32810": {
+        "total_pop": 12257,
+        "area": 242786.3,
+        "hcsa_bus": 44
+    },
+    "33100": {
+        "total_pop": 804,
+        "area": 3919929.5,
+        "hcsa_bus": null
+    },
+    "33200": {
+        "total_pop": 1499,
+        "area": 4119993.8,
+        "hcsa_bus": 3
+    },
+    "33220": {
+        "total_pop": 105463,
+        "area": 710459.9,
+        "hcsa_bus": 423
+    },
+    "33360": {
+        "total_pop": 62979,
+        "area": 1048428.6,
+        "hcsa_bus": 179
+    },
+    "33430": {
+        "total_pop": 606774,
+        "area": 133370.3,
+        "hcsa_bus": 3855
+    },
+    "33610": {
+        "total_pop": 10728,
+        "area": 1925810.1,
+        "hcsa_bus": 49
+    },
+    "33620": {
+        "total_pop": 51586,
+        "area": 688397.1,
+        "hcsa_bus": 158
+    },
+    "33800": {
+        "total_pop": 10805,
+        "area": 280718.9,
+        "hcsa_bus": 42
+    },
+    "33830": {
+        "total_pop": 1081,
+        "area": 111171,
+        "hcsa_bus": null
+    },
+    "33960": {
+        "total_pop": 213638,
+        "area": 109385.7,
+        "hcsa_bus": 604
+    },
+    "33980": {
+        "total_pop": 20934,
+        "area": 5870791.5,
+        "hcsa_bus": 43
+    },
+    "34420": {
+        "total_pop": 977,
+        "area": 255533.3,
+        "hcsa_bus": null
+    },
+    "34530": {
+        "total_pop": 37638,
+        "area": 1175786.8,
+        "hcsa_bus": 94
+    },
+    "34570": {
+        "total_pop": 782,
+        "area": 357549.9,
+        "hcsa_bus": null
+    },
+    "34580": {
+        "total_pop": 41011,
+        "area": 226900.5,
+        "hcsa_bus": 70
+    },
+    "34590": {
+        "total_pop": 326615,
+        "area": 95813.2,
+        "hcsa_bus": 815
+    },
+    "34710": {
+        "total_pop": 3530,
+        "area": 4057224.5,
+        "hcsa_bus": 10
+    },
+    "34770": {
+        "total_pop": 116539,
+        "area": 761329.6,
+        "hcsa_bus": 472
+    },
+    "34800": {
+        "total_pop": 814,
+        "area": 4073680,
+        "hcsa_bus": null
+    },
+    "34830": {
+        "total_pop": 325,
+        "area": 53710,
+        "hcsa_bus": null
+    },
+    "34860": {
+        "total_pop": 12791,
+        "area": 5870525,
+        "hcsa_bus": 26
+    },
+    "34880": {
+        "total_pop": 22517,
+        "area": 5349105,
+        "hcsa_bus": 55
+    },
+    "35010": {
+        "total_pop": 459585,
+        "area": 204147.5,
+        "hcsa_bus": 1397
+    },
+    "35250": {
+        "total_pop": 1218,
+        "area": 124769.3,
+        "hcsa_bus": null
+    },
+    "35300": {
+        "total_pop": 18878,
+        "area": 4371302,
+        "hcsa_bus": 44
+    },
+    "35600": {
+        "total_pop": 4318,
+        "area": 4069976,
+        "hcsa_bus": 7
+    },
+    "35670": {
+        "total_pop": 1048,
+        "area": 200435.5,
+        "hcsa_bus": null
+    },
+    "35740": {
+        "total_pop": 55369,
+        "area": 86986.6,
+        "hcsa_bus": 368
+    },
+    "35760": {
+        "total_pop": 10628,
+        "area": 1966984.9,
+        "hcsa_bus": 21
+    },
+    "35780": {
+        "total_pop": 3069,
+        "area": 105206.8,
+        "hcsa_bus": null
+    },
+    "35790": {
+        "total_pop": 2637,
+        "area": 7199.3,
+        "hcsa_bus": null
+    },
+    "35800": {
+        "total_pop": 1586,
+        "area": 4761287.5,
+        "hcsa_bus": 3
+    },
+    "36070": {
+        "total_pop": 833,
+        "area": 439536.6,
+        "hcsa_bus": null
+    },
+    "36150": {
+        "total_pop": 790,
+        "area": 6741465.5,
+        "hcsa_bus": null
+    },
+    "36250": {
+        "total_pop": 156863,
+        "area": 53716.7,
+        "hcsa_bus": 579
+    },
+    "36300": {
+        "total_pop": 806,
+        "area": 2658074.8,
+        "hcsa_bus": 5
+    },
+    "36370": {
+        "total_pop": 81067,
+        "area": 657026.7,
+        "hcsa_bus": 350
+    },
+    "36510": {
+        "total_pop": 42583,
+        "area": 424274.3,
+        "hcsa_bus": 130
+    },
+    "36580": {
+        "total_pop": 25887,
+        "area": 537343.4,
+        "hcsa_bus": 51
+    },
+    "36630": {
+        "total_pop": 32555,
+        "area": 838155.8,
+        "hcsa_bus": 91
+    },
+    "36660": {
+        "total_pop": 35601,
+        "area": 710781.6,
+        "hcsa_bus": 104
+    },
+    "36720": {
+        "total_pop": 319922,
+        "area": 225385.3,
+        "hcsa_bus": 2018
+    },
+    "36820": {
+        "total_pop": 25541,
+        "area": 1129287,
+        "hcsa_bus": 88
+    },
+    "36910": {
+        "total_pop": 167657,
+        "area": 1295721.1,
+        "hcsa_bus": 890
+    },
+    "36950": {
+        "total_pop": 3848,
+        "area": 88373.1,
+        "hcsa_bus": 4
+    },
+    "36960": {
+        "total_pop": 4994,
+        "area": 49003.1,
+        "hcsa_bus": null
+    },
+    "37010": {
+        "total_pop": 194072,
+        "area": 373082,
+        "hcsa_bus": 1035
+    },
+    "37300": {
+        "total_pop": 4240,
+        "area": 1082.2,
+        "hcsa_bus": 9
+    },
+    "37310": {
+        "total_pop": 34467,
+        "area": 3793659.2,
+        "hcsa_bus": 77
+    },
+    "37340": {
+        "total_pop": 35050,
+        "area": 2381889.2,
+        "hcsa_bus": 118
+    },
+    "37400": {
+        "total_pop": 1157,
+        "area": 5381348.5,
+        "hcsa_bus": null
+    },
+    "37550": {
+        "total_pop": 1005,
+        "area": 39055.8,
+        "hcsa_bus": null
+    },
+    "37570": {
+        "total_pop": 306,
+        "area": 1184.2,
+        "hcsa_bus": null
+    },
+    "37600": {
+        "total_pop": 2848,
+        "area": 15883.8,
+        "hcsa_bus": 3
+    },
+    "40070": {
+        "total_pop": 24794,
+        "area": 1557.3,
+        "hcsa_bus": 992
+    },
+    "40120": {
+        "total_pop": 39734,
+        "area": 79449.6,
+        "hcsa_bus": 271
+    },
+    "40150": {
+        "total_pop": 9059,
+        "area": 93249.1,
+        "hcsa_bus": 25
+    },
+    "40220": {
+        "total_pop": 27037,
+        "area": 182680.7,
+        "hcsa_bus": 9
+    },
+    "40250": {
+        "total_pop": 2558,
+        "area": 10235304.999999993,
+        "hcsa_bus": 78
+    },
+    "40310": {
+        "total_pop": 24808,
+        "area": 89354.2,
+        "hcsa_bus": null
+    },
+    "40430": {
+        "total_pop": 2551,
+        "area": 159038.9,
+        "hcsa_bus": 91
+    },
+    "40520": {
+        "total_pop": 10853,
+        "area": 47619.6,
+        "hcsa_bus": 8
+    },
+    "40700": {
+        "total_pop": 45706,
+        "area": 2751.8,
+        "hcsa_bus": 43
+    },
+    "40910": {
+        "total_pop": 51469,
+        "area": 2434.9,
+        "hcsa_bus": 955
+    },
+    "41010": {
+        "total_pop": 3466,
+        "area": 542034.4,
+        "hcsa_bus": 224
+    },
+    "41060": {
+        "total_pop": 117382,
+        "area": 5478.8,
+        "hcsa_bus": 9
+    },
+    "41140": {
+        "total_pop": 9379,
+        "area": 189244.7,
+        "hcsa_bus": 530
+    },
+    "41190": {
+        "total_pop": 1799,
+        "area": 501884.8,
+        "hcsa_bus": 36
+    },
+    "41330": {
+        "total_pop": 1845,
+        "area": 7768,
+        "hcsa_bus": 5
+    },
+    "41560": {
+        "total_pop": 14872,
+        "area": 77291.5,
+        "hcsa_bus": null
+    },
+    "41750": {
+        "total_pop": 1019,
+        "area": 674193.2,
+        "hcsa_bus": 41
+    },
+    "41830": {
+        "total_pop": 1693,
+        "area": 407048.3,
+        "hcsa_bus": null
+    },
+    "41960": {
+        "total_pop": 1315,
+        "area": 275556.4,
+        "hcsa_bus": 3
+    },
+    "42030": {
+        "total_pop": 24018,
+        "area": 4113.8,
+        "hcsa_bus": 3
+    },
+    "42110": {
+        "total_pop": 4206,
+        "area": 671514.2,
+        "hcsa_bus": 96
+    },
+    "42250": {
+        "total_pop": 8511,
+        "area": 189801.4,
+        "hcsa_bus": 3
+    },
+    "42600": {
+        "total_pop": 37032,
+        "area": 1375.2,
+        "hcsa_bus": 10
+    },
+    "42750": {
+        "total_pop": 4933,
+        "area": 440085.6,
+        "hcsa_bus": 300
+    },
+    "43080": {
+        "total_pop": 1112,
+        "area": 441579.6,
+        "hcsa_bus": 16
+    },
+    "43220": {
+        "total_pop": 1073,
+        "area": 569710.8,
+        "hcsa_bus": null
+    },
+    "43360": {
+        "total_pop": 2374,
+        "area": 333979.5,
+        "hcsa_bus": null
+    },
+    "43650": {
+        "total_pop": 15339,
+        "area": 127684.5,
+        "hcsa_bus": 3
+    },
+    "43710": {
+        "total_pop": 5761,
+        "area": 472128.8,
+        "hcsa_bus": 27
+    },
+    "43790": {
+        "total_pop": 11726,
+        "area": 776392.3,
+        "hcsa_bus": 8
+    },
+    "44000": {
+        "total_pop": 64,
+        "area": 10270389.999999993,
+        "hcsa_bus": null
+    },
+    "44060": {
+        "total_pop": 92308,
+        "area": 5564.1,
+        "hcsa_bus": 289
+    },
+    "44210": {
+        "total_pop": 8983,
+        "area": 627162.5,
+        "hcsa_bus": 10
+    },
+    "44340": {
+        "total_pop": 67253,
+        "area": 7554.7,
+        "hcsa_bus": 584
+    },
+    "44550": {
+        "total_pop": 35545,
+        "area": 59464.1,
+        "hcsa_bus": 122
+    },
+    "44620": {
+        "total_pop": 27176,
+        "area": 3389.4,
+        "hcsa_bus": 106
+    },
+    "44830": {
+        "total_pop": 2910,
+        "area": 342277.3,
+        "hcsa_bus": 6
+    },
+    "45040": {
+        "total_pop": 22165,
+        "area": 183176,
+        "hcsa_bus": 37
+    },
+    "45090": {
+        "total_pop": 8533,
+        "area": 452012.7,
+        "hcsa_bus": 15
+    },
+    "45120": {
+        "total_pop": 4603,
+        "area": 298618.2,
+        "hcsa_bus": 15
+    },
+    "45290": {
+        "total_pop": 36750,
+        "area": 1510.4,
+        "hcsa_bus": 661
+    },
+    "45340": {
+        "total_pop": 171489,
+        "area": 51812.5,
+        "hcsa_bus": 469
+    },
+    "45400": {
+        "total_pop": 854,
+        "area": 332182.4,
+        "hcsa_bus": 3
+    },
+    "45540": {
+        "total_pop": 1700,
+        "area": 302014.2,
+        "hcsa_bus": null
+    },
+    "45680": {
+        "total_pop": 93426,
+        "area": 34520.3,
+        "hcsa_bus": 145
+    },
+    "45890": {
+        "total_pop": 126120,
+        "area": 9175.9,
+        "hcsa_bus": 460
+    },
+    "46090": {
+        "total_pop": 14102,
+        "area": 119558.4,
+        "hcsa_bus": 43
+    },
+    "46300": {
+        "total_pop": 14626,
+        "area": 3036.8,
+        "hcsa_bus": 62
+    },
+    "46450": {
+        "total_pop": 17630,
+        "area": 176071,
+        "hcsa_bus": 65
+    },
+    "46510": {
+        "total_pop": 21259,
+        "area": 779.2,
+        "hcsa_bus": 185
+    },
+    "46670": {
+        "total_pop": 9869,
+        "area": 91586.6,
+        "hcsa_bus": 18
+    },
+    "46860": {
+        "total_pop": 1444,
+        "area": 109171.6,
+        "hcsa_bus": 3
+    },
+    "46970": {
+        "total_pop": 4014,
+        "area": 11047.6,
+        "hcsa_bus": 5
+    },
+    "47140": {
+        "total_pop": 142555,
+        "area": 15984.3,
+        "hcsa_bus": 383
+    },
+    "47290": {
+        "total_pop": 2094,
+        "area": 570221,
+        "hcsa_bus": 4
+    },
+    "47490": {
+        "total_pop": 2214,
+        "area": 622285.9,
+        "hcsa_bus": 7
+    },
+    "47630": {
+        "total_pop": 6794,
+        "area": 652720.8,
+        "hcsa_bus": 15
+    },
+    "47700": {
+        "total_pop": 99694,
+        "area": 9521.1,
+        "hcsa_bus": 292
+    },
+    "47800": {
+        "total_pop": 5463,
+        "area": 883343.4,
+        "hcsa_bus": 6
+    },
+    "47910": {
+        "total_pop": 2688,
+        "area": 266907.5,
+        "hcsa_bus": 7
+    },
+    "47980": {
+        "total_pop": 39145,
+        "area": 1427,
+        "hcsa_bus": 562
+    },
+    "48050": {
+        "total_pop": 15248,
+        "area": 38462.6,
+        "hcsa_bus": 49
+    },
+    "48130": {
+        "total_pop": 6814,
+        "area": 346848.8,
+        "hcsa_bus": 19
+    },
+    "48260": {
+        "total_pop": 7944,
+        "area": 353,
+        "hcsa_bus": 156
+    },
+    "48340": {
+        "total_pop": 12031,
+        "area": 392632.3,
+        "hcsa_bus": 22
+    },
+    "48410": {
+        "total_pop": 60105,
+        "area": 3704,
+        "hcsa_bus": 338
+    },
+    "48540": {
+        "total_pop": 21766,
+        "area": 107134,
+        "hcsa_bus": 54
+    },
+    "48640": {
+        "total_pop": 1294,
+        "area": 507527.8,
+        "hcsa_bus": 3
+    },
+    "48750": {
+        "total_pop": 5478,
+        "area": 75125.8,
+        "hcsa_bus": 22
+    },
+    "48830": {
+        "total_pop": 11328,
+        "area": 589960.8,
+        "hcsa_bus": 33
+    },
+    "49399": {
+        "total_pop": 3520,
+        "area": 62248948,
+        "hcsa_bus": null
+    },
+    "50080": {
+        "total_pop": 37826,
+        "area": 431089.1,
+        "hcsa_bus": 170
+    },
+    "50210": {
+        "total_pop": 87634,
+        "area": 55952.6,
+        "hcsa_bus": 210
+    },
+    "50250": {
+        "total_pop": 13329,
+        "area": 10081821.000000002,
+        "hcsa_bus": 5
+    },
+    "50280": {
+        "total_pop": 15700,
+        "area": 212237.5,
+        "hcsa_bus": 80
+    },
+    "50350": {
+        "total_pop": 15739,
+        "area": 1034.5,
+        "hcsa_bus": 51
+    },
+    "50420": {
+        "total_pop": 68232,
+        "area": 3461.7,
+        "hcsa_bus": 280
+    },
+    "50490": {
+        "total_pop": 41510,
+        "area": 3982.5,
+        "hcsa_bus": 121
+    },
+    "50560": {
+        "total_pop": 1748,
+        "area": 237052,
+        "hcsa_bus": null
+    },
+    "50630": {
+        "total_pop": 1833,
+        "area": 190447.9,
+        "hcsa_bus": 5
+    },
+    "50770": {
+        "total_pop": 1756,
+        "area": 282645.9,
+        "hcsa_bus": null
+    },
+    "50840": {
+        "total_pop": 4722,
+        "area": 133736.1,
+        "hcsa_bus": 9
+    },
+    "50910": {
+        "total_pop": 965,
+        "area": 160115.3,
+        "hcsa_bus": null
+    },
+    "50980": {
+        "total_pop": 16952,
+        "area": 5440182.5,
+        "hcsa_bus": 59
+    },
+    "51080": {
+        "total_pop": 1132,
+        "area": 260965.9,
+        "hcsa_bus": null
+    },
+    "51120": {
+        "total_pop": 940,
+        "area": 272469.4,
+        "hcsa_bus": 3
+    },
+    "51190": {
+        "total_pop": 31776,
+        "area": 6541.6,
+        "hcsa_bus": 208
+    },
+    "51260": {
+        "total_pop": 38926,
+        "area": 145405.1,
+        "hcsa_bus": 162
+    },
+    "51310": {
+        "total_pop": 28481,
+        "area": 2195.5,
+        "hcsa_bus": 617
+    },
+    "51330": {
+        "total_pop": 92965,
+        "area": 6487.9,
+        "hcsa_bus": 452
+    },
+    "51400": {
+        "total_pop": 18022,
+        "area": 55789.8,
+        "hcsa_bus": 80
+    },
+    "51470": {
+        "total_pop": 541,
+        "area": 287092.5,
+        "hcsa_bus": null
+    },
+    "51540": {
+        "total_pop": 5362,
+        "area": 4657461,
+        "hcsa_bus": 12
+    },
+    "51610": {
+        "total_pop": 1492,
+        "area": 398133.3,
+        "hcsa_bus": 3
+    },
+    "51680": {
+        "total_pop": 5742,
+        "area": 121990.3,
+        "hcsa_bus": 3
+    },
+    "51750": {
+        "total_pop": 10704,
+        "area": 495.6,
+        "hcsa_bus": 187
+    },
+    "51820": {
+        "total_pop": 112165,
+        "area": 16789.9,
+        "hcsa_bus": 436
+    },
+    "51890": {
+        "total_pop": 8754,
+        "area": 170981.5,
+        "hcsa_bus": 18
+    },
+    "51960": {
+        "total_pop": 3506,
+        "area": 3029769.8,
+        "hcsa_bus": 3
+    },
+    "52030": {
+        "total_pop": 1004,
+        "area": 418987.9,
+        "hcsa_bus": null
+    },
+    "52100": {
+        "total_pop": 1146,
+        "area": 268127.1,
+        "hcsa_bus": 3
+    },
+    "52170": {
+        "total_pop": 8188,
+        "area": 385.6,
+        "hcsa_bus": 143
+    },
+    "52240": {
+        "total_pop": 1077,
+        "area": 327604.9,
+        "hcsa_bus": null
+    },
+    "52310": {
+        "total_pop": 862,
+        "area": 119533.7,
+        "hcsa_bus": null
+    },
+    "52380": {
+        "total_pop": 148,
+        "area": 1358219.6,
+        "hcsa_bus": null
+    },
+    "52450": {
+        "total_pop": 1440,
+        "area": 186244.6,
+        "hcsa_bus": null
+    },
+    "52520": {
+        "total_pop": 1431,
+        "area": 722435.7,
+        "hcsa_bus": 3
+    },
+    "52590": {
+        "total_pop": 3259,
+        "area": 671157.2,
+        "hcsa_bus": 6
+    },
+    "52660": {
+        "total_pop": 14368,
+        "area": 52580.2,
+        "hcsa_bus": 33
+    },
+    "52730": {
+        "total_pop": 6154,
+        "area": 185984.9,
+        "hcsa_bus": 34
+    },
+    "52800": {
+        "total_pop": 8255,
+        "area": 11973097,
+        "hcsa_bus": 4
+    },
+    "52870": {
+        "total_pop": 6062,
+        "area": 155985.6,
+        "hcsa_bus": 10
+    },
+    "52940": {
+        "total_pop": 676,
+        "area": 186308.5,
+        "hcsa_bus": null
+    },
+    "53010": {
+        "total_pop": 676,
+        "area": 253922.5,
+        "hcsa_bus": null
+    },
+    "53080": {
+        "total_pop": 735,
+        "area": 9288503,
+        "hcsa_bus": null
+    },
+    "53150": {
+        "total_pop": 7811,
+        "area": 313.8,
+        "hcsa_bus": 100
+    },
+    "53220": {
+        "total_pop": 10970,
+        "area": 37230748.00000001,
+        "hcsa_bus": 10
+    },
+    "53290": {
+        "total_pop": 14281,
+        "area": 4479754.5,
+        "hcsa_bus": 47
+    },
+    "53360": {
+        "total_pop": 2836,
+        "area": 648807.1,
+        "hcsa_bus": 7
+    },
+    "53430": {
+        "total_pop": 30868,
+        "area": 1901,
+        "hcsa_bus": 348
+    },
+    "53570": {
+        "total_pop": 5258,
+        "area": 320835.9,
+        "hcsa_bus": 5
+    },
+    "53640": {
+        "total_pop": 1207,
+        "area": 426504.2,
+        "hcsa_bus": 4
+    },
+    "53710": {
+        "total_pop": 1011,
+        "area": 183542.9,
+        "hcsa_bus": null
+    },
+    "53780": {
+        "total_pop": 123325,
+        "area": 12729.8,
+        "hcsa_bus": 339
+    },
+    "53800": {
+        "total_pop": 38738,
+        "area": 990900,
+        "hcsa_bus": 168
+    },
+    "53920": {
+        "total_pop": 3490,
+        "area": 13306101.000000002,
+        "hcsa_bus": 3
+    },
+    "53990": {
+        "total_pop": 27798,
+        "area": 172760.7,
+        "hcsa_bus": 59
+    },
+    "54060": {
+        "total_pop": 3560,
+        "area": 236933,
+        "hcsa_bus": 3
+    },
+    "54130": {
+        "total_pop": 1133,
+        "area": 650859,
+        "hcsa_bus": 4
+    },
+    "54170": {
+        "total_pop": 160031,
+        "area": 9892.9,
+        "hcsa_bus": 821
+    },
+    "54200": {
+        "total_pop": 58946,
+        "area": 32429.6,
+        "hcsa_bus": 179
+    },
+    "54280": {
+        "total_pop": 29998,
+        "area": 9549805,
+        "hcsa_bus": 87
+    },
+    "54310": {
+        "total_pop": 22414,
+        "area": 1523739.8,
+        "hcsa_bus": 40
+    },
+    "54340": {
+        "total_pop": 4085,
+        "area": 151818.5,
+        "hcsa_bus": 12
+    },
+    "54410": {
+        "total_pop": 1207,
+        "area": 191543.3,
+        "hcsa_bus": 4
+    },
+    "54480": {
+        "total_pop": 562,
+        "area": 562458.2,
+        "hcsa_bus": null
+    },
+    "54550": {
+        "total_pop": 1980,
+        "area": 293099.3,
+        "hcsa_bus": 6
+    },
+    "54620": {
+        "total_pop": 870,
+        "area": 744080.2,
+        "hcsa_bus": 3
+    },
+    "54690": {
+        "total_pop": 408,
+        "area": 283231.3,
+        "hcsa_bus": null
+    },
+    "54760": {
+        "total_pop": 774,
+        "area": 471892.2,
+        "hcsa_bus": null
+    },
+    "54830": {
+        "total_pop": 43511,
+        "area": 12001.2,
+        "hcsa_bus": 73
+    },
+    "54900": {
+        "total_pop": 1282,
+        "area": 1188632,
+        "hcsa_bus": 3
+    },
+    "54970": {
+        "total_pop": 1206,
+        "area": 17998460,
+        "hcsa_bus": null
+    },
+    "55040": {
+        "total_pop": 1529,
+        "area": 3191505.5,
+        "hcsa_bus": 3
+    },
+    "55110": {
+        "total_pop": 85302,
+        "area": 17489.7,
+        "hcsa_bus": 298
+    },
+    "55180": {
+        "total_pop": 9159,
+        "area": 702960.8,
+        "hcsa_bus": 28
+    },
+    "55250": {
+        "total_pop": 1008,
+        "area": 10018855,
+        "hcsa_bus": null
+    },
+    "55320": {
+        "total_pop": 101940,
+        "area": 5285.1,
+        "hcsa_bus": 1020
+    },
+    "55390": {
+        "total_pop": 521,
+        "area": 12411093.999999993,
+        "hcsa_bus": null
+    },
+    "55460": {
+        "total_pop": 3410,
+        "area": 329378.2,
+        "hcsa_bus": 12
+    },
+    "55530": {
+        "total_pop": 432,
+        "area": 193488.6,
+        "hcsa_bus": null
+    },
+    "55600": {
+        "total_pop": 2426,
+        "area": 376302.5,
+        "hcsa_bus": 6
+    },
+    "55670": {
+        "total_pop": 698,
+        "area": 351059.3,
+        "hcsa_bus": null
+    },
+    "55740": {
+        "total_pop": 9067,
+        "area": 434.7,
+        "hcsa_bus": 101
+    },
+    "55810": {
+        "total_pop": 464,
+        "area": 1385811.8,
+        "hcsa_bus": null
+    },
+    "55880": {
+        "total_pop": 518,
+        "area": 1018459.4,
+        "hcsa_bus": null
+    },
+    "55950": {
+        "total_pop": 531,
+        "area": 342694.4,
+        "hcsa_bus": null
+    },
+    "56090": {
+        "total_pop": 39139,
+        "area": 64320.1,
+        "hcsa_bus": 133
+    },
+    "56160": {
+        "total_pop": 162,
+        "area": 4504609,
+        "hcsa_bus": null
+    },
+    "56230": {
+        "total_pop": 17653,
+        "area": 170346.9,
+        "hcsa_bus": 26
+    },
+    "56300": {
+        "total_pop": 1363,
+        "area": 305393.6,
+        "hcsa_bus": 6
+    },
+    "56370": {
+        "total_pop": 837,
+        "area": 380902.9,
+        "hcsa_bus": 3
+    },
+    "56460": {
+        "total_pop": 5040,
+        "area": 163130.2,
+        "hcsa_bus": 26
+    },
+    "56580": {
+        "total_pop": 22554,
+        "area": 1964.5,
+        "hcsa_bus": 615
+    },
+    "56620": {
+        "total_pop": 1747,
+        "area": 15982170.000000002,
+        "hcsa_bus": null
+    },
+    "56730": {
+        "total_pop": 11190,
+        "area": 143122.2,
+        "hcsa_bus": 36
+    },
+    "56790": {
+        "total_pop": 3077,
+        "area": 1254371.4,
+        "hcsa_bus": 11
+    },
+    "56860": {
+        "total_pop": 247,
+        "area": 116602.5,
+        "hcsa_bus": null
+    },
+    "56930": {
+        "total_pop": 1721,
+        "area": 106.8,
+        "hcsa_bus": 28
+    },
+    "57000": {
+        "total_pop": 596,
+        "area": 830135.5,
+        "hcsa_bus": null
+    },
+    "57080": {
+        "total_pop": 27762,
+        "area": 1371.9,
+        "hcsa_bus": 543
+    },
+    "57140": {
+        "total_pop": 1152,
+        "area": 129457.2,
+        "hcsa_bus": null
+    },
+    "57210": {
+        "total_pop": 5249,
+        "area": 487668.2,
+        "hcsa_bus": 12
+    },
+    "57280": {
+        "total_pop": 14975,
+        "area": 1841707.8,
+        "hcsa_bus": 33
+    },
+    "57350": {
+        "total_pop": 1007,
+        "area": 201692.7,
+        "hcsa_bus": null
+    },
+    "57420": {
+        "total_pop": 1598,
+        "area": 984175,
+        "hcsa_bus": 9
+    },
+    "57490": {
+        "total_pop": 133389,
+        "area": 25749.7,
+        "hcsa_bus": 381
+    },
+    "57630": {
+        "total_pop": 81,
+        "area": 3260529,
+        "hcsa_bus": null
+    },
+    "57700": {
+        "total_pop": 30933,
+        "area": 90120.6,
+        "hcsa_bus": 56
+    },
+    "57770": {
+        "total_pop": 946,
+        "area": 2420124.8,
+        "hcsa_bus": null
+    },
+    "57840": {
+        "total_pop": 43554,
+        "area": 1981.2,
+        "hcsa_bus": 427
+    },
+    "57910": {
+        "total_pop": 220249,
+        "area": 10472.7,
+        "hcsa_bus": 1216
+    },
+    "57980": {
+        "total_pop": 17106,
+        "area": 561.8,
+        "hcsa_bus": 451
+    },
+    "58050": {
+        "total_pop": 143374,
+        "area": 104299.3,
+        "hcsa_bus": 334
+    },
+    "58190": {
+        "total_pop": 401,
+        "area": 110169.2,
+        "hcsa_bus": null
+    },
+    "58260": {
+        "total_pop": 591,
+        "area": 265669.3,
+        "hcsa_bus": 3
+    },
+    "58330": {
+        "total_pop": 4427,
+        "area": 169164.9,
+        "hcsa_bus": 4
+    },
+    "58400": {
+        "total_pop": 348,
+        "area": 165120.4,
+        "hcsa_bus": null
+    },
+    "58470": {
+        "total_pop": 279,
+        "area": 5780987.5,
+        "hcsa_bus": null
+    },
+    "58510": {
+        "total_pop": 36601,
+        "area": 1794,
+        "hcsa_bus": 180
+    },
+    "58540": {
+        "total_pop": 934,
+        "area": 255101.3,
+        "hcsa_bus": null
+    },
+    "58570": {
+        "total_pop": 36088,
+        "area": 1137.7,
+        "hcsa_bus": 367
+    },
+    "58610": {
+        "total_pop": 1824,
+        "area": 194617.6,
+        "hcsa_bus": 5
+    },
+    "58680": {
+        "total_pop": 431,
+        "area": 190386.5,
+        "hcsa_bus": null
+    },
+    "58760": {
+        "total_pop": 203679,
+        "area": 68326,
+        "hcsa_bus": 455
+    },
+    "58820": {
+        "total_pop": 4169,
+        "area": 83222.9,
+        "hcsa_bus": 3
+    },
+    "58890": {
+        "total_pop": 798,
+        "area": 283182.7,
+        "hcsa_bus": null
+    },
+    "59030": {
+        "total_pop": 302,
+        "area": 331945,
+        "hcsa_bus": null
+    },
+    "59100": {
+        "total_pop": 730,
+        "area": 204089.9,
+        "hcsa_bus": null
+    },
+    "59170": {
+        "total_pop": 1024,
+        "area": 230471.2,
+        "hcsa_bus": 3
+    },
+    "59250": {
+        "total_pop": 706,
+        "area": 18129734,
+        "hcsa_bus": null
+    },
+    "59310": {
+        "total_pop": 1299,
+        "area": 336506.8,
+        "hcsa_bus": null
+    },
+    "59320": {
+        "total_pop": 428,
+        "area": 112883.5,
+        "hcsa_bus": null
+    },
+    "59330": {
+        "total_pop": 498,
+        "area": 159448.9,
+        "hcsa_bus": null
+    },
+    "59340": {
+        "total_pop": 7317,
+        "area": 11206598.000000002,
+        "hcsa_bus": 11
+    },
+    "59350": {
+        "total_pop": 357,
+        "area": 2794946.5,
+        "hcsa_bus": null
+    },
+    "59360": {
+        "total_pop": 1169,
+        "area": 3042876.5,
+        "hcsa_bus": 3
+    },
+    "59370": {
+        "total_pop": 3591,
+        "area": 213159.2,
+        "hcsa_bus": 9
+    },
+    "60210": {
+        "total_pop": 6232,
+        "area": 352388.6,
+        "hcsa_bus": 16
+    },
+    "60410": {
+        "total_pop": 17294,
+        "area": 17115.1,
+        "hcsa_bus": 31
+    },
+    "60610": {
+        "total_pop": 19348,
+        "area": 61095.3,
+        "hcsa_bus": 96
+    },
+    "60810": {
+        "total_pop": 21904,
+        "area": 93308.9,
+        "hcsa_bus": 63
+    },
+    "61010": {
+        "total_pop": 2144,
+        "area": 798241.6,
+        "hcsa_bus": 3
+    },
+    "61210": {
+        "total_pop": 8066,
+        "area": 489765.1,
+        "hcsa_bus": 10
+    },
+    "61410": {
+        "total_pop": 56945,
+        "area": 37795.5,
+        "hcsa_bus": 201
+    },
+    "61510": {
+        "total_pop": 10290,
+        "area": 410811.1,
+        "hcsa_bus": 19
+    },
+    "61610": {
+        "total_pop": 25415,
+        "area": 11125.9,
+        "hcsa_bus": 98
+    },
+    "61810": {
+        "total_pop": 6652,
+        "area": 323054.6,
+        "hcsa_bus": 20
+    },
+    "62010": {
+        "total_pop": 987,
+        "area": 199662.4,
+        "hcsa_bus": 3
+    },
+    "62210": {
+        "total_pop": 6931,
+        "area": 65343.8,
+        "hcsa_bus": 11
+    },
+    "62410": {
+        "total_pop": 4528,
+        "area": 259156.2,
+        "hcsa_bus": 8
+    },
+    "62610": {
+        "total_pop": 47636,
+        "area": 12114.8,
+        "hcsa_bus": 118
+    },
+    "62810": {
+        "total_pop": 53684,
+        "area": 7791,
+        "hcsa_bus": 788
+    },
+    "63010": {
+        "total_pop": 17219,
+        "area": 550735.4,
+        "hcsa_bus": 49
+    },
+    "63210": {
+        "total_pop": 6324,
+        "area": 115618.9,
+        "hcsa_bus": 15
+    },
+    "63410": {
+        "total_pop": 1601,
+        "area": 109574.1,
+        "hcsa_bus": null
+    },
+    "63610": {
+        "total_pop": 37734,
+        "area": 72010.3,
+        "hcsa_bus": 157
+    },
+    "63810": {
+        "total_pop": 11329,
+        "area": 60046.2,
+        "hcsa_bus": 41
+    },
+    "64010": {
+        "total_pop": 67449,
+        "area": 141363.1,
+        "hcsa_bus": 416
+    },
+    "64210": {
+        "total_pop": 19713,
+        "area": 333081.5,
+        "hcsa_bus": 50
+    },
+    "64610": {
+        "total_pop": 13300,
+        "area": 513525,
+        "hcsa_bus": 26
+    },
+    "64810": {
+        "total_pop": 15218,
+        "area": 58377.8,
+        "hcsa_bus": 30
+    },
+    "65010": {
+        "total_pop": 6118,
+        "area": 261549.3,
+        "hcsa_bus": 11
+    },
+    "65210": {
+        "total_pop": 2404,
+        "area": 66039.5,
+        "hcsa_bus": null
+    },
+    "65410": {
+        "total_pop": 13800,
+        "area": 353590.8,
+        "hcsa_bus": 40
+    },
+    "65610": {
+        "total_pop": 4167,
+        "area": 958353.9,
+        "hcsa_bus": 3
+    },
+    "65810": {
+        "total_pop": 23769,
+        "area": 69114.7,
+        "hcsa_bus": 77
+    },
+    "70200": {
+        "total_pop": 26534,
+        "area": 32771.3,
+        "hcsa_bus": 107
+    },
+    "70420": {
+        "total_pop": 7392,
+        "area": 32271322.000000007,
+        "hcsa_bus": 3
+    },
+    "70540": {
+        "total_pop": 174,
+        "area": 4140.5,
+        "hcsa_bus": null
+    },
+    "70620": {
+        "total_pop": 4208,
+        "area": 28131202,
+        "hcsa_bus": null
+    },
+    "70700": {
+        "total_pop": 1391,
+        "area": 205605.5,
+        "hcsa_bus": 3
+    },
+    "71000": {
+        "total_pop": 84613,
+        "area": 11131.8,
+        "hcsa_bus": 477
+    },
+    "71300": {
+        "total_pop": 10345,
+        "area": 3330993.2,
+        "hcsa_bus": null
+    },
+    "72200": {
+        "total_pop": 10621,
+        "area": 741664.4,
+        "hcsa_bus": 26
+    },
+    "72300": {
+        "total_pop": 25598,
+        "area": 290314.6,
+        "hcsa_bus": 33
+    },
+    "72330": {
+        "total_pop": 6863,
+        "area": 26832934,
+        "hcsa_bus": null
+    },
+    "72800": {
+        "total_pop": 37862,
+        "area": 5265.6,
+        "hcsa_bus": 91
+    },
+    "73600": {
+        "total_pop": 7397,
+        "area": 18521024,
+        "hcsa_bus": null
+    },
+    "74050": {
+        "total_pop": 2753,
+        "area": 748316.6,
+        "hcsa_bus": null
+    },
+    "74550": {
+        "total_pop": 3138,
+        "area": 15328708,
+        "hcsa_bus": null
+    },
+    "74560": {
+        "total_pop": 508,
+        "area": 563.8,
+        "hcsa_bus": null
+    },
+    "74660": {
+        "total_pop": 6902,
+        "area": 4967503.5,
+        "hcsa_bus": null
+    },
+    "74680": {
+        "total_pop": 3649,
+        "area": 1406969.8,
+        "hcsa_bus": null
+    },
+    "79399": {
+        "total_pop": 7379,
+        "area": 1978999.8,
+        "hcsa_bus": 10
+    },
+    "89399": {
+        "total_pop": 420960,
+        "area": 235817.2,
+        "hcsa_bus": 2170
+    },
+    "99399": {
+        "total_pop": 4626,
+        "area": 25631.6,
+        "hcsa_bus": 3
+    }
+}
