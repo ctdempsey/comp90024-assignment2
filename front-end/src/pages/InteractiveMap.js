@@ -14,21 +14,9 @@ import BarChartRatios from '../components/BarChartRatios'
 import L from "leaflet";
 
 const tweet_query = `http://172.26.130.183:5555/api/view/tweet_view/LGAcount?group=true`
+//mock api:
+//const tweet_query = `https://testapi.io/api/emilylm/tweets`
 
-/*
-const CustomPopup = ({ feature }) => {
-  const lga_code = feature.properties.LGA_CODE19
-  console.log("FEAT", feature)
-  return (
-    <div>
-    <p>
-    {`${feature.properties.LGA_NAME19}</br><b>No. Cases: </b>${feature.properties.cases}</br><b>Total Population: </b>${lga_data[lga_code]['total_pop']}</br><b>Area: </b>${lga_data[lga_code]['area']}</br>`}
-    </p>
-    </div>
-
-  );
-};
-*/
 
 function getColor(d, max) {
   d = d*1.00/max*1000.00
@@ -306,7 +294,7 @@ mouseover: () => (this.highlightFeature, this.infoShow(feature)),
       <div>
       {JSON.stringify(this.state.features.features[0].properties)}
       {JSON.stringify(this.state.maxCases)}
-      {('cases' in this.state.lga_data["10050"] && 'tweets' in this.state.lga_data["10050"]) ?
+      {('cases' in this.state.lga_data["10050"]) ?
         <div>
         <Map bounds={this.state.bounds} zoomSnap={0.1} ref="map" center={position} zoom={this.state.zoom}>
         <TileLayer
@@ -339,45 +327,3 @@ mouseover: () => (this.highlightFeature, this.infoShow(feature)),
     )
   }
 }
-
-/*
-<GeoJSON
-  data={aus_postcodes}
-  style={this.geoJSONStyle}
-  onEachFeature={this.onEachPCFeature}
-/>
-{(this.state.lgaCode != undefined) ?
-<InfoPanel key={this.state.lgaCode} lgaData={this.state.lga_data} lgaCode={this.state.lgaCode}/>
-: null}
-
-
-<Legend max={this.state.maxCases}/>
-
-
-
-for (let feat in data):
-
-  if (feat in features):
-    let lga = data[feat].attributes.LGA_CODE19
-    data[]
-  try {
-    decodeURI("%%%");   // You cannot URI decode percent signs
-  }
-  catch(err) {
-    document.getElementById("demo").innerHTML = err.name;
-  }
-
-
-
-  data[lga]['tweet_case_ratio'] = ratio
-  count = 1;
-}
-if (data[lga]['cases'] == 0){
-  ratio = count/1
-} else if (count == 0){
-  ratio = 0
-} else {
-  ratio = count/data[lga]['cases']
-}
-
-*/
