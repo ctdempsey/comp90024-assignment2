@@ -1,3 +1,12 @@
+#mapid { height: 180px; }
+
+.leaflet-container {
+  height: calc(100vh - 50px);
+  width: 100%;
+  padding: 0px;
+}
+
+
 body {
   margin: 0px;
 }
@@ -28,4 +37,46 @@ body {
   float: left;
   margin-right: 8px;
   opacity: 0.7;
+}
+
+
+#chart-container {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0px;
+  width: 300px;
+  height: 125px;
+  background-color: transparent;
+}
+
+.row{
+  border-bottom: 1px solid lightgrey;
+}
+
+.table {
+  margin: 4px;
+}
+
+#page-header{
+  background-color: white;
+  box-shadow: 0px 3px 5px rgba(0,0,0,0.18);
+  height: 60px;
+  z-index: 9999;
+}
+#page-header.row{
+  padding: 6px !important;
+
+}
+
+#mapContainer{
+  display: flex;
+  flex-flow: column;
+  height: calc(100vh - 61px);
+  padding: 0px;
+}
+
+#pageContainer{
+
+  padding: 0px;
 }
