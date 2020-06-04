@@ -17,7 +17,7 @@ export default class InfoPanel extends React.PureComponent {
       <div class="info legend leaflet-control">
       <div className="container container-fluid">
         {(lgaCode == undefined) ? <div className="row" id="info-header">
-          <h6> Click on a map region to view details... </h6>
+          <h6><em> <b>  Click on a map region to view details...  </b> </em></h6>
         </div>
         :
         <div className="row" id="info-header">

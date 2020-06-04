@@ -1,7 +1,7 @@
 #mapid { height: 180px; }
 
 .leaflet-container {
-  height: calc(100vh - 50px);
+  height: calc(100vh - 71px);
   width: 100%;
   padding: 0px;
 }
@@ -82,7 +82,7 @@ body {
 #mapContainer{
   display: flex;
   flex-flow: column;
-  height: calc(100vh - 61px);
+  height: calc(100vh - 71px);
   padding: 0px;
 }
 
