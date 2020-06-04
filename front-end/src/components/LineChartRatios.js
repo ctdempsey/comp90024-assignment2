@@ -1,3 +1,16 @@
+// Line Chart component for the front end application
+// COMP90024 Assignment 2 2020
+//
+// Jock Harkness 758158
+// Thomas Minuzzo 638958
+// Cameron Dempsey 759026
+// Emily Marshall 587580
+// Hoang Viet Mai 813361
+//
+// Renders a composite chart of all LGAs, mapping ratio of tweets about covid
+// per covid case, against mean household income and % of population who have
+// accessed higher education
+
 import * as React from "react";
 import {ComposedChart, ResponsiveContainer, Brush, Line, Area, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from "recharts";
 

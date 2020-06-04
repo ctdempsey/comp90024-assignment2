@@ -1,3 +1,12 @@
+// Homepage component for the front end application
+// COMP90024 Assignment 2 2020
+//
+// Jock Harkness 758158
+// Thomas Minuzzo 638958
+// Cameron Dempsey 759026
+// Emily Marshall 587580
+// Hoang Viet Mai 813361
+
 import React, { Component } from 'react'
 import { Map, TileLayer, GeoJSON, FeatureGroup } from "react-leaflet"
 import ReactDOM from 'react-dom'
@@ -9,21 +18,18 @@ import InfoPanel from '../components/InfoPanel'
 import BarChartSingle from '../components/BarChartSingle'
 import BarChartRatios from '../components/BarChartRatios'
 import LineChartRatios from '../components/LineChartRatios'
-
 import L from "leaflet";
 
+// API query strings
 const tweet_query = `http://172.26.130.183:5555/api/view/tweet_view/LGAcount?group=true`
-//const tweet_query = `https://testapi.io/api/emilylm/tweets`
-//const tweet_query = `http://localhost:5555/api/view/tweet_view/LGAcount?group=true`
-
 const hashtag_query = `http://172.26.130.183:5555/api/view/tweet_view/hashtags?group=true`
-//const hashtag_query = `https://testapi.io/api/emilylm/hastags`
-
 const cases_query = `https://services1.arcgis.com/vHnIGBHHqDR6y0CR/arcgis/rest/services/Australian_Cases_by_LGA/FeatureServer/0/query?where=1%3D1&outFields=LGA_CODE19,Cases&returnGeometry=false&outSR=4326&f=json`
 
+// Hashtags used in the twitter search query to identify covid-related tweets
 const searchHashtags = ["covid", "covid19", "covid-19", "coronavirus", "lockdown", "pandemic"]
 
 
+// Returns the colour for a LGA region on the map
 function getColor(d, max) {
   d = d*1.00/max*1000.00
   return d > 1000 ? '#800026' :
@@ -37,6 +43,7 @@ function getColor(d, max) {
 }
 
 
+// Class to render the Homepage View
 export default class InteractiveMap extends Component {
   constructor(props) {
     super(props);
@@ -44,20 +51,20 @@ export default class InteractiveMap extends Component {
       lat: 51.505,
       lng: -0.09,
       zoom: 12,
-      bounds: undefined,
-      features: aus_lgas,
-      maxCases: undefined,
-      showInfo: false,
-      lgaCode: undefined,
-      lga_data: lga_data,
-      maxTweets: undefined,
-      ratiosHigh: [],
-      ratiosLow: [],
-      ratios: [],
-      view: 0,
-      page: "map",
-      topHashtags: []
+      bounds: undefined, // determined the zoom bounds for the map
+      features: aus_lgas, // list of LGA feature geometries
+      maxCases: undefined, // maximum number of cases per LGA
+      lgaCode: undefined, // LGA code for current LGA clicked on
+      lga_data: lga_data, // LGA information
+      maxTweets: undefined, // masimum number of tweets per LGA
+      ratiosHigh: [], // 25 LGAs with highest ratio of tweets per case
+      ratiosLow: [], // 25 LGAs with lowest ratio of tweets per case
+      ratios: [], // Sorted list of tweets per case for all LGAs
+      view: 0, // colour view option for map, 0 = # cases, 1 = # tweets, 2 = ratio of tweets per case
+      page: "map", // page view
+      topHashtags: [] // List of 25 most frequent hashtags present in covid-19 related tweets
     }
+    // bind functions to instance
     this.handleOptionChange = this.handleOptionChange.bind(this);
     this.onEachLGA = this.onEachLGA.bind(this)
     this.handleClickFeature = this.handleClickFeature.bind(this)
@@ -70,41 +77,52 @@ export default class InteractiveMap extends Component {
     this.highlightFeature = this.highlightFeature.bind(this)
   }
 
-
   async componentDidMount() {
+    // load in remote data
     let hashtags = await this.getTopHashtags();
     let features = await this.getCasesLGA();
     let tweets = await this.getTweetsLGA();
-
     let data = lga_data
+    // initialise max counters for each data variable
     let maxTweets = 0;
     let maxCases = 0;
     let maxRatio = 0;
+    // initialise empty list of tweet per case ratios
     let ratios = [];
+    // loop through LGA features with case numbers in returned data
     for (let f in features){
       let cases = features[f].attributes.Cases
       let lga = features[f].attributes.LGA_CODE19
+      // keep track of maximum cases
       if (cases > maxCases){
         maxCases = cases
       }
+      // initialise new fields in LGA feature
       data[lga]['tweet_case_ratio'] = 0
       data[lga]['tweet_count'] = 0
+      // assign appropriate # cases to LGA feature
       if (cases == null){
         data[lga]['cases'] = 0
       } else {
         data[lga]['cases'] = cases
       }
     }
-
+    // loop through all LGA/tweet count pairs in returned data
     for (let t in tweets){
       let count = tweets[t].value
       let lga = tweets[t].key
+      // keep track of maximum tweet count
       if (count > maxTweets){
         maxTweets = count
       }
+      // store tweet count in LGA feature
       data[lga]['tweet_count'] = count
       let cases = data[lga]['cases']
-
+      // calculate ratio of tweets per case for this LGA
+      // - if cases = 0 AND count = 0, set ratio to 0
+      // - if only one of cases = 0 OR count = 0, set the variable equal to 1,
+      //   this will avoid loss of information for interesting LGAs with many
+      //   tweets but no cases, and vice versa
       let ratio;
       if (count == 0){
         if (cases == 0){
@@ -119,35 +137,44 @@ export default class InteractiveMap extends Component {
           ratio = (count/cases).toFixed(3)
         }
       }
+      // keep track of max ratio value
       if (ratio > maxRatio){
         maxRatio = ratio
       }
+      // assign ratio to the LGA feature
       data[lga]['tweet_case_ratio'] = ratio
       let name = data[lga]['lga_name18']
       let higherEd = data[lga]['%_of_pop_with_post_school_education']
       let income = data[lga]['mean_income']
+      // add ratio to the ratios object
       ratios.push({lga, name, ratio, higherEd, income})
     }
+    // store new information in state
     this.setState({
           lga_data: data,
           maxCases,
           maxTweets,
           maxRatio,
     })
+    // sort ratios in descending order
     ratios.sort(function(a, b) {
       return b.ratio - a.ratio;
     });
+    // get the 25 LGAs with highest ratios, and 25 with lowest ratios
     let ratiosHigh = ratios.slice(0, 24);
     let ratiosLow = ratios.slice(ratios.length-25, ratios.length-1)
+    // store in state
     this.setState({ratiosHigh, ratiosLow, ratios})
-
+    // sort hashtags in descending order of count
     hashtags.sort(function(a, b) {
       return b.value - a.value;
     });
+    // get 25 hashtags with highest count and store to state
     let topHashtags = hashtags.slice(0,24);
     this.setState({topHashtags})
   }
 
+  // send a generic API request
   async fetchJson(url) {
     let response = await fetch(url);
     if (response.ok) {
@@ -156,7 +183,7 @@ export default class InteractiveMap extends Component {
       throw new Error('Data fetch failed');;
     }
   }
-
+  // fetch cases per LGA
   async getCasesLGA() {
     try {
       let data = await this.fetchJson(cases_query);
@@ -165,13 +192,12 @@ export default class InteractiveMap extends Component {
       console.log(err)
     }
   }
-
+  // fetch tweets per LGA
   async getTweetsLGA() {
     try {
       let data = await this.fetchJson(tweet_query,{
         mode: 'no-cors',
         method: 'post',
-        //url: `http://172.26.130.183:5555`,
         url: `http://localhost:5555`
       });
       return data;
@@ -179,23 +205,12 @@ export default class InteractiveMap extends Component {
       console.log(err)
     }
   }
-
-  async getCasesLGA() {
-    const query = `https://services1.arcgis.com/vHnIGBHHqDR6y0CR/arcgis/rest/services/Australian_Cases_by_LGA/FeatureServer/0/query?where=1%3D1&outFields=LGA_CODE19,Cases&returnGeometry=false&outSR=4326&f=json`;
-    try {
-      let data = await this.fetchJson(query);
-      return data.features;
-    } catch(err){
-      console.log(err)
-    }
-  }
-
+  // fetch hashtag counts
   async getTopHashtags() {
     try {
       let data = await this.fetchJson(hashtag_query,{
         mode: 'no-cors',
         method: 'post',
-        //url: `http://172.26.130.183:5555`,
         url: `http://localhost:5555`
       });
       return data;
@@ -204,7 +219,7 @@ export default class InteractiveMap extends Component {
     }
   }
 
-
+  // build legend for map
   getLegend(maxCases){
     let max = parseFloat(maxCases)
     let grades = [0, 100, 50, 20, 10, 5, 2, 1];
@@ -228,12 +243,12 @@ export default class InteractiveMap extends Component {
     )
   }
 
-
+  // get the style for geoJSON feature
   getJSONstyle(cases, maxCases) {
     return getColor(parseFloat(cases), parseFloat(maxCases))
   }
 
-
+  // function called on each geojson feature before it's added to the map
   onEachLGA(feature: Object, layer: Object) {
     let view = this.state.view
     let max
@@ -242,6 +257,7 @@ export default class InteractiveMap extends Component {
     let cases = this.state.lga_data[lga].cases
     let tweets = this.state.lga_data[lga].tweet_count
     let ratio = this.state.lga_data[lga].tweet_case_ratio
+    // check the 'view' value in state to decide which variable to paint a feature by
     if (view == 0){
       max = this.state.maxCases
       attribute = cases
@@ -254,26 +270,25 @@ export default class InteractiveMap extends Component {
       max = this.state.maxRatio
       attribute = ratio
     }
-
+    // get the correct colour and set layer style
     layer.setStyle({
       fillColor: this.getJSONstyle(attribute, max),
       color: 'white',
       weight: 1,
       fillOpacity: 0.5,
     })
+    // create tooltip for this feature with appropriate LGA data
     const popupContent = `<Popup>${feature.properties.LGA_NAME19}</br><b>No. Cases: </b>${cases}</br><b>No. Tweets: </b>${tweets}</br><b>Total Population: </b>${lga_data[lga]['population']}</br><b>Area: </b>${lga_data[lga]['area']}</br></Popup>`
-
-
-
+    // bind tooltip to this feature
     layer.bindTooltip(popupContent, { direction: 'center', sticky: 'true', offset: [-75, -25]})
-
+    // define events for this feature
     layer.on({
       click: () => this.handleClickFeature(feature),
       mouseover: this.highlightFeature,
       mouseout: this.resetHighlight,
     });
   }
-
+  // highlight bold outline on hover start
   highlightFeature(e) {
     var layer = e.target;
     layer.bringToFront()
@@ -284,7 +299,7 @@ export default class InteractiveMap extends Component {
         fillOpacity: 0.7
         });
   }
-
+  // remove bold outline on hover end
   resetHighlight(e) {
     var layer = e.target;
     layer.setStyle({
@@ -293,21 +308,21 @@ export default class InteractiveMap extends Component {
       fillOpacity: 0.5,
     });
   }
-
-	handleOptionChange = e => {
-		const view = e.target.value;
-		this.setState({
-			view,
-		});
-	}
-
+  // zoom to feature on click
   handleClickFeature = (feature) => {
     const bboxArray = bbox(feature);
     const corner1 = [bboxArray[1], bboxArray[0]];
     const corner2 = [bboxArray[3], bboxArray[2]];
     this.setState({bounds: [corner1, corner2], lgaCode: feature.properties.LGA_CODE19})
   }
-
+  // switch view on click event
+	handleOptionChange = e => {
+		const view = e.target.value;
+		this.setState({
+			view,
+		});
+	}
+  // zoom to entire geojson layer bounds on loading of geojson layer
   onFeatureGroupAdd = () => {
     let bounds = this.refs.geojson.leafletElement.getBounds()
     bounds.getSouthWest().wrap();
@@ -316,13 +331,19 @@ export default class InteractiveMap extends Component {
     this.refs.map.leafletElement.fitBounds(bounds);
   }
 
-
+  // render page
   render() {
+    // define variables
     const legendCases = this.getLegend(this.state.maxCases);
     const legendTweets = this.getLegend(this.state.maxTweets);
     const legendRatios = this.getLegend(this.state.maxRatio);
     const hashtags = this.state.topHashtags;
     const position = [this.state.lat, this.state.lng]
+    // render button navigation between three views
+    // load three views depending on chosen button
+    //    1. map
+    //    2. statistical analysis
+    //    3. top hashtags list
     return (
       <div className="container-fluid" id="pageContainer">
         <div className="row align-items-center" id="page-header">
@@ -334,9 +355,6 @@ export default class InteractiveMap extends Component {
           <button type="button" class="btn btn-light" aria-pressed={(this.state.page == "hashtags")} onClick={() => this.setState({page: "hashtags"})}>Top Hashtags</button>
           </div>
       </div>
-
-
-
 
       {(this.state.page == "map") ?
       <div id="mapContainer">

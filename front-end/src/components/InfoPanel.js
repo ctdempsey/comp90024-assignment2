@@ -1,14 +1,16 @@
+// LGA Detail component for the front end application
+// COMP90024 Assignment 2 2020
+//
+// Jock Harkness 758158
+// Thomas Minuzzo 638958
+// Cameron Dempsey 759026
+// Emily Marshall 587580
+// Hoang Viet Mai 813361
+//
+// Renders information panel for each LGA on the map
+
 import * as React from "react";
 import BarChartSingle from "./BarChartSingle"
-
-const getArrow = (slope) => {
-	if (slope >= 0){
-		return 	<span style={{ color: "#60ACFC"}}>&#8679;</span>;
-	}
-	if (slope <= 0){
-		return 	<span style={{ color: "#60ACFC"}}>&#8681;</span>;
-	}
-}
 
 export default class InfoPanel extends React.PureComponent {
 	render() {
