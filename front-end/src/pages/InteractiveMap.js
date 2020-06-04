@@ -68,7 +68,6 @@ export default class InteractiveMap extends Component {
     this.getJSONstyle = this.getJSONstyle.bind(this)
     this.getLegend = this.getLegend.bind(this)
     this.highlightFeature = this.highlightFeature.bind(this)
-    this.updateInfo = this.updateInfo.bind(this)
   }
 
 
@@ -140,13 +139,13 @@ export default class InteractiveMap extends Component {
     });
     let ratiosHigh = ratios.slice(0, 24);
     let ratiosLow = ratios.slice(ratios.length-25, ratios.length-1)
+    this.setState({ratiosHigh, ratiosLow, ratios})
 
     hashtags.sort(function(a, b) {
       return b.value - a.value;
     });
     let topHashtags = hashtags.slice(0,24);
-    console.log("TOP HASHTAGS", topHashtags)
-    this.setState({ratiosHigh, ratiosLow, ratios, topHashtags})
+    this.setState({topHashtags})
   }
 
   async fetchJson(url) {
@@ -232,12 +231,6 @@ export default class InteractiveMap extends Component {
 
   getJSONstyle(cases, maxCases) {
     return getColor(parseFloat(cases), parseFloat(maxCases))
-  }
-
-
-
-  updateInfo(){
-
   }
 
 
@@ -408,12 +401,30 @@ export default class InteractiveMap extends Component {
       <div id="chartContainer">
         <h6></h6>
         <h4 style={{textAlign: "center"}}>Statistical Analysis</h4>
-        <h6 style={{textAlign: "center"}}>Summary of all LGAs</h6>
+        <h6 style={{textAlign: "center", color: "navy"}}>Summary of all LGAs</h6>
         <LineChartRatios ratios={this.state.ratios} />
-        <h6 style={{textAlign: "center"}}>25 LGAs with the highest ratio of tweets per covid-19 case</h6>
+        <p style={{fontSize: '0.875rem', textAlign: "center", color: "#404040;"}}>
+        This graph maps the ratio of tweets about covid-19, against the mean
+        income of households and the percentage of the population that have
+        recieved post-high school education, for each Local Government Area
+         (LGA) in Australia. Tweets are considered to be relating to covid-19 if
+         they contain any of the following hashtags: <b>#covid, #covid19,
+         #covid-19, #coronavirus, #lockdown, #pandemic</b>
+         </p>
+        <h6 style={{textAlign: "center", color: "navy"}}>25 LGAs with the highest ratio of tweets per covid-19 case</h6>
         <BarChartRatios ratios={this.state.ratiosHigh} />
-        <h6 style={{textAlign: "center"}}>25 LGAs with the lowest ratio of tweets per covid-19 case</h6>
+        <p style={{fontSize: '0.875rem', textAlign: "center", color: "#404040;"}}>
+        This graph shows the top 25 LGAs with the highest ratio of tweets about covid-19, against the mean
+        income of households and the percentage of the population that have
+        recieved post-high school education.
+         </p>
+        <h6 style={{textAlign: "center", color: "navy"}}>25 LGAs with the lowest ratio of tweets per covid-19 case</h6>
         <BarChartRatios ratios={this.state.ratiosLow} />
+        <p style={{fontSize: '0.875rem', textAlign: "center", color: "#404040;"}}>
+        This graph shows the 25 LGAs with the lowest ratio of tweets about covid-19, against the mean
+        income of households and the percentage of the population that have
+        recieved post-high school education.
+         </p>
       </div>
       :
       <div>
