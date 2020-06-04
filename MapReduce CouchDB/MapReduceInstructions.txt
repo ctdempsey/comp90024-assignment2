@@ -1,0 +1,7 @@
+Views at:
+TOTAL TWEETS 
+http://<server IP address>:<couchDB port, default 5984>/<database name>/_design/tweet_view/_view/LGAcount
+TWEETS PER LGA
+http://<server IP address>:<couchDB port, default 5984>/<database name>/_design/tweet_view/_view/LGAcount?group=true
+HASHTAGS IN TWEETS
+http://<server IP address>:<couchDB port, default 5984>/<database name>/_design/tweet_view/_view/hashtags?group=true

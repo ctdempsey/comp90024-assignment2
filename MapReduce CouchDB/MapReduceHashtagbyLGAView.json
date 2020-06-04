@@ -1,0 +1,15 @@
+{
+  "_id": "_design/HashtagByLGA",
+  "_rev": "12-a772180404f9d376012327aaf261294b",
+  "views": {
+    "socialdistancing+isolation": {
+      "reduce": "function (keys, values, rereduce) {\n    return sum(values);\n}",
+      "map": "function (doc) {\n  var hashtags = doc.hashtags\n  var lga = doc.LGA\n  for(var idx in hashtags){\n    if(hashtags[idx]==\"socialdistancing\"||hashtags[idx]==\"isolation\"||hashtags[idx]==\"iso\"||hashtags[idx]==\"Isolation\"||hashtags[idx]==\"quarantine\"||hashtags[idx]==\"stayhome\"){\n        if(lga[0][1]){\n          for(var idx2 in lga){\n            emit(lga[idx2], 1/lga.length);\n          }\n        }\n        else if(lga){\n          emit(lga,1)\n        } \n        break\n    }\n  }\n}"
+    },
+    "auspol+Auspol": {
+      "reduce": "function (keys, values, rereduce) {\n  return sum(values);\n}",
+      "map": "function (doc) {\n  var hashtags = doc.hashtags\n  var lga = doc.LGA\n  for(var idx in hashtags){\n    if(hashtags[idx]==\"auspol\"||hashtags[idx]==\"AusPol\"){\n      emit(lga, 1)\n      break\n    }\n  }\n}"
+    }
+  },
+  "language": "javascript"
+}

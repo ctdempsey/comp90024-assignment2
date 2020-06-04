@@ -1,0 +1,15 @@
+{
+  "_id": "_design/tweet_view",
+  "_rev": "31-4d7208528b9b14f5aa30eef8a1304e15",
+  "views": {
+    "hashtags": {
+      "reduce": "function (keys, values, rereduce) {\n    return sum(values);\n}",
+      "map": "function (doc) {\n  var hashtags = doc.hashtags\n  for(var idx in hashtags){\n    emit(hashtags[idx], 1)\n  }\n}"
+    },
+    "LGAcount": {
+      "reduce": "function (keys, values, rereduce) {\n    return sum(values);\n}",
+      "map": "function (doc){\n  var lga = doc.LGA\n  if(lga[0][1]){\n    for(var idx in lga){\n      emit(lga[idx], 1/lga.length);\n    }\n  }\n  else if(lga){\n    emit(lga,1)\n  }\n}"
+    }
+  },
+  "language": "javascript"
+}
