@@ -11,20 +11,19 @@ import BarChartSingle from '../components/BarChartSingle'
 import BarChartRatios from '../components/BarChartRatios'
 import LineChartRatios from '../components/LineChartRatios'
 
-
-
-//import Legend from '../components/Legend'
 import L from "leaflet";
 
 const tweet_query = `http://172.26.130.183:5555/api/view/tweet_view/LGAcount?group=true`
 //const tweet_query = `https://testapi.io/api/emilylm/tweets`
 //const tweet_query = `http://localhost:5555/api/view/tweet_view/LGAcount?group=true`
 
+const hashtag_query = `http://172.26.130.183:5555/api/view/tweet_view/hashtags?group=true`
+//const hashtag_query = `https://testapi.io/api/emilylm/hastags`
+
+const cases_query = `https://services1.arcgis.com/vHnIGBHHqDR6y0CR/arcgis/rest/services/Australian_Cases_by_LGA/FeatureServer/0/query?where=1%3D1&outFields=LGA_CODE19,Cases&returnGeometry=false&outSR=4326&f=json`
 
 function getColor(d, max) {
   d = d*1.00/max*1000.00
-  //console.log("COLOR", d, max)
-  //console.log("color", d)
   return d > 1000 ? '#800026' :
          d > 500  ? '#BD0026' :
          d > 200  ? '#E31A1C' :
@@ -54,26 +53,28 @@ export default class InteractiveMap extends Component {
       ratiosLow: [],
       ratios: [],
       view: 0,
-      page: "map"
+      page: "map",
+      topHashtags: []
     }
     this.handleOptionChange = this.handleOptionChange.bind(this);
     this.onEachLGA = this.onEachLGA.bind(this)
     this.handleClickFeature = this.handleClickFeature.bind(this)
     this.getCasesLGA = this.getCasesLGA.bind(this)
     this.getTweetsLGA = this.getTweetsLGA.bind(this)
+    this.getTopHashtags = this.getTopHashtags.bind(this)
     this.fetchJson = this.fetchJson.bind(this)
     this.getJSONstyle = this.getJSONstyle.bind(this)
     this.getLegend = this.getLegend.bind(this)
     this.highlightFeature = this.highlightFeature.bind(this)
     this.updateInfo = this.updateInfo.bind(this)
-    //this.infoShow = this.infoShow.bind(this)
   }
 
+
   async componentDidMount() {
+    let hashtags = await this.getTopHashtags();
     let features = await this.getCasesLGA();
     let tweets = await this.getTweetsLGA();
-    //console.log("FEAT:", JSON.stringify(aus_lgas))
-    //console.log("FEAT2:", JSON.stringify(features))
+
     let data = lga_data
     let maxTweets = 0;
     let maxCases = 0;
@@ -117,7 +118,6 @@ export default class InteractiveMap extends Component {
           ratio = (count/cases).toFixed(3)
         }
       }
-
       if (ratio > maxRatio){
         maxRatio = ratio
       }
@@ -131,15 +131,20 @@ export default class InteractiveMap extends Component {
           lga_data: data,
           maxCases,
           maxTweets,
-          maxRatio
+          maxRatio,
     })
     ratios.sort(function(a, b) {
       return b.ratio - a.ratio;
     });
     let ratiosHigh = ratios.slice(0, 24);
     let ratiosLow = ratios.slice(ratios.length-25, ratios.length-1)
-    //console.log("RATIOS", ratiosHigh, ratiosLow)
-    this.setState({ratiosHigh, ratiosLow, ratios})
+
+    hashtags.sort(function(a, b) {
+      return b.value - a.value;
+    });
+    let topHashtags = hashtags.slice(0,24);
+    console.log("TOP HASHTAGS", topHashtags)
+    this.setState({ratiosHigh, ratiosLow, ratios, topHashtags})
   }
 
   async fetchJson(url) {
@@ -148,6 +153,29 @@ export default class InteractiveMap extends Component {
       return response.json();
     } else {
       throw new Error('Data fetch failed');;
+    }
+  }
+
+  async getCasesLGA() {
+    try {
+      let data = await this.fetchJson(cases_query);
+      return data.features;
+    } catch(err){
+      console.log(err)
+    }
+  }
+
+  async getTweetsLGA() {
+    try {
+      let data = await this.fetchJson(tweet_query,{
+        mode: 'no-cors',
+        method: 'post',
+        //url: `http://172.26.130.183:5555`,
+        url: `http://localhost:5555`
+      });
+      return data;
+    } catch(err){
+      console.log(err)
     }
   }
 
@@ -161,22 +189,20 @@ export default class InteractiveMap extends Component {
     }
   }
 
-  async getTweetsLGA() {
+  async getTopHashtags() {
     //const query = `https://testapi.io/api/emilylm/tweets`;
     try {
-      let data = await this.fetchJson(tweet_query,{
-    mode: 'no-cors',
-    method: 'post',
-    //url: `http://172.26.130.183:5555`,
-    url: `http://localhost:5555`
-  });
+      let data = await this.fetchJson(hashtag_query,{
+        mode: 'no-cors',
+        method: 'post',
+        //url: `http://172.26.130.183:5555`,
+        url: `http://localhost:5555`
+      });
       return data;
     } catch(err){
       console.log(err)
     }
   }
-
-
 
 
   getLegend(maxCases){
@@ -198,7 +224,7 @@ export default class InteractiveMap extends Component {
     }
     return(
     <div class="info legend leaflet-control">
-    {labels.map(label => <span><i style={{ background: label.color}}></i> {label.interval.from}&ndash;{label.interval.to}<br/></span>)}
+      {labels.map(label => <span><i style={{ background: label.color}}></i> {label.interval.from}&ndash;{label.interval.to}<br/></span>)}
     </div>
     )
   }
@@ -208,15 +234,7 @@ export default class InteractiveMap extends Component {
     return getColor(parseFloat(cases), parseFloat(maxCases))
   }
 
-  async getCasesLGA() {
-    const query = `https://services1.arcgis.com/vHnIGBHHqDR6y0CR/arcgis/rest/services/Australian_Cases_by_LGA/FeatureServer/0/query?where=1%3D1&outFields=LGA_CODE19,Cases&returnGeometry=false&outSR=4326&f=json`;
-    try {
-      let data = await this.fetchJson(query);
-      return data.features;
-    } catch(err){
-      console.log(err)
-    }
-  }
+
 
   updateInfo(){
 
@@ -230,6 +248,7 @@ export default class InteractiveMap extends Component {
     let lga = feature.properties.LGA_CODE19
     let cases = this.state.lga_data[lga].cases
     let tweets = this.state.lga_data[lga].tweet_count
+    let ratio = this.state.lga_data[lga].tweet_case_ratio
     if (view == 0){
       max = this.state.maxCases
       attribute = cases
@@ -237,6 +256,10 @@ export default class InteractiveMap extends Component {
     if (view == 1){
       max = this.state.maxTweets
       attribute = tweets
+    }
+    if (view == 2){
+      max = this.state.maxRatio
+      attribute = ratio
     }
     /*
     if (view == 0){
@@ -321,6 +344,8 @@ mouseover: () => (this.highlightFeature, this.infoShow(feature)),
   render() {
     const legendCases = this.getLegend(this.state.maxCases);
     const legendTweets = this.getLegend(this.state.maxTweets);
+    const legendRatios = this.getLegend(this.state.maxRatio);
+    const hashtags = this.state.topHashtags;
     const position = [this.state.lat, this.state.lng]
     return (
       <div className="container-fluid" id="pageContainer">
@@ -328,15 +353,17 @@ mouseover: () => (this.highlightFeature, this.infoShow(feature)),
           <div class="col-12 text-center">
           <button type="button" class="btn btn-light" aria-pressed={(this.state.page == "map")} onClick={() => this.setState({page: "map"})}>Map View</button>
           &nbsp;&nbsp;
-          <button type="button" class="btn btn-light" aria-pressed={(this.state.page == "chart")} onClick={() => this.setState({page: "chart"})}>Summary Charts</button>
+          <button type="button" class="btn btn-light" aria-pressed={(this.state.page == "chart")} onClick={() => this.setState({page: "chart"})}>Statistical Analysis</button>
+          &nbsp;&nbsp;
+          <button type="button" class="btn btn-light" aria-pressed={(this.state.page == "hashtags")} onClick={() => this.setState({page: "hashtags"})}>Top Hashtags</button>
           </div>
       </div>
 
 
 
-      <div id="mapContainer">
+
       {(this.state.page == "map") ?
-      <div>
+      <div id="mapContainer">
       {('cases' in this.state.lga_data["10050"]) ?
         <div>
         <Map bounds={this.state.bounds} zoomSnap={0.1} ref="map" center={position} zoom={this.state.zoom}>
@@ -359,13 +386,19 @@ mouseover: () => (this.highlightFeature, this.infoShow(feature)),
           <div class="form-check">
             <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value={0} checked={this.state.view == 0} onClick={this.handleOptionChange} />
             <label class="form-check-label" for="exampleRadios1">
-              # of Covid-19 Cases
+              # Covid-19 Cases
             </label>
           </div>
           <div class="form-check">
             <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value={1} checked={this.state.view == 1} onClick={this.handleOptionChange} />
             <label class="form-check-label" for="exampleRadios2">
-              # of Covid-19 Tweets
+              # Covid-19 Tweets
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value={2} checked={this.state.view == 2} onClick={this.handleOptionChange} />
+            <label class="form-check-label" for="exampleRadios2">
+              # Tweets per Case
             </label>
           </div>
           </div>
@@ -377,25 +410,61 @@ mouseover: () => (this.highlightFeature, this.infoShow(feature)),
           <LegendControl position="bottomright">
             {legendCases}
           </LegendControl>
-           :
+           : (this.state.view == 1) ?
            <LegendControl position="bottomright">
              {legendTweets}
-           </LegendControl>}
+           </LegendControl>
+         : <LegendControl position="bottomright">
+           {legendRatios}
+         </LegendControl>}
         </Map>
         </div>
       : null}
       </div>
-      :
-      <div>
+      : (this.state.page == "chart") ?
+      <div id="chartContainer">
+        <h6></h6>
+        <h4 style={{textAlign: "center"}}>Statistical Analysis</h4>
+        <h6 style={{textAlign: "center"}}>Summary of all LGAs</h6>
+        <LineChartRatios ratios={this.state.ratios} />
         <h6 style={{textAlign: "center"}}>10 LGAs with the highest ratio of tweets per covid-19 case</h6>
         <BarChartRatios ratios={this.state.ratiosHigh} />
         <h6 style={{textAlign: "center"}}>10 LGAs with the lowest ratio of tweets per covid-19 case</h6>
         <BarChartRatios ratios={this.state.ratiosLow} />
-        <h6 style={{textAlign: "center"}}>Summary of all LGAs</h6>
-        <LineChartRatios ratios={this.state.ratios} />
       </div>
-      }
+      :
+      <div>
+      { (hashtags.length > 1) ?
+        <div className="container-fluid" id="hashtagContainer">
+        <div className="row">
+          <div class="col-sm">
+            <h6></h6>
+            <h4 style={{textAlign: "center"}}>Top Hastags</h4>
+            <h6 style={{textAlign: "center"}}>A list of the 25 most common hashtags present within covid-related tweets</h6>
+          </div>
+        </div>
+        <div className="row">
+        <div class="col-sm" id="hashtag-table">
+        <table id="hashtag-table">
+            <thead>
+            <tr>
+              <td><b>Hashtag</b></td>
+              <td><b>Count</b></td>
+            </tr>
+            </thead>
+            <tbody>
+          {hashtags.map(hashtag => <tr>
+            <td>#{hashtag.key}</td>
+            <td>{hashtag.value}</td>
+          </tr>)}
+          </tbody>
+        </table>
+        </div>
       </div>
+      </div>
+      : null}
+      </div>
+    }
     </div>
     )
   }

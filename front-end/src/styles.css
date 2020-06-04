@@ -50,12 +50,22 @@ body {
   background-color: transparent;
 }
 
-.row{
+.info.row{
   border-bottom: 1px solid lightgrey;
 }
 
 .table {
   margin: 4px;
+}
+
+
+#hashtagContainer {
+  align-items: center;
+  align-content: center;
+  text-align: center;
+}
+#hashtag-table {
+    margin: 0 auto !important;
 }
 
 #page-header{
@@ -79,4 +89,8 @@ body {
 #pageContainer{
 
   padding: 0px;
+}
+
+#tableCol1 {
+  min-width: 140px;
 }
