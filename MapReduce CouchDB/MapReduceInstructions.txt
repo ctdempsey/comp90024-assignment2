@@ -1,3 +1,9 @@
+Jock Harkness 758158
+Thomas Minuzzo 638958
+Cameron Dempsey 759026
+Emily Marshall 587580
+Hoang Viet Mai 813361
+
 Views at:
 TOTAL TWEETS 
 http://<server IP address>:<couchDB port, default 5984>/<database name>/_design/tweet_view/_view/LGAcount
