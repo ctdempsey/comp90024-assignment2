@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
 import { Map, TileLayer, GeoJSON, FeatureGroup } from "react-leaflet"
 import ReactDOM from 'react-dom'
-import aus_lgas from '../assets/LGAS_2019.json'
-import aus_postcodes from '../assets/aus-postcodes.json'
+import aus_lgas from '../assets/lga_shapes.json'
 import lga_data from '../assets/lga_data.json'
 import bbox from '@turf/bbox'
-import LegendControl from '../components/LegendControl2'
+import LegendControl from '../components/LegendControl'
 import InfoPanel from '../components/InfoPanel'
 import BarChartSingle from '../components/BarChartSingle'
 import BarChartRatios from '../components/BarChartRatios'
@@ -21,6 +20,9 @@ const hashtag_query = `http://172.26.130.183:5555/api/view/tweet_view/hashtags?g
 //const hashtag_query = `https://testapi.io/api/emilylm/hastags`
 
 const cases_query = `https://services1.arcgis.com/vHnIGBHHqDR6y0CR/arcgis/rest/services/Australian_Cases_by_LGA/FeatureServer/0/query?where=1%3D1&outFields=LGA_CODE19,Cases&returnGeometry=false&outSR=4326&f=json`
+
+const searchHashtags = ["covid", "covid19", "covid-19", "coronavirus", "lockdown", "pandemic"]
+
 
 function getColor(d, max) {
   d = d*1.00/max*1000.00
@@ -190,7 +192,6 @@ export default class InteractiveMap extends Component {
   }
 
   async getTopHashtags() {
-    //const query = `https://testapi.io/api/emilylm/tweets`;
     try {
       let data = await this.fetchJson(hashtag_query,{
         mode: 'no-cors',
@@ -213,7 +214,6 @@ export default class InteractiveMap extends Component {
     let to;
     let color;
     let interval;
-    //let maxCases = this.max;
     for (let i = 0; i < grades.length-1; i++) {
       grades[i+1] = Math.round(max/grades[i+1])
       from = grades[i];
@@ -261,13 +261,7 @@ export default class InteractiveMap extends Component {
       max = this.state.maxRatio
       attribute = ratio
     }
-    /*
-    if (view == 0){
-      max = this.state.maxRatio
-      attribute = this.state.ratios[lga].ratio
-    }
-    */
-    //console.log("FEATURE", feature.properties.cases)
+
     layer.setStyle({
       fillColor: this.getJSONstyle(attribute, max),
       color: 'white',
@@ -275,13 +269,10 @@ export default class InteractiveMap extends Component {
       fillOpacity: 0.5,
     })
     const popupContent = `<Popup>${feature.properties.LGA_NAME19}</br><b>No. Cases: </b>${cases}</br><b>No. Tweets: </b>${tweets}</br><b>Total Population: </b>${lga_data[lga]['population']}</br><b>Area: </b>${lga_data[lga]['area']}</br></Popup>`
-    /*const popupContent = ReactDOMServer.renderToString(
-      <CustomPopup feature={feature} />
-    );*/
+
 
 
     layer.bindTooltip(popupContent, { direction: 'center', sticky: 'true', offset: [-75, -25]})
-    //layer.bindTooltip(popupContent, { direction: 'left', sticky: 'true', offset: [-75, -25]})
 
     layer.on({
       click: () => this.handleClickFeature(feature),
@@ -298,20 +289,15 @@ export default class InteractiveMap extends Component {
         color: '#666',
         dashArray: '',
         fillOpacity: 0.7
-        });    //console.log("EEEE", e.target.feature.properties.LGA_CODE19)
+        });
   }
-/*
-mouseover: () => (this.highlightFeature, this.infoShow(feature)),
-  infoShow = (feature) => {
-    this.setState({info: feature.properties.LGA_NAME19})
-  }*/
+
   resetHighlight(e) {
     var layer = e.target;
     layer.setStyle({
       color: 'white',
       weight: 1,
       fillOpacity: 0.5,
-      //fillColor: '#fff2af',
     });
   }
 
@@ -327,9 +313,6 @@ mouseover: () => (this.highlightFeature, this.infoShow(feature)),
     const corner1 = [bboxArray[1], bboxArray[0]];
     const corner2 = [bboxArray[3], bboxArray[2]];
     this.setState({bounds: [corner1, corner2], lgaCode: feature.properties.LGA_CODE19})
-
-
-    //this.refs.map.leafletElement.fitBounds(this.refs.geojson.leafletElement.getBounds())
   }
 
   onFeatureGroupAdd = () => {
@@ -427,9 +410,9 @@ mouseover: () => (this.highlightFeature, this.infoShow(feature)),
         <h4 style={{textAlign: "center"}}>Statistical Analysis</h4>
         <h6 style={{textAlign: "center"}}>Summary of all LGAs</h6>
         <LineChartRatios ratios={this.state.ratios} />
-        <h6 style={{textAlign: "center"}}>10 LGAs with the highest ratio of tweets per covid-19 case</h6>
+        <h6 style={{textAlign: "center"}}>25 LGAs with the highest ratio of tweets per covid-19 case</h6>
         <BarChartRatios ratios={this.state.ratiosHigh} />
-        <h6 style={{textAlign: "center"}}>10 LGAs with the lowest ratio of tweets per covid-19 case</h6>
+        <h6 style={{textAlign: "center"}}>25 LGAs with the lowest ratio of tweets per covid-19 case</h6>
         <BarChartRatios ratios={this.state.ratiosLow} />
       </div>
       :
@@ -439,8 +422,9 @@ mouseover: () => (this.highlightFeature, this.infoShow(feature)),
         <div className="row">
           <div class="col-sm">
             <h6></h6>
-            <h4 style={{textAlign: "center"}}>Top Hastags</h4>
+            <h4 style={{textAlign: "center"}}>Top Hashtags</h4>
             <h6 style={{textAlign: "center"}}>A list of the 25 most common hashtags present within covid-related tweets</h6>
+            <p><small><em>*hashtags included in the Twitter API search query are highlighted in red</em></small></p>
           </div>
         </div>
         <div className="row">
@@ -454,7 +438,7 @@ mouseover: () => (this.highlightFeature, this.infoShow(feature)),
             </thead>
             <tbody>
           {hashtags.map(hashtag => <tr>
-            <td>#{hashtag.key}</td>
+            <td style={{color: `${(searchHashtags.includes(hashtag.key)) ? "red" : "black"}`}}>#{hashtag.key}</td>
             <td>{hashtag.value}</td>
           </tr>)}
           </tbody>
