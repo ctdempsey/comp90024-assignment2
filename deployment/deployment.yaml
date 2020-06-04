@@ -5,16 +5,16 @@
   become: yes
 
   roles:
-    #- role: instance-common
-    #- role: instance-docker-swarm
-    #- role: instance-couchdb-cluster
-    #- role: instance-couchdb-verify
-      #when: ansible_default_ipv4.address == configuration_node
-    #- role: instance-tweet-harvester
-    #- role: instance-tweet-harvester-stream
-    #- role: instance-backend-api
-      #when: ansible_default_ipv4.address == configuration_node
-    #- role: instance-backend-nginx
-      #when: ansible_default_ipv4.address == configuration_node
+    - role: instance-common
+    - role: instance-docker-swarm
+    - role: instance-couchdb-cluster
+    - role: instance-couchdb-verify
+      when: ansible_default_ipv4.address == configuration_node
+    - role: instance-tweet-harvester
+    - role: instance-tweet-harvester-stream
+    - role: instance-backend-api
+      when: ansible_default_ipv4.address == configuration_node
+    - role: instance-backend-nginx
+      when: ansible_default_ipv4.address == configuration_node
     - role: instance-front-end
       when: ansible_default_ipv4.address == configuration_node
