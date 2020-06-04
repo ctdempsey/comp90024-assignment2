@@ -1,4 +1,0 @@
-Add JSON view file to database,e.g.,ass2v2
-Go to url for View JSON metadata (as below but with relevant info), make sure you use ?group=true
-
-http://127.0.0.1:5984/ass2v2/_design/locmapreduce/_view/CoordinatesPrecedence/?group=true
